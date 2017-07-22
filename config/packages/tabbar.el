@@ -1,8 +1,8 @@
 ;; Tabbar - Adds tabs containing open buffers at top of window
 
-(unless (package-installed-p 'use-package)
+(unless (package-installed-p 'tabbar)
   (package-refresh-contents)
-  (package-install 'use-package))
+  (package-install 'tabbar))
 
 (require 'tabbar)
 
