@@ -34,3 +34,4 @@
 (load "ext/load-directory")
 (load-directory "~/.emacs.d/config/packages")
 (load-directory "~/.emacs.d/config/hooks")
+(load-directory "~/.emacs.d/config/tweaks")
