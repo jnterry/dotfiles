@@ -15,9 +15,6 @@
   (package-initialize))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-;; Ensure all emacs files are byte compile
-(byte-recompile-directory (expand-file-name "~/.emacs.d/config") 0)
-
 ;; Install use-package to make managing installed packages easier
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -43,3 +40,22 @@
 (load-directory "~/.emacs.d/config/packages")
 (load-directory "~/.emacs.d/config/hooks")
 (load-directory "~/.emacs.d/config/tweaks")
+
+;; Ensure all emacs files are byte compile so subsequent start-ups
+;; are quicker. This is done after loading everything so everything
+;; is defined at this point
+(byte-recompile-directory (expand-file-name "~/.emacs.d/config") 0)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+	(rainbow-delimiters web-mode validate use-package tabbar spaceline-all-the-icons smart-tabs-mode neotree multiple-cursors move-text json-mode haskell-mode git-gutter-fringe+ expand-region dockerfile-mode))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
