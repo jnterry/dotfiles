@@ -3,6 +3,9 @@
 *.#*
 *~
 
+# Ignore Compiled el files
+*.elc
+
 # Ignore Emacs generated directories
 /auto-save-list/
 /elpa/
