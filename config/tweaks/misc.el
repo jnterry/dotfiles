@@ -1,3 +1,4 @@
+;; Set personal data
 (setq user-full-name    "Jamie Terry"
       user-mail-address "jnterry@ntlworld.com")
 
@@ -9,3 +10,11 @@
 
 ;; Enable line numbers
 (global-linum-mode t)
+
+;; Hide UI faff
+(tool-bar-mode -1) ;; Top menu bar
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
+
+;; Dispaly time in modeline
+(display-time-mode 1)

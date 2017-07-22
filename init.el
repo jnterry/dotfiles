@@ -27,8 +27,7 @@
 (add-to-list 'load-path "~/.emacs.d/config/ext/")
 
 ;; Load individual setup files
-(load "theme")
-(load "misc-tweaks")
+(load "ext/dracula-theme")
 
 ;; Load config directories
 (load "ext/load-directory")
