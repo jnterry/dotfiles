@@ -13,9 +13,10 @@
 (setq neo-hidden-regexp-list
       '(
 	"^\\.git$" ;; Git dir
-	"~$"      ;; emacs backup files
-	"^#.*#$"  ;; emacs backup files
-	"\\.elc$" ;; compiled el files
+	"~$"       ;; emacs backup files
+	"^#.*#$"   ;; emacs backup files
+	"^\\.#"    ;; emacs backup files
+	"\\.elc$"  ;; compiled el files
 	)
       )
 
