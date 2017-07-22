@@ -22,3 +22,8 @@
 
 ;; Start with neotree open by default
 (neotree)
+
+;; Ensure line numbers are turned off in the neotree buffer
+(defun my/neotree-hook (_unused)
+    (linum-mode -1))
+(add-hook 'neo-after-create-hook 'my/neotree-hook)
