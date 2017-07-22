@@ -14,6 +14,7 @@
 
 ;; Load individual setup files
 (load "theme")
+(load "misc-tweaks")
 
 ;; Load config directories
 (load "ext/load-directory")
