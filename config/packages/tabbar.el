@@ -1,6 +1,6 @@
 ;; Tabbar - Adds tabs containing open buffers at top of window
 
-(use-package 'tabbar)
+(require 'tabbar)
 
 ;; Enable tabbar
 (tabbar-mode)
@@ -14,12 +14,13 @@
 ;;  - user  - all user created buffers
 ;;  - emacs - emacs created buffers (scratch, messages)
 (defun my-tabbar-buffer-groups ()
-   (list (cond ((string=      "*shell*" (buffer-name)          ) "user" ) ;; put emacs shells in user group
-	       ((string-equal "*" (substring (buffer-name) 0 1))     "emacs") ;; other emacs buffers in emacs group
-               ((eq major-mode 'dired-mode                     ) "emacs") ;;  "      "      "      "      "
-               (t                                                "user" ) ;; everything else in user group
-	       )
-	 )
-   )
+  (list (cond ((string=      "*shell*"    (buffer-name)       ) "user" ) ;; put emacs shells in user group
+			  ((string=      "*terminal*" (buffer-name)       ) "user" ) ;;  "      "      "      "      "
+			  ((string-equal "*" (substring (buffer-name) 0 1)) "emacs") ;; other emacs buffers in emacs group
+			  ((eq major-mode 'dired-mode                     ) "emacs") ;;  "      "      "      "      "
+			  (t                                                "user" ) ;; everything else in user group
+			  )
+		)
+  )
 
 (setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
