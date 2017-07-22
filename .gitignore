@@ -2,3 +2,7 @@
 *#*#
 *.#*
 *~
+
+# Ignore Emacs generated directories
+/auto-save-list/
+/elpa/
