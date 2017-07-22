@@ -8,6 +8,20 @@
   (package-initialize))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
+;; Install use-package to make managing installed packages easier
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-and-compile
+  (defvar use-package-verbose t)
+  (require 'cl)
+  (require 'use-package)
+  (require 'bind-key)
+  (require 'diminish)
+  (setq use-package-always-ensure t))
+
+
 ;; Add load paths
 (add-to-list 'load-path "~/.emacs.d/config/")
 (add-to-list 'load-path "~/.emacs.d/config/ext/")
