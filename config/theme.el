@@ -1,1 +1,1 @@
-(load "config/ext/dracula-theme)
+(load "ext/dracula-theme")
