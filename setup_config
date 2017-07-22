@@ -1,0 +1,5 @@
+#!/usr/bin/emacs --script
+
+(load-file "~/.emacs.d/init.el")
+
+(all-the-icons-install-fonts)
