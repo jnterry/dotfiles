@@ -3,7 +3,7 @@
 
 (load "ext/neotree")
 
-(global-set-key [f8] 'neotree-toogle)
+(global-set-key [f8] 'neotree-toggle)
 
 ;; Use graphical icons for file types/directories in graphics mode,
 ;; else us standard collapseable arrows
