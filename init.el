@@ -1,3 +1,10 @@
+;; Hide UI faff at startup to avoid momentary display
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
+
 ;; Setup packge repository
 (when (>= emacs-major-version 24)
   (require 'package)
@@ -7,6 +14,9 @@
    t)
   (package-initialize))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+;; Ensure all emacs files are byte compile
+(byte-recompile-directory (expand-file-name "~/.emacs.d/config") 0)
 
 ;; Install use-package to make managing installed packages easier
 (unless (package-installed-p 'use-package)
@@ -20,7 +30,6 @@
   (require 'bind-key)
   (require 'diminish)
   (setq use-package-always-ensure t))
-
 
 ;; Add load paths
 (add-to-list 'load-path "~/.emacs.d/config/")
