@@ -1,5 +1,6 @@
 (use-package dockerfile-mode)
 (use-package haskell-mode)
+(use-package yaml-mode)
 
 (use-package web-mode
   :mode (("\\.html\\'" . web-mode)
