@@ -1,4 +1,7 @@
-;; Start with neotree open by default
 (add-hook 'emacs-startup-hook
-		  (lambda () (neotree) )
+		  (lambda () (
+					  (neotree)                 ;; Start with neotree open
+					  (global-visual-line-mode) ;; Always use visual-line-mode
+					  )
+			)
 		  )
