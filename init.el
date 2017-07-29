@@ -30,7 +30,7 @@
 
 ;; Don't save emacs generated customisations in this file since
 ;; this file is tracked by git
-(setq custom-file "~/custom.el")
+(setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
 ;; Add load paths
