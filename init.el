@@ -28,6 +28,11 @@
   (require 'diminish)
   (setq use-package-always-ensure t))
 
+;; Don't save emacs generated customisations in this file since
+;; this file is tracked by git
+(setq custom-file "~/custom.el")
+(load custom-file)
+
 ;; Add load paths
 (add-to-list 'load-path "~/.emacs.d/config/")
 (add-to-list 'load-path "~/.emacs.d/config/ext/")
@@ -45,17 +50,3 @@
 ;; are quicker. This is done after loading everything so everything
 ;; is defined at this point
 (byte-recompile-directory (expand-file-name "~/.emacs.d/config") 0)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-	(rainbow-delimiters web-mode validate use-package tabbar spaceline-all-the-icons smart-tabs-mode neotree multiple-cursors move-text json-mode haskell-mode git-gutter-fringe+ expand-region dockerfile-mode))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
