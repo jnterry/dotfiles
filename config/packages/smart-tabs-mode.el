@@ -8,4 +8,4 @@
 (setq         indent-tabs-mode 1)
 
 ;; Set languages to use smart tabs mode
-(smart-tabs-insinuate 'c 'c++ 'java)
+(smart-tabs-insinuate 'c 'c++ 'java 'javascript)
