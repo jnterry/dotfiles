@@ -1,20 +1,41 @@
-(use-package dockerfile-mode)
-(use-package haskell-mode)
-(use-package yaml-mode)
+(use-package dockerfile-mode
+  :mode "\\Dockerfile\\'"
+)
 
-(use-package web-mode
-  :mode (("\\.html\\'" . web-mode)
-         ("\\.html\\.erb\\'" . web-mode)
-         ("\\.mustache\\'" . web-mode)
-         ("\\.jinja\\'" . web-mode)
-         ("\\.php\\'" . web-mode))
-  :config
-  (setq web-mode-enable-css-colorization t)
-  (setq web-mode-code-indent-offset 2)
-  (setq web-mode-markup-indent-offset 2))
+(use-package haskell-mode
+  :mode (("\\.hs\\'"  . haskell-mode)
+		 ("\\.lhs\\'" . haskell-mode)
+		)
+)
+
+(use-package yaml-mode
+  :mode (("\\.yaml\\'" . yaml-mode)
+		 ("\\.yml\\'"  . yaml-mode)
+		)
+)
+
+(use-package markdown-mode
+  :mode "\\.md\\'"
+)
+
+(use-package js2-mode
+  :mode "\\.js\\'"
+)
 
 (use-package json-mode
   :mode "\\.json\\'"
-  :config (add-hook 'json-mode-hook (lambda ()
-                                      (make-local-variable 'js-indent-level)
-                                      (setq js-indent-level 2))))
+)
+
+(use-package web-mode
+  :mode (("\\.html\\'"       . web-mode)
+         ("\\.html\\.erb\\'" . web-mode)
+         ("\\.mustache\\'"   . web-mode)
+         ("\\.jinja\\'"      . web-mode)
+         ("\\.php\\'"        . web-mode)
+		 ("\\.dot\\'"        . web-mode)
+		)
+  :config
+  (setq web-mode-enable-css-colorization t)
+  (setq web-mode-code-indent-offset      2)
+  (setq web-mode-markup-indent-offset    4)
+)
