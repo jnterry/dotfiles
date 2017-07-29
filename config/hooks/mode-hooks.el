@@ -25,7 +25,9 @@
 			   )
 		 )
   (add-hook hook 'flyspell-mode)
-)
+  )
+
+(setq ispell-personal-dictionary "~/.emacs.d/flyspell_personal_dictionary")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
