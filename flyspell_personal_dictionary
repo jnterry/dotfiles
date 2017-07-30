@@ -1,2 +1,14 @@
-personal_ws-1.1 en 1 
+personal_ws-1.1 en 13 
+const
+sqlite
+adapter
+emacs
+TODO
 config
+chai
+mysql
+truthy
+localhost
+performant
+customisations
+sql
