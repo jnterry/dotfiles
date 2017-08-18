@@ -2,6 +2,14 @@
   :mode "\\Dockerfile\\'"
 )
 
+(use-package puppet-mode
+  :mode "\\.pp\\'"
+  :config
+  (setq puppet-indent-level     4)
+  (setq puppet-indent-tabs-mode t)
+
+)
+
 (use-package haskell-mode
   :mode (("\\.hs\\'"  . haskell-mode)
 		 ("\\.lhs\\'" . haskell-mode)
