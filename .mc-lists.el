@@ -8,6 +8,7 @@
 		indent-for-tab-command
 		overwrite-mode
 		sh-assignment
+		org-end-of-line
 		))
 
 (setq mc/cmds-to-run-once
