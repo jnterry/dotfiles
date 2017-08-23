@@ -6,9 +6,11 @@
 		electric-newline-and-maybe-indent
 		end-of-visual-line
 		indent-for-tab-command
+		org-end-of-line
 		overwrite-mode
 		sh-assignment
-		org-end-of-line
+		yaml-electric-backspace
+		yaml-electric-dash-and-dot
 		))
 
 (setq mc/cmds-to-run-once
