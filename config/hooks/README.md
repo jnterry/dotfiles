@@ -1,1 +1,0 @@
-Contains definitions of various hooks, IE, actions to perform in response to certain events

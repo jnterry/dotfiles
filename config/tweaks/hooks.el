@@ -1,7 +1,10 @@
 (add-hook 'emacs-startup-hook
 		  (lambda () (
-					  (neotree)                 ;; Start with neotree open
 					  (global-visual-line-mode) ;; Always use visual-line-mode
 					  )
 			)
 		  )
+
+
+;; Delete whitespace at end of lines
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
