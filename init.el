@@ -26,7 +26,8 @@
   (require 'use-package)
   (require 'bind-key)
   (require 'diminish)
-  (setq use-package-always-ensure t))
+  (setq use-package-always-ensure t)
+)
 
 ;; Don't save emacs generated customisations in this file since
 ;; this file is tracked by git
@@ -37,8 +38,14 @@
 (add-to-list 'load-path "~/.emacs.d/config/")
 (add-to-list 'load-path "~/.emacs.d/config/ext/")
 
-;; Load individual setup files
-(load "ext/dracula-theme")
+(use-package dracula-theme
+  :init (load-theme 'dracula t)
+  ;; Dracula-theme
+  ;; Jazz-theme
+  ;; Ample-theme
+  ;; Junio
+  :ensure t
+)
 
 ;; Load config directories
 (load "ext/load-directory")
