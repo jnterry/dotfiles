@@ -42,21 +42,9 @@
          ("\\.mustache\\'"   . web-mode)
          ("\\.jinja\\'"      . web-mode)
          ("\\.php\\'"        . web-mode)
-		 ("\\.dot\\'"        . web-mode)
-		 ("\\.vue\\'"        . web-mode)
+				 ("\\.dot\\'"        . web-mode)
+				 ("\\.vue\\'"        . web-mode)
 		)
   :config
   (setq web-mode-enable-css-colorization t)
-  (setq web-mode-code-indent-offset      2)
-  (setq web-mode-css-indent-offset       2)
-  (setq web-mode-markup-indent-offset    2)
-  (setq tab-width                        2)
-  (setq-default tab-width                2)
-  :init
-  (add-hook 'after-init-hook
-						(lambda ()
-							; (web-mode-use-tabs)
-							(set-variable tab-width 2)
-						)
-	)
 )
