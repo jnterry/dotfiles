@@ -3,17 +3,19 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-		electric-newline-and-maybe-indent
-		end-of-visual-line
-		indent-for-tab-command
-		org-end-of-line
-		overwrite-mode
-		sh-assignment
-		yaml-electric-backspace
-		yaml-electric-dash-and-dot
-		))
+				electric-newline-and-maybe-indent
+				end-of-visual-line
+				indent-for-tab-command
+				keyboard-escape-quit
+				org-end-of-line
+				overwrite-mode
+				sh-assignment
+				yaml-electric-backspace
+				yaml-electric-dash-and-dot
+				beginning-of-visual-line
+				))
 
 (setq mc/cmds-to-run-once
       '(
-		mouse-set-region
-		))
+				mouse-set-region
+				))
