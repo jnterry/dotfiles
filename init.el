@@ -38,15 +38,6 @@
 (add-to-list 'load-path "~/.emacs.d/config/")
 (add-to-list 'load-path "~/.emacs.d/config/ext/")
 
-(use-package dracula-theme
-  :init (load-theme 'dracula t)
-  ;; Dracula-theme
-  ;; Jazz-theme
-  ;; Ample-theme
-  ;; Junio
-  :ensure t
-)
-
 ;; Load config directories
 (load "ext/load-directory")
 (load-directory "~/.emacs.d/config/packages")
