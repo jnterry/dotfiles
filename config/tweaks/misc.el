@@ -15,4 +15,4 @@
 (display-time-mode 1)
 
 ;; After copy Ctrl+c in Linux X11, you can paste by `yank' in emacs
-(setq x-select-enable-clipboard t)
+(setq select-enable-clipboard t)
