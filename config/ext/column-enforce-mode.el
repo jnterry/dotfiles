@@ -11,7 +11,7 @@
 ;;           By: Jordon Biondo
 ;;     Update #: 13
 ;; URL: www.github.com/jordonbiondo/column-enforce-mode
-;; Keywords: 
+;; Keywords:
 ;; Compatibility: >= Emacs 22.1
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -52,7 +52,7 @@
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; don't judge me
-(require 'cl)
+(require 'cl-lib)
 
 (defgroup column-enforce nil
   "Highlight text that extends beyond a certain column (80 column rule)"

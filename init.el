@@ -22,7 +22,7 @@
 
 (eval-and-compile
   (defvar use-package-verbose t)
-  (require 'cl)
+  (require 'cl-lib)
   (require 'use-package)
   (require 'bind-key)
   (require 'diminish)
