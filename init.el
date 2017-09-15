@@ -43,7 +43,6 @@
 ;; Load config directories
 (load "ext/load-directory")
 (load-directory "~/.emacs.d/config/packages")
-(load-directory "~/.emacs.d/config/hooks")
 (load-directory "~/.emacs.d/config/tweaks")
 
 ;; Ensure all emacs files are byte compile so subsequent start-ups
