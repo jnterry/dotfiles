@@ -43,6 +43,7 @@
          ("\\.jinja\\'"      . web-mode)
          ("\\.php\\'"        . web-mode)
 		 ("\\.dot\\'"        . web-mode)
+		 ("\\.vue\\'"        . web-mode)
 		)
   :config
   (setq web-mode-enable-css-colorization t)
