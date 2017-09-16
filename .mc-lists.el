@@ -4,10 +4,10 @@
 (setq mc/cmds-to-run-for-all
       '(
 		electric-newline-and-maybe-indent
+		beginning-of-visual-line
 		end-of-visual-line
 		indent-for-tab-command
 		org-end-of-line
-		overwrite-mode
 		sh-assignment
 		yaml-electric-backspace
 		yaml-electric-dash-and-dot
@@ -16,4 +16,5 @@
 (setq mc/cmds-to-run-once
       '(
 		mouse-set-region
+		overwrite-mode
 		))
