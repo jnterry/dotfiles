@@ -22,11 +22,12 @@
 
 (eval-and-compile
   (defvar use-package-verbose t)
-  (require 'cl)
+  (require 'cl-lib)
   (require 'use-package)
   (require 'bind-key)
   (require 'diminish)
-  (setq use-package-always-ensure t))
+  (setq use-package-always-ensure t)
+)
 
 ;; Don't save emacs generated customisations in this file since
 ;; this file is tracked by git
@@ -37,13 +38,9 @@
 (add-to-list 'load-path "~/.emacs.d/config/")
 (add-to-list 'load-path "~/.emacs.d/config/ext/")
 
-;; Load individual setup files
-(load "ext/dracula-theme")
-
 ;; Load config directories
 (load "ext/load-directory")
 (load-directory "~/.emacs.d/config/packages")
-(load-directory "~/.emacs.d/config/hooks")
 (load-directory "~/.emacs.d/config/tweaks")
 
 ;; Ensure all emacs files are byte compile so subsequent start-ups

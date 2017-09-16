@@ -15,6 +15,5 @@
 
 (setq mc/cmds-to-run-once
       '(
-		mouse-set-region
-		overwrite-mode
-		))
+				mouse-set-region
+				))

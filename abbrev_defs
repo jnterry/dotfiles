@@ -83,28 +83,7 @@ namespace xen{
 
 (define-abbrev-table 'org-export-stack-mode-abbrev-table '())
 
-(define-abbrev-table 'org-mode-abbrev-table
-  '(
-    ("@blkd" "#+BEGIN_DEFINITION
-
-#+END_DEFINITION" nil 0)
-    ("@blke" "#+BEGIN_EQUATION
-
-#+END_EQUATION" nil 2)
-    ("@blkl" "#+BEGIN_LATEX
-
-#+END_LATEX" nil 0)
-	("@blkc" "#+BEGIN_COLLAPSE
-
-#+END_COLLAPSE" nil 0)
-    ("@blkq" "#+BEGIN_QUOTE
-
-#+END_QUOTE" nil 0)
-    ("@blkr" "#+RESULTS:" nil 0)
-    ("@blks" "#+BEGIN_SRC
-
-#+END_SRC" nil 0)
-   ))
+(define-abbrev-table 'org-mode-abbrev-table '())
 
 (define-abbrev-table 'outline-mode-abbrev-table '())
 
