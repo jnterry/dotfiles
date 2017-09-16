@@ -1,10 +1,12 @@
-personal_ws-1.1 en 14 
+personal_ws-1.1 en 16 
 const
 sqlite
 adapter
 emacs
+PRERELEASE
 todo
-TODO
+combinator
+parsimmon
 config
 chai
 mysql
