@@ -5,7 +5,7 @@
 (use-package puppet-mode
   :mode "\\.pp\\'"
   :config
-  (setq puppet-indent-level     4)
+  (setq puppet-indent-level     2)
   (setq puppet-indent-tabs-mode t)
 
 )
