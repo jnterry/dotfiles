@@ -25,7 +25,10 @@
 								 ("perl" . perl)
 								 )
 								)
-	  )
+			)
+
+(add-hook 'org-mode-hook 'visual-line-mode)
+(add-hook 'org-mode-hook 'adaptive-wrap-prefix-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add characters to expand into #+BEGIN #+END blocks with <c then tab
