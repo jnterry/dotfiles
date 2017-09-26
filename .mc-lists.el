@@ -8,9 +8,11 @@
 				end-of-visual-line
 				indent-for-tab-command
 				keyboard-escape-quit
+				org-cycle
 				org-end-of-line
 				org-self-insert-command
 				overwrite-mode
+				puppet-interpolate
 				sh-assignment
 				smarter-move-beginning-of-line
 				yaml-electric-backspace
