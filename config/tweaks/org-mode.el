@@ -32,3 +32,45 @@
 (add-hook 'org-shiftleft-final-hook 'windmove-left)
 (add-hook 'org-shiftdown-final-hook 'windmove-down)
 (add-hook 'org-shiftright-final-hook 'windmove-right)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Add characters to expand into #+BEGIN #+END blocks with <c then tab
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(set-variable 'org-structure-template-alist ()) ;; remove defaults
+
+(add-to-list 'org-structure-template-alist
+						 '(
+							 "d"
+							 "#+BEGIN_DEFINITION\n?\n#+END_DEFINITION\n" ""
+							 )
+						 )
+(add-to-list 'org-structure-template-alist
+						 '(
+							 "e"
+							 "#+BEGIN_EQUATION\n?\n#+END_EQUATION\n" ""
+							 )
+						 )
+(add-to-list 'org-structure-template-alist
+						 '(
+							 "s"
+							 "#+BEGIN_SRC ?\n\n#+END_SRC\n" ""
+							 )
+						 )
+(add-to-list 'org-structure-template-alist
+						 '(
+							 "q"
+							 "#+BEGIN_QUOTE\n?\n#+END_QUOTE\n" ""
+							 )
+						 )
+(add-to-list 'org-structure-template-alist
+						 '(
+							 "n"
+							 "#+BEGIN_SIDENOTE\n?\n#+END_SIDENOTE\n" ""
+							 )
+						 )
+(add-to-list 'org-structure-template-alist
+						 '(
+							 "c"
+							 "#+BEGIN_COLLAPSE ?\n\n#+END_COLLAPSE\n" ""
+							 )
+						 )
