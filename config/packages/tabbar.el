@@ -13,6 +13,15 @@
 (global-set-key (kbd "M-[") 'tabbar-backward-tab)
 (global-set-key (kbd "M-]") 'tabbar-forward-tab )
 
+
+(defun kill-other-buffers ()
+      "Kills buffers but the current"
+      (interactive)
+      (mapc 'kill-buffer (delq (current-buffer) (delq (neotree) (buffer-list))))
+)
+
+(global-set-key (kbd "<M-f3>") 'kill-other-buffers)
+
 ;; Make all tabs be displayed in single group, hence can see all open buffers at once
 ;; Groups:
 ;;  - user  - all user created buffers
