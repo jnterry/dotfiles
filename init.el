@@ -36,10 +36,14 @@
 
 ;; Add load paths
 (add-to-list 'load-path "~/.emacs.d/config/")
-(add-to-list 'load-path "~/.emacs.d/config/ext/")
 
 ;; Load config directories
-(load "ext/load-directory")
+(defun load-directory (dir)
+  (let ((load-it (lambda (f)
+		   (load-file (concat (file-name-as-directory dir) f)))
+		 ))
+    (mapc load-it (directory-files dir nil "\\.el$"))))
+
 (load-directory "~/.emacs.d/config/packages")
 (load-directory "~/.emacs.d/config/tweaks")
 

@@ -1,6 +1,4 @@
-(load "ext/column-enforce-mode")
-
-(use-package column-enforce
+(use-package column-enforce-mode
   :config
 	(setq column-enforce-column 80)
 	:init
