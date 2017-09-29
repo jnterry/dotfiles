@@ -38,7 +38,7 @@
 (add-to-list 'org-structure-template-alist
 						 '(
 							 "d"
-							 "#+BEGIN_DEFINITION\n?\n#+END_DEFINITION\n" ""
+							 "#+BEGIN_DEFINITION ?\n\n#+END_DEFINITION\n" ""
 							 )
 						 )
 (add-to-list 'org-structure-template-alist
