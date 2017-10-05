@@ -4,6 +4,10 @@
 (setq mc/cmds-to-run-for-all
       '(
 				beginning-of-visual-line
+				c-electric-brace
+				c-electric-paren
+				c-electric-slash
+				c-indent-line-or-region
 				electric-newline-and-maybe-indent
 				end-of-visual-line
 				indent-for-tab-command
