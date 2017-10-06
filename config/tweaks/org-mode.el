@@ -43,6 +43,12 @@
 						 )
 (add-to-list 'org-structure-template-alist
 						 '(
+							 "b"
+							 "#+BEGIN_BOX ?\n\n#+END_BOX\n" ""
+							 )
+						 )
+(add-to-list 'org-structure-template-alist
+						 '(
 							 "e"
 							 "#+BEGIN_EQUATION\n?\n#+END_EQUATION\n" ""
 							 )
