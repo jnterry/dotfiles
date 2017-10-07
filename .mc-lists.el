@@ -14,6 +14,7 @@
 				keyboard-escape-quit
 				org-cycle
 				org-end-of-line
+				org-force-self-insert
 				org-self-insert-command
 				overwrite-mode
 				puppet-interpolate
