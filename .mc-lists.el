@@ -5,8 +5,12 @@
       '(
 				beginning-of-visual-line
 				c-electric-brace
+				c-electric-lt-gt
 				c-electric-paren
+				c-electric-pound
+				c-electric-semi&comma
 				c-electric-slash
+				c-electric-star
 				c-indent-line-or-region
 				electric-newline-and-maybe-indent
 				end-of-visual-line
@@ -16,6 +20,7 @@
 				org-end-of-line
 				org-force-self-insert
 				org-self-insert-command
+				org-yank
 				overwrite-mode
 				puppet-interpolate
 				sh-assignment
@@ -26,6 +31,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+				kill-region
 				mouse-set-region
 				org-insert-heading-respect-content
 				))
