@@ -53,4 +53,11 @@
 	:mode (("\\.rb\\'"      . ruby-mode)
 				 ("\\.vagrant\\'" . ruby-mode)
 				 )
-	)
+)
+
+
+(use-package verilog-mode
+       :mode (("\\.v\\'" . verilog-mode))
+       :config
+       (clear-abbrev-table verilog-mode-abbrev-table)
+)
