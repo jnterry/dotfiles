@@ -13,6 +13,9 @@
 				c-electric-star
 				c-indent-line-or-region
 				electric-newline-and-maybe-indent
+				electric-verilog-colon
+				electric-verilog-semi
+				electric-verilog-tab
 				end-of-visual-line
 				indent-for-tab-command
 				keyboard-escape-quit
