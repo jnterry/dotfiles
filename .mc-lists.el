@@ -5,6 +5,7 @@
       '(
 				beginning-of-visual-line
 				c-electric-brace
+				c-electric-colon
 				c-electric-lt-gt
 				c-electric-paren
 				c-electric-pound
@@ -16,7 +17,9 @@
 				electric-verilog-colon
 				electric-verilog-semi
 				electric-verilog-tab
+				electric-verilog-tick
 				end-of-visual-line
+				ignore
 				indent-for-tab-command
 				keyboard-escape-quit
 				org-cycle
@@ -28,6 +31,7 @@
 				puppet-interpolate
 				sh-assignment
 				smarter-move-beginning-of-line
+				tabbar-select-tab-callback
 				yaml-electric-backspace
 				yaml-electric-dash-and-dot
 				))
