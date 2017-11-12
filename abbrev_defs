@@ -1,6 +1,8 @@
 ;;-*-coding: utf-8;-*-
 (define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
 
+(define-abbrev-table 'Custom-mode-abbrev-table '())
+
 (define-abbrev-table 'Info-edit-mode-abbrev-table '())
 
 (define-abbrev-table 'awk-mode-abbrev-table
@@ -23,7 +25,13 @@
 
 (define-abbrev-table 'completion-list-mode-abbrev-table '())
 
+(define-abbrev-table 'diff-mode-abbrev-table '())
+
+(define-abbrev-table 'display-time-world-mode-abbrev-table '())
+
 (define-abbrev-table 'edit-abbrevs-mode-abbrev-table '())
+
+(define-abbrev-table 'elisp-byte-code-mode-abbrev-table '())
 
 (define-abbrev-table 'emacs-lisp-byte-code-mode-abbrev-table '())
 
@@ -31,12 +39,14 @@
 
 (define-abbrev-table 'fundamental-mode-abbrev-table '())
 
+(define-abbrev-table 'gfm-mode-abbrev-table '())
+
 (define-abbrev-table 'global-abbrev-table
   '(
+    ("////" "/////////////////////////////////////////////////////////////////////" nil 4)
     ("dxb" "/////////////////////////////////////////////////////////////////////
 /// \\brief
-/////////////////////////////////////////////////////////////////////" nil 4)
-    ("////" "/////////////////////////////////////////////////////////////////////" nil 4)
+/////////////////////////////////////////////////////////////////////" nil 13)
     ("xenh" "////////////////////////////////////////////////////////////////////////////
 ///                      Part of Xeno Engine                             ///
 ////////////////////////////////////////////////////////////////////////////
@@ -57,6 +67,24 @@ namespace xen{
 
 #endif
 " nil 3)
+  ("pteh" "////////////////////////////////////////////////////////////////////////////
+///                      Part of Project Tempo                           ///
+////////////////////////////////////////////////////////////////////////////
+/// \\file
+/// \\author Jamie Terry
+/// \\date
+/// \\brief
+////////////////////////////////////////////////////////////////////////////
+
+#ifndef TEMPO__HPP
+#define TEMPO__HPP
+
+namespace tempo{
+
+}
+
+#endif
+" nil 3)
    ))
 
 (define-abbrev-table 'help-mode-abbrev-table '())
@@ -68,6 +96,8 @@ namespace xen{
    ))
 
 (define-abbrev-table 'lisp-mode-abbrev-table '())
+
+(define-abbrev-table 'markdown-mode-abbrev-table '())
 
 (define-abbrev-table 'messages-buffer-mode-abbrev-table '())
 
@@ -103,6 +133,14 @@ namespace xen{
 
 (define-abbrev-table 'text-mode-abbrev-table '())
 
+(define-abbrev-table 'url-cookie-mode-abbrev-table '())
+
 (define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-git-region-history-mode-abbrev-table '())
+
+(define-abbrev-table 'verilog-mode-abbrev-table '())
+
+(define-abbrev-table 'vhdl-mode-abbrev-table '())
