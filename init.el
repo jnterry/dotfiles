@@ -36,6 +36,7 @@
 
 ;; Add load paths
 (add-to-list 'load-path "~/.emacs.d/config/")
+(add-to-list 'load-path "~/.emacs.d/ext/")
 
 ;; Load config directories
 (defun load-directory (dir)
