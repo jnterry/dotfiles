@@ -1,4 +1,4 @@
-personal_ws-1.1 en 267 
+personal_ws-1.1 en 277 
 leftarrow
 preceeded
 grep
@@ -26,6 +26,7 @@ GPUs
 Nyquist
 twocolumn
 emacs
+Centos
 SRC
 intrinsics
 conjugacy
@@ -53,6 +54,7 @@ infiniband
 nlogn
 topsep
 Haproxy
+TPR
 Netcraft
 ShiftBy
 setlist
@@ -110,17 +112,20 @@ Luxford
 Elsley
 Waymont
 infty
+ATTR
 multicol
 hpp
 ing
 adapter
 HSL
 walltime
+glibc
 Kerstin
 qsub
 setup
 Eder
 SIDENOTE
+portably
 Guildford
 bashrc
 dataset
@@ -132,6 +137,7 @@ InstallShield
 qstat
 killall
 Tilehurst
+jpg
 combinator
 Jira
 TeamCity
@@ -155,8 +161,8 @@ enumitem
 dt
 parskip
 dx
-sqlite
 overfit
+sqlite
 frac
 notitlepage
 Archlinux
@@ -175,6 +181,7 @@ mis
 js
 endif
 jt
+detections
 namespace
 overfitting
 ffast
@@ -209,6 +216,7 @@ setlength
 MVB
 FPUs
 OpenGL
+sz
 rfoot
 BAE
 SRAM
@@ -218,6 +226,7 @@ viewable
 textasteriskcentered
 xp
 QDR
+Subtask
 Latencies
 OOP
 datax
@@ -260,6 +269,7 @@ pagestyle
 Tapeout
 XKCD
 tbc
+center
 sqrt
 todo
 vectorial
