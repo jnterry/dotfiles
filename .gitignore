@@ -6,9 +6,10 @@
 # Ignore Compiled el files
 *.elc
 
-# Ignore Emacs generated directories
+# Ignore Emacs generated directories and files
 /auto-save-list/
 /elpa/
 /url/
 /eshell/
 session.*
+tramp
