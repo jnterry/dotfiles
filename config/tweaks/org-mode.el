@@ -16,6 +16,30 @@
 ;; Lets tab work as normal in code blocks
 (setq org-src-tab-acts-natively t)
 
+;; Ensure indentation is preserved in exported src blocks
+(setq org-src-preserve-indentation t)
+
+;; Ensure SRC blocks are exported nicely when going to latex and pdf
+(setq org-latex-listings t) ;; use listings package in code exports
+(require 'ox-latex)
+(add-to-list 'org-latex-packages-alist '("" "listings")) ;; \usepackage listings
+(add-to-list 'org-latex-packages-alist '("dvipsnames" "xcolor"))    ;; \usepackage color (for syntax highlighting)
+(setq org-latex-listings-options
+			'(("basicstyle" "\\footnotesize")
+				("tabsize" "2")
+
+				("keywordstyle" "\\color{NavyBlue}")
+				("commentstyle" "\\color{OliveGreen}")
+				("stringstyle"  "\\color{Mahogany}")
+
+				;;("numberstyle" "\\tiny\\color{gray}")
+				;;("numbers" "left")
+				("numbers" "none")
+
+				("frame" "single")
+			 )
+)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org mode script blocks
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
