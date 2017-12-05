@@ -1,4 +1,4 @@
-personal_ws-1.1 en 277 
+personal_ws-1.1 en 298 
 leftarrow
 preceeded
 grep
@@ -13,6 +13,7 @@ parameterised
 vectorization
 optimizations
 Multinomial
+parallelized
 VTune
 myprog
 AWS
@@ -22,6 +23,8 @@ cgit
 intel
 Kerrison
 numpy
+subcaption
+labelfont
 GPUs
 Nyquist
 twocolumn
@@ -36,8 +39,9 @@ Sonka
 mysql
 mathcal
 toc
-DNS
 CSS
+DNS
+tmp
 gcc
 attractor
 frontend
@@ -52,9 +56,12 @@ config
 scikit
 infiniband
 nlogn
+runtimes
+runtime's
 topsep
 Haproxy
 TPR
+BlueCrystal
 Netcraft
 ShiftBy
 setlist
@@ -101,14 +108,18 @@ pragram
 Penrose
 Zarola
 VueJS
+pragma
 vue
 fancyvrb
 unoptimised
+worksharing
 SIMD
 HPC
 performant
+runtime
 color
 Luxford
+diag
 Elsley
 Waymont
 infty
@@ -123,9 +134,9 @@ glibc
 Kerstin
 qsub
 setup
+portably
 Eder
 SIDENOTE
-portably
 Guildford
 bashrc
 dataset
@@ -137,15 +148,19 @@ InstallShield
 qstat
 killall
 Tilehurst
+numa
 jpg
+captionsetup
 combinator
 Jira
 TeamCity
 localhost
 cd
+itr
 cmpl
 parindent
 propto
+Optimization
 Uzbeki
 unmaintainable
 max
@@ -188,6 +203,7 @@ ffast
 lm
 nd
 vectorized
+labelsep
 ne
 Dimensionality
 borked
@@ -223,6 +239,8 @@ SRAM
 vs
 gmon
 viewable
+omp
+OMP
 textasteriskcentered
 xp
 QDR
@@ -250,6 +268,7 @@ RGB
 ALU's
 ppn
 parallelization
+parallelizing
 pre
 ALU
 Bim
@@ -258,10 +277,11 @@ textfloatsep
 lhead
 PSF
 thepage
+struct
 Arduinos
 noitemsep
-CMake
 cmake
+CMake
 cgi
 ModelSim
 RHS
@@ -276,3 +296,4 @@ vectorial
 qteaching
 SGI
 parameterisation
+PROC
