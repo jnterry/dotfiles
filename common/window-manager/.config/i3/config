@@ -153,6 +153,9 @@ bindsym XF86AudioPrev  exec playerctl previous
 # Start up polybar
 exec ~/.config/polybar/launch_polybar.sh
 
+# Set background
+exec feh --bg-scale ~/.config/i3/background.jpg
+
 # Set keyrepreat rate to faster than default
 #         repeat rate delay(ms) #/second
 exec xset r      rate       250       30
