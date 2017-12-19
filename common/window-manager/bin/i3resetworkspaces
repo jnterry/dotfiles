@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-i3emptyworkspace 1
 i3emptyworkspace 2
 i3emptyworkspace 3
+i3emptyworkspace 4
 
-i3-msg "workspace 1; append_layout ~/.config/i3/layouts/full-emacs.json;\
- 			  workspace 2; append_layout ~/.config/i3/layouts/full-terminal.json;\
-				workspace 3; append_layout ~/.config/i3/layouts/full-browser.json"
+i3-msg "workspace 2; append_layout ~/.config/i3/layouts/full-emacs.json;\
+ 			  workspace 3; append_layout ~/.config/i3/layouts/full-terminal.json;\
+				workspace 4; append_layout ~/.config/i3/layouts/full-browser.json"
 
 emacs &
 terminator &
