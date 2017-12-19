@@ -31,9 +31,13 @@
 				puppet-interpolate
 				sh-assignment
 				smarter-move-beginning-of-line
+				specman-activate-indent
 				specman-insert-bracket-closer
 				specman-insert-bracket-opener
+				specman-insert-curly-closer
 				specman-insert-gt
+				specman-insert-parens-closer
+				specman-insert-parens-opener
 				specman-remove-tab
 				tabbar-select-tab-callback
 				yaml-electric-backspace
