@@ -44,17 +44,21 @@
          ("\\.php\\'"        . web-mode)
 				 ("\\.dot\\'"        . web-mode)
 				 ("\\.vue\\'"        . web-mode)
-		)
+				)
   :config
   (setq web-mode-enable-css-colorization t)
-	)
+)
 
 (use-package ruby-mode
 	:mode (("\\.rb\\'"      . ruby-mode)
 				 ("\\.vagrant\\'" . ruby-mode)
-				 )
+				)
 )
 
+(use-package markdown-mode
+	:mode (("\\.md\\'"      . markdown-mode)
+				)
+)
 
 (use-package verilog-mode
        :mode (("\\.v\\'" . verilog-mode))
