@@ -1,9 +1,11 @@
-personal_ws-1.1 en 298 
+personal_ws-1.1 en 307 
 leftarrow
+SHL
 preceeded
 grep
 chai
 math
+SHR
 cmd
 noindent
 lnodes
@@ -22,8 +24,8 @@ dir
 cgit
 intel
 Kerrison
-numpy
 subcaption
+numpy
 labelfont
 GPUs
 Nyquist
@@ -39,8 +41,8 @@ Sonka
 mysql
 mathcal
 toc
-CSS
 DNS
+CSS
 tmp
 gcc
 attractor
@@ -56,8 +58,8 @@ config
 scikit
 infiniband
 nlogn
-runtimes
 runtime's
+runtimes
 topsep
 Haproxy
 TPR
@@ -154,6 +156,7 @@ captionsetup
 combinator
 Jira
 TeamCity
+GridPosition
 localhost
 cd
 itr
@@ -173,6 +176,7 @@ unclosed
 rhead
 const
 enumitem
+SpecMan
 dt
 parskip
 dx
@@ -193,6 +197,7 @@ HW
 le
 jnbe
 mis
+OpenMP's
 js
 endif
 jt
@@ -218,6 +223,7 @@ RG
 Arduino
 proxied
 truthy
+BFM's
 username
 sh
 LaTex
@@ -232,7 +238,9 @@ setlength
 MVB
 FPUs
 OpenGL
+NOP
 sz
+testcase
 rfoot
 BAE
 SRAM
@@ -240,7 +248,6 @@ vs
 gmon
 viewable
 omp
-OMP
 textasteriskcentered
 xp
 QDR
@@ -249,6 +256,7 @@ Latencies
 OOP
 datax
 RBF
+LevelManager
 sqdiff
 hyphenpenalty
 XY
@@ -262,6 +270,7 @@ OpenMP
 reqX
 SciSys
 qquad
+BFM
 hyperparameters
 DeadOutputs
 RGB
@@ -280,8 +289,8 @@ thepage
 struct
 Arduinos
 noitemsep
-cmake
 CMake
+cmake
 cgi
 ModelSim
 RHS
