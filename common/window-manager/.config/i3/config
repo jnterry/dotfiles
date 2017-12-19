@@ -10,6 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $alt Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -104,6 +105,12 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+# Move workspace to another monitor
+bindsym $mod+$alt+Left  move workspace to output left
+bindsym $mod+$alt+Right move workspace to output right
+bindsym $mod+$alt+Down  move workspace to output down
+bindsym $mod+$alt+Up    move workspace to output up
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
