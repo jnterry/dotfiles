@@ -25,7 +25,7 @@
   (require 'cl-lib)
   (require 'use-package)
   (require 'bind-key)
-  (require 'diminish)
+;;  (require 'diminish)
   (setq use-package-always-ensure t)
 )
 
