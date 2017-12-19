@@ -47,6 +47,9 @@ bindsym $mod+d exec dmenu_run
 # Hide borders
 hide_edge_borders none
 
+# Printscreen
+bindsym --release Print exec "i3screenshot"
+
 # change focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
