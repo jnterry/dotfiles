@@ -1,0 +1,7 @@
+{
+  "swallows": [
+    {
+			"class": "^X\\-terminal\\-emulator|Terminator$"
+    }
+  ]
+}
