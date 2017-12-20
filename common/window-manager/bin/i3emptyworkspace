@@ -1,3 +1,17 @@
 #!/usr/bin/env bash
+#
+# Script which empties the contents of a particular i3 workspace by killing all
+# windows within it
+#
+# Can optional specify numeric argument for the workspace to kill
+#
+# :TODO: if switching workspaces, should record what current workspace is, and
+# then switch back to current after killing the other
 
-i3-msg "workspace ${1}; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; kill "
+set -e
+
+if [[ ${@} > 1 ]] ; then
+		i3-msg "workspace ${1}"
+fi
+
+i3-msg "focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; focus parent; kill "
