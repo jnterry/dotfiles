@@ -148,7 +148,7 @@ bindsym XF86AudioPrev  exec playerctl previous
 exec ~/.config/polybar/launch_polybar.sh
 
 # Set background
-exec feh --bg-fill ~/.config/i3/background.png
+exec feh --bg-fill --no-xinerama ~/.config/i3/background.png
 
 # Start default programs
 exec i3resetworkspaces
