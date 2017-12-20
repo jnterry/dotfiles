@@ -39,7 +39,7 @@ bindsym $mod+Shift+q kill
 ########################################
 # Menus
 bindsym $mod+r   exec rofi -show run
-bindsym $mod+s   exec rofi -show ssh
+bindsym $mod+t   exec rofi -show ssh
 bindsym $alt+Tab exec rofi -show window
 ########################################
 
