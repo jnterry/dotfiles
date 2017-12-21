@@ -18,4 +18,4 @@
     background_type = transparent
     copy_on_selection = True
     cursor_color = "#aaaaaa"
-		show_titlebar= false
+    show_titlebar = False
