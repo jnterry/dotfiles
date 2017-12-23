@@ -6,13 +6,18 @@ pushd $(dirname "${0}") > /dev/null
 SCRIPTDIR=$(pwd -L)
 popd > /dev/null
 
+STOW_CMD='/usr/bin/stow'
+if [[ -d '/usr/bin/stowforce' ]] ; then
+	STOW_CMD='/usr/bin/stow'
+fi
+
 #######################################
 # Install common files
 cd ${SCRIPTDIR}/common
 for d in `ls -d */`;
 do	
 	printf "Installing %32s : " $d
-	( /usr/bin/stowforce $d --target $HOME )
+	$STOW_CMD $d --target $HOME
 	printf "Done\n"
 done
 
@@ -24,7 +29,7 @@ if [[ -d ${HOSTDIR} ]] ; then
 	for d in `ls -d */`;
 	do
 		printf "Installing %32s : " $d
-		( /usr/bin/stowforce $d --target $HOME )
+		$STOW_CMD $d --target $HOME
 		printf "Done\n"
 	done
 fi
