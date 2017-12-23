@@ -7,8 +7,8 @@ SCRIPTDIR=$(pwd -L)
 popd > /dev/null
 
 STOW_CMD='/usr/bin/stow'
-if [[ -d '/usr/bin/stowforce' ]] ; then
-	STOW_CMD='/usr/bin/stow'
+if [[ -f '/usr/bin/stowforce' ]] ; then
+	STOW_CMD='/usr/bin/stowforce'
 fi
 
 #######################################
