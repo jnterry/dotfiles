@@ -28,19 +28,3 @@ if [[ -d ${HOSTDIR} ]] ; then
 				printf "Done\n"
 		done
 fi
-
-#######################################
-# Install dependencies
-if   [ `command -v apt` ]
-then
-		sudo apt install xclip scrot
-elif [ `command -v yum` ]
-then
-		sudo yum install xclip scrot
-elif [ `command -v pacman` ]
-then
-		sudo pacman -S xclip scrot
-else
-		echo "Failed to find suiable package manager with which to install dependencies"
-		exit 1
-fi
