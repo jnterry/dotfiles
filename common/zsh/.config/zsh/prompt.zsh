@@ -23,6 +23,8 @@ setopt PROMPT_SUBST
 # and re-usable to draw segmented prompts
 CURRENT_BG='NONE'
 
+source ~/.config/zsh/git_status/zshrc.sh
+
 # Special Powerline characters
 () {
 		local LC_ALL="" LC_CTYPE="en_US.UTF-8"
@@ -72,26 +74,13 @@ prompt_host() {
 		prompt_segment 18 text_color "$(hostname) "
 }
 
+prompt_jobs() {
+		prompt_segment 31 white " jobs: \$(jobs -l | wc -l) "
+}
+
 prompt_dir() {
-		# We don't want super long path names
-		#
-		# Instead we will show a simple indicator (in $HOME or not) followed by the
-		# last component of the path
-
-		# The home inidcator will print:
-		# ~ if cwd is subdirectory of $HOME
-		# / if cwd is subdirectory of root
-		#              get cwd   replace $HOME with ~     replace anything other than just ~
-		root_indicator='`pwd    | sed "s:^$HOME.*:~:"   |  sed "s:^[^~].*$:/:"`'
-
-		# Get the last component of the path
-		# But if we are in home or root dont print anything,
-		# since thats already shown by root_indicator
-		#basename_indicator='`basename "$(pwd | sed "s:^$HOME$::" | sed "s:^/$::")"`'
-		basename_indicator='`pwd | sed "s:^${HOME}/?::" | sed "s:^/$::"`'
-
-		prompt_segment 31  white " $root_indicator "
-		prompt_segment 117 black "$basename_indicator"
+		# Write directory name, but replace a leading $HOME path with ~
+		prompt_segment 117 black " \$(pwd | sed 's:^$HOME:~:') "
 }
 
 prompt_git() {
@@ -100,48 +89,47 @@ prompt_git() {
 		echo "$branch_name"
 }
 
-# Status:
-# - was there an error
-# - am I root
-# - are there background jobs?
-prompt_status() {
-  local symbols
-  symbols=()
-  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘"
-  [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
-  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
-
-  [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
-}
-
 ## Main prompt
 build_title_left() {
-		#RETVAL=$?
-		#prompt_status
-		#prompt_virtualenv
-		#prompt_context
-		#prompt_dir
-		#prompt_git
-		#prompt_bzr
-		#prompt_hg
-		#prompt_end
-
 		prompt_host
+		prompt_jobs
 		prompt_dir
 		prompt_end
 }
 
 build_title_right() {
-	  prompt_git
+	  echo '$(git_super_status)'
 }
 
 build_prompt() {
-		printf '$(tput bold)$(whoami) ❯$(tput sgr0)'
+		printf '$(whoami) ❯'
 }
 
 
 print_prompt() {
+		# Here we print the prompt
+		# The trick to getting some text right aligned is:
+		# 1. Print the right text full width
+		#    - This is done with %*s -> * means width is specified by another argument
+		#    - which we fill in with the total number of columns, determined with "tput cols"
+		# 2. Use \r (caridge return) to go back to start of line (but not to the next line)
+		# 3. Print the left text
+		#
 	  echo "\$(printf '%*s\r%s\n%s' \$(tput cols) \"$(build_title_right)\" \"$(build_title_left)\" \"$(build_prompt)\")"
+
+		# :TODO: the git status text is currently not completely right aligned -
+		# but is instead just near the right (but by varing amounts, so can't
+		# correct with a constant)
+		# I think this is due to formatting characters taking up "space" in terms of
+		# character count but not visually.
+		# Theoretically can wrap in %{...%} to make zsh think it takes 0 width, but
+		# that seems to be broken... (maybe its not being escaped into the final string?)
+		# https://unix.stackexchange.com/a/90876
+
+		# can also set RPROMPT to have zsh auto print something on the right, but
+		# that seems to suffer from the same problem of format characters taking up space
+		# Additionally it is printed on the second line when LHS prompt contains a new-line
+		# character (as ours does)
 }
 
 PROMPT="$(print_prompt) "
