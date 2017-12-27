@@ -1,4 +1,4 @@
-personal_ws-1.1 en 307 
+personal_ws-1.1 en 315 
 leftarrow
 SHL
 preceeded
@@ -7,6 +7,7 @@ chai
 math
 SHR
 cmd
+dia
 noindent
 lnodes
 Javascript
@@ -37,6 +38,7 @@ intrinsics
 conjugacy
 sql
 SPS
+bmatrix
 Sonka
 mysql
 mathcal
@@ -69,6 +71,7 @@ ShiftBy
 setlist
 MEng
 GCSE
+arctan
 frequentist
 Minigames
 fancyhf
@@ -104,6 +107,7 @@ GMM
 Wix
 fancyhdr
 PRERELEASE
+Sobel
 qdel
 bigstar
 pragram
@@ -123,6 +127,7 @@ color
 Luxford
 diag
 Elsley
+hor
 Waymont
 infty
 ATTR
@@ -176,6 +181,7 @@ unclosed
 rhead
 const
 enumitem
+Prewitt
 SpecMan
 dt
 parskip
@@ -189,6 +195,7 @@ NEC
 Verilog
 ivdep
 Optimize
+butterworth's
 Obscura
 addtolength
 COMS
@@ -251,6 +258,7 @@ omp
 textasteriskcentered
 xp
 QDR
+nabla
 Subtask
 Latencies
 OOP
