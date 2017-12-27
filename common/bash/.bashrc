@@ -130,3 +130,5 @@ export PATH="/home/jamie/bin/miniconda3/bin:$PATH"
 
 export PATH="/opt/intel/vtune_amplifier_2018/bin64:$PATH"
 export PATH=~/bin/tau-2.27/x86_64/bin:${PATH}
+
+export PATH="~/bin:$PATH"
