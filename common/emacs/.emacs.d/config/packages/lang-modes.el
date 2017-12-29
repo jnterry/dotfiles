@@ -37,13 +37,13 @@
 )
 
 (use-package web-mode
-  :mode (("\\.html\\'"       . web-mode)
-         ("\\.html\\.erb\\'" . web-mode)
+  :mode (("\\.html\\.erb\\'" . web-mode)
          ("\\.mustache\\'"   . web-mode)
          ("\\.jinja\\'"      . web-mode)
          ("\\.php\\'"        . web-mode)
-				 ("\\.dot\\'"        . web-mode)
 				 ("\\.vue\\'"        . web-mode)
+				 ("\\.html\\'"       . html-mode)
+				 ("\\.dot\\'"        . html-mode)
 				)
   :config
   (setq web-mode-enable-css-colorization t)
