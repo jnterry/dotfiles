@@ -9,3 +9,6 @@ for f in `ls ${ZSH_CONFIG_DIR} | grep \.sh$`
 do
 		source ${ZSH_CONFIG_DIR}$f
 done
+
+# Add z command to jump to recently used directories
+source "$HOME/bin/z.sh"
