@@ -7,7 +7,7 @@ SAVEHIST=10000
 bindkey -e
 
 # Ensure we include bin in the path
-export PATH="~/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 ZSH_CONFIG_DIR=$HOME/.config/zsh/
 for f in `ls ${ZSH_CONFIG_DIR} | grep \.sh$`
