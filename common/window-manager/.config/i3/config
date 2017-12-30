@@ -50,7 +50,7 @@ bindsym $alt+Tab exec rofi -show window
 hide_edge_borders none
 
 # Printscreen
-bindsym --release Print exec "i3screenshot"
+bindsym --release Print exec "$HOME/bin/i3screenshot"
 
 # change focus
 bindsym $mod+Left focus left
