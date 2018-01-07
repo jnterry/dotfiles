@@ -22,9 +22,11 @@
 				ignore
 				indent-for-tab-command
 				keyboard-escape-quit
+				kmacro-start-macro-or-insert-counter
 				org-cycle
 				org-end-of-line
 				org-force-self-insert
+				org-return-indent
 				org-self-insert-command
 				org-yank
 				overwrite-mode
