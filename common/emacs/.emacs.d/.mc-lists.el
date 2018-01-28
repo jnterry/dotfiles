@@ -23,6 +23,7 @@
 				indent-for-tab-command
 				keyboard-escape-quit
 				kmacro-start-macro-or-insert-counter
+				markdown-cycle
 				org-cycle
 				org-end-of-line
 				org-force-self-insert
@@ -51,4 +52,5 @@
 				kill-region
 				mouse-set-region
 				org-insert-heading-respect-content
+				view-order-manuals
 				))
