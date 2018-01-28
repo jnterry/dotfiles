@@ -49,6 +49,10 @@
   (setq web-mode-enable-css-colorization t)
 )
 
+(use-package less-css-mode
+	:mode "\\.less\\'"
+)
+
 (use-package ruby-mode
 	:mode (("\\.rb\\'"      . ruby-mode)
 				 ("\\.vagrant\\'" . ruby-mode)
