@@ -33,3 +33,5 @@ if [[ -d ${HOSTDIR} ]] ; then
 		printf "Done\n"
 	done
 fi
+
+exit 0
