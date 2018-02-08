@@ -42,11 +42,14 @@
          ("\\.jinja\\'"      . web-mode)
          ("\\.php\\'"        . web-mode)
 				 ("\\.vue\\'"        . web-mode)
-				 ("\\.html\\'"       . html-mode)
-				 ("\\.dot\\'"        . html-mode)
+				 ("\\.html\\'"       . web-mode)
+				 ("\\.dot\\'"        . web-mode)
 				)
   :config
   (setq web-mode-enable-css-colorization t)
+	(setq web-mode-markup-indent-offset    2)
+	(setq web-mode-css-indent-offset       2)
+	(setq web-mode-code-indent-offset      2)
 )
 
 (use-package less-css-mode
