@@ -42,6 +42,7 @@
 				specman-insert-parens-closer
 				specman-insert-parens-opener
 				specman-remove-tab
+				tabbar-backward-tab
 				tabbar-select-tab-callback
 				yaml-electric-backspace
 				yaml-electric-dash-and-dot

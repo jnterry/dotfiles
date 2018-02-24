@@ -1,4 +1,4 @@
-personal_ws-1.1 en 405 
+personal_ws-1.1 en 419
 Minigames
 pragram
 ALU
@@ -11,6 +11,7 @@ uncategorized
 bashrc
 addtolength
 endif
+quaternions
 notin
 VueJS
 frac
@@ -48,12 +49,15 @@ xtmp
 portably
 parameterisation
 soma
+backpropogation
 noitemsep
 gmon
 TeamCity
+indexable
 parameterised
 rasterisation
 Rasterisation
+validator
 cmake
 CMake
 Zerbino
@@ -97,6 +101,7 @@ forall
 chai
 hor
 grep
+Hopfield
 borked
 hpp
 chipset
@@ -112,9 +117,11 @@ SpecMan
 customisations
 cgit
 parallelization
+viewport
 runtime
 optimize
 GPUs
+Ising
 ish
 hyperparameter
 rescale
@@ -147,6 +154,7 @@ mis
 nullptr
 GUIs
 nlogn
+Purkinje
 lnodes
 backend
 Karnaugh
@@ -264,8 +272,10 @@ Postgres
 superscalar
 TPR
 overfit
+UoB
 Xeon
 Uzbeki
+rasterizer
 FDIV
 textasteriskcentered
 truthy
@@ -288,6 +298,7 @@ Wix
 optimizations
 uncountably
 rfoot
+Tweety
 lhead
 vue
 Arduino
@@ -302,6 +313,7 @@ Netcraft
 XKCD
 misclassified
 AdaBoost
+interoperability
 math
 PROC
 vectorize
@@ -314,11 +326,13 @@ dimensionality
 dt
 intrinsics
 dereferenced
+excitatory
 qteaching
 dx
 FN
 FP
 Arduinos
+ij
 perceptron
 variates
 captionsetup
