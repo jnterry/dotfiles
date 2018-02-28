@@ -73,6 +73,13 @@
        (clear-abbrev-table verilog-mode-abbrev-table)
 )
 
+(use-package glsl-mode
+       :mode (("\\.glsl\\'" . glsl-mode)
+							("\\.vert\\'" . glsl-mode)
+							("\\.frag\\'" . glsl-mode)
+				)
+)
+
 ;; (load "specman-mode")
 ;; (add-to-list 'auto-mode-alist '("\\.e\\'" . specman-mode   ))
 ;; (add-to-list 'auto-mode-alist '("\\.ecom\\'" . specman-mode))
