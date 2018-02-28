@@ -1,4 +1,4 @@
-personal_ws-1.1 en 419
+personal_ws-1.1 en 424 
 Minigames
 pragram
 ALU
@@ -54,9 +54,8 @@ noitemsep
 gmon
 TeamCity
 indexable
-parameterised
 rasterisation
-Rasterisation
+parameterised
 validator
 cmake
 CMake
@@ -131,6 +130,7 @@ optimization
 itr
 covariance
 max
+Hebbian
 lim
 LHS
 unoptimised
@@ -157,6 +157,7 @@ nlogn
 Purkinje
 lnodes
 backend
+unhandled
 Karnaugh
 DeadOutputs
 worksharing
@@ -202,6 +203,7 @@ iteratively
 overfitting
 orm
 Sobel
+normals
 RGB
 cmpl
 ifndef
@@ -320,6 +322,8 @@ vectorize
 Hlavac
 qquad
 cd
+emissive
+templated
 intel
 eg
 dimensionality
@@ -416,5 +420,6 @@ Renishaw
 usepackage
 itemize
 detections
+renderer
 BFM
 qsub
