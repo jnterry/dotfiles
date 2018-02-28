@@ -58,7 +58,7 @@
 #ifndef XEN__HPP
 #define XEN__HPP
 
-namespace xen{
+namespace xen {
 
 }
 
@@ -73,7 +73,7 @@ namespace xen{
 #ifndef TEMPO__HPP
 #define TEMPO__HPP
 
-namespace tempo{
+namespace tempo {
 
 }
 
