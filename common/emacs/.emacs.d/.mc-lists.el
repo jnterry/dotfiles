@@ -53,5 +53,6 @@
 				kill-region
 				mouse-set-region
 				org-insert-heading-respect-content
+				tabbar-forward-tab
 				view-order-manuals
 				))
