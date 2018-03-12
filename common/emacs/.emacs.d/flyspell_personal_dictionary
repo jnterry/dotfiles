@@ -1,4 +1,4 @@
-personal_ws-1.1 en 424 
+personal_ws-1.1 en 431 
 Minigames
 pragram
 ALU
@@ -15,6 +15,7 @@ quaternions
 notin
 VueJS
 frac
+ast
 myprog
 Gaussians
 cmd
@@ -50,6 +51,7 @@ portably
 parameterisation
 soma
 backpropogation
+Prolog's
 noitemsep
 gmon
 TeamCity
@@ -80,6 +82,7 @@ parallelizing
 optimizing
 frequentist
 GMM
+prolog
 Prolog
 PRERELEASE
 iff
@@ -110,8 +113,8 @@ ing
 frontend
 testbench
 HSL
-ConnectionPromises
 ConnectionPromise's
+ConnectionPromises
 SpecMan
 customisations
 cgit
@@ -181,6 +184,7 @@ NOP
 MUL
 NPM
 infty
+underbrace
 glibc
 parallelize
 Luxford
@@ -191,8 +195,8 @@ QDR
 Hoisin
 Eder
 Javascript
-RBF
 OOP
+RBF
 attentional
 RANSAC
 gprof
@@ -235,6 +239,7 @@ COMS
 setup
 documentclass
 SHR
+SLD
 ivdep
 jnbe
 ModelSim
@@ -250,6 +255,7 @@ datax
 NodeJS
 rhead
 rasterization
+NewAgenda
 SRC
 vectorial
 unmaintainable
@@ -332,8 +338,8 @@ intrinsics
 dereferenced
 excitatory
 qteaching
-dx
 FN
+dx
 FP
 Arduinos
 ij
@@ -374,12 +380,13 @@ sh
 DVCS
 color
 uncalibrated
-rr
 th
+rr
 OpenMP's
 OpenCV
 adapter
 nano
+monotonicity
 butterworth's
 setlength
 TP
@@ -409,8 +416,8 @@ OpenMP
 BAE
 bistable
 vectorization
-DUVs
 DUV's
+DUVs
 chainable
 username
 const
