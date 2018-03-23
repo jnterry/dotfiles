@@ -83,7 +83,6 @@ optimizing
 frequentist
 GMM
 prolog
-Prolog
 PRERELEASE
 iff
 Kerrison
@@ -113,8 +112,8 @@ ing
 frontend
 testbench
 HSL
-ConnectionPromise's
 ConnectionPromises
+ConnectionPromise's
 SpecMan
 customisations
 cgit
@@ -195,8 +194,8 @@ QDR
 Hoisin
 Eder
 Javascript
-OOP
 RBF
+OOP
 attentional
 RANSAC
 gprof
@@ -314,6 +313,7 @@ struct
 translational
 pragma
 Thresholding
+Raytracing
 ShiftBy
 reconvergence
 emacs
@@ -338,8 +338,8 @@ intrinsics
 dereferenced
 excitatory
 qteaching
-FN
 dx
+FN
 FP
 Arduinos
 ij
@@ -380,13 +380,13 @@ sh
 DVCS
 color
 uncalibrated
-th
 rr
+th
 OpenMP's
 OpenCV
+monotonicity
 adapter
 nano
-monotonicity
 butterworth's
 setlength
 TP
@@ -416,8 +416,8 @@ OpenMP
 BAE
 bistable
 vectorization
-DUV's
 DUVs
+DUV's
 chainable
 username
 const
