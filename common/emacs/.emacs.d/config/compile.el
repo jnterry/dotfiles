@@ -1,11 +1,18 @@
-;; Sets up emacs compile mode that allows building a project through emacs
-
-;; Taken from:
-;; https://stackoverflow.com/questions/21125015/cycle-through-results-using-next-error-previous-error
-
-(defvar compile-error-wrap-flash-color "#af00d7")
+;; Various tweaks to emacs compile mode and setup of key bindings
 
 (use-package compile :after (find-file-in-project))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Emacs uses next-error and previous-error to jump the cursor between errors
+;; found in compiler output.
+;;
+;; We want to cycle back to the begining when the end is reached, these
+;; functions achieve that goal
+;;
+;; Originally taken from:
+;; https://stackoverflow.com/questions/21125015/cycle-through-results-using-next-error-previous-error
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defvar compile-error-wrap-flash-color "#af00d7")
 
 (defun my-indicate-error-nav-wrapped (direction)
   "Display a message in minibuffer indicating that we wrapped
@@ -56,6 +63,75 @@ forwards, if negative)."
                        (call-interactively 'previous-error))
                      (my-indicate-error-nav-wrapped 'previous))))))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; To make it more obvious where errors are in a source file we want to
+;; highlight them
+;;
+;; Code original taken from https://www.emacswiki.org/emacs/CompilationMode#toc7
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'custom)
+
+(defvar all-overlays ())
+
+(defun delete-this-overlay(overlay is-after begin end &optional len)
+	(delete-overlay overlay)
+	)
+
+(defun highlight-current-line()
+	(interactive)
+	(setq current-point (point))
+	(beginning-of-line)
+	(setq beg (point))
+	(forward-line 1)
+	(setq end (point))
+	;; Create and place the overlay
+	(setq error-line-overlay (make-overlay 1 1))
+
+	;; Append to list of all overlays
+	(setq all-overlays (cons error-line-overlay all-overlays))
+
+	(overlay-put error-line-overlay
+							 'face '(background-color . "#453939"))
+	(overlay-put error-line-overlay
+							 'modification-hooks (list 'delete-this-overlay))
+	(move-overlay error-line-overlay beg end)
+	(goto-char current-point)
+	)
+
+(defun delete-all-overlays()
+	(while all-overlays
+		(delete-overlay (car all-overlays))
+		(setq all-overlays (cdr all-overlays))
+		)
+	)
+
+(defun highlight-error-lines(compilation-buffer process-result)
+	(interactive)
+	(delete-all-overlays)
+	(condition-case nil
+			(while t
+				(next-error)
+				(highlight-current-line)
+				(save-excursion
+					(compilation-next-error-function 0)
+					(highlight-current-line))
+				)
+		(error nil))
+	)
+
+(setq compilation-finish-function 'highlight-error-lines)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; By default the compile command relies on the variable "compile-command" to
+;; work out what to run.
+;;
+;; We already use the package "find-file-in-project" to make managing a project
+;; in emacs easier, so we will use its API "ffip-get-project-root-directory" to
+;; find the root of the project, and then heuristically work out what the
+;; compile command is
+;;
+;; This code is self implemented - no source online
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun compile-a-project ()
 	"Compiles a project by finding the project root as per ffip-get-project-root
 then heuristically determining the project's type and building it"
@@ -71,10 +147,6 @@ then heuristically determining the project's type and building it"
 
 	;; Split window below so compile output ends up at bottom of screen
 	(split-window-below)
-
-	;; Make current window larger by half of the size of the other
-	;; IE: shrink the height of the compiler output
-	(enlarge-window (/ (window-height (next-window)) 2))
 
 	;; Now compile the project
 	(let ((project-root (ffip-get-project-root-directory)))
@@ -94,8 +166,18 @@ then heuristically determining the project's type and building it"
 		 (t (print (concat "Failed to determine how to build project at "
 											 project-root)))
 		 )
-		))
+		)
 
+	;; Enlarge this window by half the size of the compile window
+	;; This has shrinks the compile output to half its original height
+	;; Note: We must do this after compiling the project since the compile
+	;; command will re-balance the windows
+	(enlarge-window (/ (window-height (next-window)) 2))
+	)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Setup hotkeys
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (bind-key* "M-;"  #'compile-a-project)
 (bind-key* "<f5>" #'compile-a-project)
 (bind-key* "M-,"  #'my-previous-error-wrapped)
