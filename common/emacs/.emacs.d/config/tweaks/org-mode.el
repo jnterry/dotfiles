@@ -2,9 +2,11 @@
 
 ;; Ensure latest version of org is installed, rather than that
 ;; bundled with emacs
-(use-package org
-	:pin gnu
-)
+;; :TODO: enable? does it work if org already installed?
+;; check with org-version command
+;;(use-package org
+;;	:pin gnu
+;;)
 
 ;; Drag and drop images into org-mode
 (use-package org-download
@@ -22,32 +24,32 @@
 ;; Lets tab work as normal in code blocks
 (setq org-src-tab-acts-natively t)
 
-;; Ensure indentation is preserved in exported src blocks
-(setq org-src-preserve-indentation t)
-
 ;; Ensure source blocks are exported nicely to latex and pdf, this includes:
 ;; - tabs that aren't size 0
 ;; - syntax highlighting
 ;; - outline
+
+;; Ensure indentation is preserved in exported src blocks
+(setq org-src-preserve-indentation t)
+
 (setq org-latex-listings t) ;; use listings package in code exports
-(require 'ox-latex)
 (add-to-list 'org-latex-packages-alist '("" "listings")) ;; \usepackage listings
 (add-to-list 'org-latex-packages-alist '("dvipsnames" "xcolor"))    ;; \usepackage color (for syntax highlighting)
 (setq org-latex-listings-options
-			'(("basicstyle" "\\footnotesize")
-				("tabsize" "2")
+	    '(("basicstyle" "\\footnotesize")
+	      ("tabsize" "2")
 
-				("keywordstyle" "\\color{NavyBlue}")
-				("commentstyle" "\\color{OliveGreen}")
-				("stringstyle"  "\\color{Mahogany}")
+	      ("keywordstyle" "\\color{NavyBlue}")
+	      ("commentstyle" "\\color{OliveGreen}")
+	      ("stringstyle"  "\\color{Mahogany}")
 
-				;;("numberstyle" "\\tiny\\color{gray}")
-				;;("numbers" "left")
-				("numbers" "none")
+	      ;;("numberstyle" "\\tiny\\color{gray}")
+	      ;;("numbers" "left")
+	      ("numbers" "none")
 
-				("frame" "single")
-			 )
-)
+	      ("frame" "single")
+	      )
+	    )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org mode script blocks
