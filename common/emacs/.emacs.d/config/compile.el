@@ -1,14 +1,19 @@
-;; Taken from https://emacs.stackexchange.com/questions/439/is-there-a-command-describe-command-similar-to-command-describe-function
+;; Sets up emacs compile mode that allows building a project through emacs
 
-(defvar my-modeline-flash-color "#af00d7")
+;; Taken from:
+;; https://stackoverflow.com/questions/21125015/cycle-through-results-using-next-error-previous-error
+
+(defvar compile-error-wrap-flash-color "#af00d7")
+
+(use-package compile :after (find-file-in-project))
 
 (defun my-indicate-error-nav-wrapped (direction)
   "Display a message in minibuffer indicating that we wrapped
 also flash the mode-line"
   (let ((mode-line-color (face-background 'mode-line)))
     (message "Wrapped %s error" (symbol-name direction))
-    (set-face-background 'mode-line my-modeline-flash-color)
-    (sit-for 0.3)
+    (set-face-background 'mode-line compile-error-wrap-flash-color)
+    (sit-for 0.5)
     (set-face-background 'mode-line mode-line-color)))
 
 (defun my-next-error-wrapped (&optional arg reset)
@@ -51,7 +56,29 @@ forwards, if negative)."
                        (call-interactively 'previous-error))
                      (my-indicate-error-nav-wrapped 'previous))))))
 
+(defun compile-a-project ()
+	"Compiles a project by finding the project root as per ffip-get-project-root
+then heuristically determining the project's type and building it"
+	(interactive)
+	(let ((project-root (ffip-get-project-root-directory)))
+		(cond
+		 ;; Build a project with makefile in root of vcs repo
+		 ((file-exists-p (concat project-root "Makefile"))
+			(let ((compile-command (concat "cd " project-root " && make")))
+				(recompile)
+				)
+			)
+		 ;; Build a project with makefile in /build folder of vcs repo
+		 ((file-exists-p (concat project-root "build/Makefile"))
+			(let ((compile-command (concat "cd " project-root "build && make")))
+				(recompile)
+				)
+		 )
+		 (t (print (concat "Failed to determine how to build project at "
+											 project-root)))
+		 )
+		))
 
-(global-set-key (kbd "C-'") 'recompile)
-(global-set-key (kbd "C-,") 'my-previous-error-wrapped)
-(global-set-key (kbd "C-.") 'my-next-error-wrapped)
+(bind-key* "C-'" #'compile-a-project)
+(bind-key* "C-," #'my-previous-error-wrapped)
+(bind-key* "C-." #'my-next-error-wrapped)
