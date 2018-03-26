@@ -2,16 +2,6 @@
 ;;;
 ;;; Code:
 
-
-;; A number of major-modes depend on emacs version 24.4 or newer
-;; Work out if we are on this version and set a variable to use in rest of file
-(defvar using-modern-emacs (or (> emacs-major-version 24)
-															 (and (eq emacs-major-version 24) (>= emacs-minor-version 4))
-															 ))
-
-(print (concat "*** lang-modes using-modern-emacs: "
-							 (if using-modern-emacs "true" "false")))
-
 (use-package dockerfile-mode
   :mode "\\Dockerfile\\'"
 )
@@ -36,7 +26,10 @@
 		)
 )
 
-(when using-modern-emacs
+;; markdown-mode relies on emacs version 24.4 or newer
+(when (or (> emacs-major-version 24)
+					(and (eq emacs-major-version 24) (>= emacs-minor-version 4))
+					)
 	(use-package markdown-mode
 		:mode "\\.md\\'"
 		))
@@ -51,27 +44,25 @@
   :mode "\\.json\\'"
 )
 
-(when using-modern-emacs
-	(use-package web-mode
-		:mode (("\\.html\\.erb\\'" . web-mode)
-					 ("\\.mustache\\'"   . web-mode)
-					 ("\\.jinja\\'"      . web-mode)
-					 ("\\.php\\'"        . web-mode)
-					 ("\\.vue\\'"        . web-mode)
-					 ("\\.html\\'"       . web-mode)
-					 ("\\.dot\\'"        . web-mode)
-					 )
-		:config
-		(setq web-mode-enable-css-colorization t)
-		(setq web-mode-markup-indent-offset    2)
-		(setq web-mode-css-indent-offset       2)
-		(setq web-mode-code-indent-offset      2)
-		))
+(use-package web-mode
+	:mode (("\\.html\\.erb\\'" . web-mode)
+				 ("\\.mustache\\'"   . web-mode)
+				 ("\\.jinja\\'"      . web-mode)
+				 ("\\.php\\'"        . web-mode)
+				 ("\\.vue\\'"        . web-mode)
+				 ("\\.html\\'"       . web-mode)
+				 ("\\.dot\\'"        . web-mode)
+				 )
+	:config
+	(setq web-mode-enable-css-colorization t)
+	(setq web-mode-markup-indent-offset    2)
+	(setq web-mode-css-indent-offset       2)
+	(setq web-mode-code-indent-offset      2)
+)
 
-(when using-modern-emacs
-	(use-package less-css-mode
-		:mode "\\.less\\'"
-		))
+(use-package less-css-mode
+	:mode "\\.less\\'"
+)
 
 (use-package ruby-mode
 	:mode (("\\.rb\\'"      . ruby-mode)
