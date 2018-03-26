@@ -1,3 +1,16 @@
+;;; lang-modes --- Setups various major modes for editing different languages
+;;;
+;;; Code:
+
+
+;; A number of major-modes depend on emacs version 24.4 or newer
+;; Work out if we are on this version and set a variable to use in rest of file
+(defvar using-modern-emacs (or (> emacs-major-version 24)
+															 (and (eq emacs-major-version 24) (>= emacs-minor-version 4))
+															 )
+
+	)
+
 (use-package dockerfile-mode
   :mode "\\Dockerfile\\'"
 )
@@ -22,15 +35,10 @@
 		)
 )
 
-;; Ensure markdown-mode is only used on emacs versions 24.4 and above since
-;; unsupported on older versions
-(when (or (> emacs-major-version 24)
-					(and (eq emacs-major-version 24) (>= emacs-minor-version 4))
-					)
-	(use-package markdown-mode
-		:mode "\\.md\\'"
-		)
-	)
+(use-package markdown-mode
+	:if using-modern-emacs
+	:mode "\\.md\\'"
+)
 
 (use-package js2-mode
   :mode "\\.js\\'"
@@ -59,6 +67,7 @@
 )
 
 (use-package less-css-mode
+	:if using-modern-emacs
 	:mode "\\.less\\'"
 )
 
@@ -89,3 +98,5 @@
 ;; (load "specman-mode")
 ;; (add-to-list 'auto-mode-alist '("\\.e\\'" . specman-mode   ))
 ;; (add-to-list 'auto-mode-alist '("\\.ecom\\'" . specman-mode))
+
+;;; lang-modes.el ends here
