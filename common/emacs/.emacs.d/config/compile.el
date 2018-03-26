@@ -60,6 +60,23 @@ forwards, if negative)."
 	"Compiles a project by finding the project root as per ffip-get-project-root
 then heuristically determining the project's type and building it"
 	(interactive)
+
+	;; Close any existing compilation windows
+	(progn
+		(if (get-buffer "*compilation*") ; If old compile window exists
+  	(progn
+  	  (delete-windows-on (get-buffer "*compilation*")) ; Delete the compilation windows
+  	  (kill-buffer "*compilation*") ; and kill the buffers
+  	  )))
+
+	;; Split window below so compile output ends up at bottom of screen
+	(split-window-below)
+
+	;; Make current window larger by half of the size of the other
+	;; IE: shrink the height of the compiler output
+	(enlarge-window (/ (window-height (next-window)) 2))
+
+	;; Now compile the project
 	(let ((project-root (ffip-get-project-root-directory)))
 		(cond
 		 ;; Build a project with makefile in root of vcs repo
@@ -79,6 +96,7 @@ then heuristically determining the project's type and building it"
 		 )
 		))
 
-(bind-key* "M-;" #'compile-a-project)
-(bind-key* "M-," #'my-previous-error-wrapped)
-(bind-key* "M-." #'my-next-error-wrapped)
+(bind-key* "M-;"  #'compile-a-project)
+(bind-key* "<f5>" #'compile-a-project)
+(bind-key* "M-,"  #'my-previous-error-wrapped)
+(bind-key* "M-."  #'my-next-error-wrapped)
