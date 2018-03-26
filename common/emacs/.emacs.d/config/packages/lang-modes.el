@@ -7,9 +7,10 @@
 ;; Work out if we are on this version and set a variable to use in rest of file
 (defvar using-modern-emacs (or (> emacs-major-version 24)
 															 (and (eq emacs-major-version 24) (>= emacs-minor-version 4))
-															 )
+															 ))
 
-	)
+(print (concat "*** lang-modes using-modern-emacs: "
+							 (if using-modern-emacs "true" "false")))
 
 (use-package dockerfile-mode
   :mode "\\Dockerfile\\'"
