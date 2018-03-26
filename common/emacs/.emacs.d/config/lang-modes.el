@@ -32,12 +32,6 @@
 	)
 )
 
-(use-package js2-mode
-  :mode "\\.js\\'"
-  :init
-   (setq js2-strict-trailing-comma-warning nil)
-)
-
 (use-package json-mode
   :mode "\\.json\\'"
 )
@@ -50,6 +44,8 @@
 				 ("\\.vue\\'"        . web-mode)
 				 ("\\.html\\'"       . web-mode)
 				 ("\\.dot\\'"        . web-mode)
+				 ("\\.js\\'"         . web-mode)
+				 ("\\.html\\'"       . web-mode)
 				 )
 	:config
 	(setq web-mode-enable-css-colorization t)
