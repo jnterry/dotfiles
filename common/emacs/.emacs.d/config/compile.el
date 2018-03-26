@@ -188,8 +188,9 @@ then heuristically determining the project's type and building it"
 				(recompile)
 				)
 		 )
-		 (t (print (concat "Failed to determine how to build project at "
-											 project-root)))
+		 (t (print (concat "Failed to determine how to build project at '"
+											 project-root
+											 "'. Add a heuristic to ~/.emacs.d/config/compile.el")))
 		 )
 		)
 
