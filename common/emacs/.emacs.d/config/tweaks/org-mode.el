@@ -21,7 +21,7 @@
 
 ;; Ensure SRC blocks are exported nicely when going to latex and pdf
 (setq org-latex-listings t) ;; use listings package in code exports
-(require 'ox-latex)
+(use-package ox-latex)
 (add-to-list 'org-latex-packages-alist '("" "listings")) ;; \usepackage listings
 (add-to-list 'org-latex-packages-alist '("dvipsnames" "xcolor"))    ;; \usepackage color (for syntax highlighting)
 (setq org-latex-listings-options
