@@ -15,3 +15,7 @@
 
 ;; Delete whitespace at end of lines on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Set number of undo entries very high
+(setq undo-limit 20000000)
+(setq undo-strong-limit 40000000)
