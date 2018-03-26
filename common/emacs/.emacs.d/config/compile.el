@@ -79,6 +79,6 @@ then heuristically determining the project's type and building it"
 		 )
 		))
 
-(bind-key* "C-'" #'compile-a-project)
-(bind-key* "C-," #'my-previous-error-wrapped)
-(bind-key* "C-." #'my-next-error-wrapped)
+(bind-key* "M-;" #'compile-a-project)
+(bind-key* "M-," #'my-previous-error-wrapped)
+(bind-key* "M-." #'my-next-error-wrapped)
