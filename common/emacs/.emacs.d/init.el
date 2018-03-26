@@ -48,7 +48,7 @@
 ;; Don't save emacs generated customisations in this file since this file is
 ;; tracked by git and we don't want to include them in the repository
 (setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(when (file-exists-p custom-file) (load custom-file))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add load paths
