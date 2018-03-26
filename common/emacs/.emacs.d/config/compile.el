@@ -153,17 +153,38 @@ then heuristically determining the project's type and building it"
 	(split-window-below)
 
 	;; Now compile the project
-	(let ((project-root (ffip-get-project-root-directory)))
+	(let ((project-root (ffip-get-project-root-directory))
+
+				;; make output typically includes lines such as:
+				;; file.cpp:10: recipe for target 'file.cpp.o' failed
+				;;
+				;; These are picked up by compilation mode as errors, hence using
+				;; "next-error" hotkeys will jump to lines inside the make files
+				;; In reality, it is the source code that is at fault - not the makefile
+				;; and we don't want to edit the make file.
+				;;
+				;; Hence we use a command which filters those lines out:
+				;; grep:
+				;;  -v captures all but matches
+				;;  -w does as whole word
+				;;  see: https://askubuntu.com/questions/354993/how-to-remove-lines-from-the-text-file-containing-specific-words-through-termina
+				;;
+				;; The set pipefail ensures the error code from make is propagated
+				;; out of the overall command (rather than the 0 returned by grep)
+				;; see: https://stackoverflow.com/questions/1221833/pipe-output-and-capture-exit-status-in-bash
+				(make-cmd "(set -o pipefail; make | grep -vwE 'recipe.*failed');")
+				)
+
 		(cond
 		 ;; Build a project with makefile in root of vcs repo
 		 ((file-exists-p (concat project-root "Makefile"))
-			(let ((compile-command (concat "cd " project-root " && make")))
+			(let ((compile-command (concat "cd " project-root " && " make-cmd)))
 				(recompile)
 				)
 			)
 		 ;; Build a project with makefile in /build folder of vcs repo
 		 ((file-exists-p (concat project-root "build/Makefile"))
-			(let ((compile-command (concat "cd " project-root "build && make")))
+			(let ((compile-command (concat "cd " project-root "build && " make-cmd)))
 				(recompile)
 				)
 		 )
