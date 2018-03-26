@@ -10,7 +10,9 @@ the other directories in this folder should only be installed on devices with pa
 
 [![Build Status](https://travis-ci.org/jnterry/dotfiles.svg?branch=master)](https://travis-ci.org/jnterry/dotfiles)
 
-At first glance having CI for dotfiles may seem strange - however when we note that emacs is configured using a full Turing complete language it begins to make more sense. The idea here is to test that the config can be rolled out to a completely blank slate machine (like that provided by a continuous integration environment), and the config does not rely on any custom human made changes to the system.
+At first glance having CI for dotfiles may seem strange - however when we note that emacs is configured using a full Turing complete language it begins to make more sense. The idea here is to test that the config can be rolled out to a completely blank slate machine (like that provided by a continuous integration environment) in order to ensure the config does not rely on any custom human made changes to the system.
+
+:TODO: can we test the other configs as well? Eg, check that programs can parse their .dotfiles
 
 # To Install
 
