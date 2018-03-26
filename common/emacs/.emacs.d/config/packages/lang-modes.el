@@ -35,10 +35,10 @@
 		)
 )
 
-(use-package markdown-mode
-	:if using-modern-emacs
-	:mode "\\.md\\'"
-)
+(when using-modern-emacs
+	(use-package markdown-mode
+		:mode "\\.md\\'"
+		))
 
 (use-package js2-mode
   :mode "\\.js\\'"
@@ -66,10 +66,10 @@
 	(setq web-mode-code-indent-offset      2)
 )
 
-(use-package less-css-mode
-	:if using-modern-emacs
-	:mode "\\.less\\'"
-)
+(when using-modern-emacs
+	(use-package less-css-mode
+		:mode "\\.less\\'"
+		))
 
 (use-package ruby-mode
 	:mode (("\\.rb\\'"      . ruby-mode)
