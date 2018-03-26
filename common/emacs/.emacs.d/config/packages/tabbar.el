@@ -22,17 +22,29 @@
 
 (global-set-key (kbd "<M-f3>") 'kill-other-buffers)
 
-;; Make all tabs be displayed in single group, hence can see all open buffers at once
+;; By default tabbar tries to put buffers from the same language into a "group"
+;; It then only displays tabs in the same group as the currently opened buffer
+;; This is a pain for a lot of tasks, eg, editing html, css and js simultaniouly
+;;
+;; This makes everything go into a single group named "user", apart from a few
+;; special emacs buffers
 ;; Groups:
 ;;  - user  - all user created buffers
 ;;  - emacs - emacs created buffers (scratch, messages)
 (defun my-tabbar-buffer-groups ()
   (list (cond
-				 ((string=      "*shell*"    (buffer-name)       ) "user" ) ;; put emacs shells in user group
-				 ((string=      "*terminal*" (buffer-name)       ) "user" ) ;;  "      "      "      "      "
-				 ((string-equal "*" (substring (buffer-name) 0 1)) "emacs") ;; other emacs buffers in emacs group
-				 ((eq major-mode 'dired-mode                     ) "emacs") ;;  "      "      "      "      "
-				 (t                                                "user" ) ;; everything else in user group
+				 ;; Special cases -> some emacs buffers we want to be in the same group
+				 ;; as files
+				 ((string=      "*shell*"       (buffer-name)    ) "user" )
+				 ((string=      "*terminal*"    (buffer-name)    ) "user" )
+				 ((string=      "*compilation*" (buffer-name)    ) "user" )
+
+				 ;; All other emacs special buffers go in their own group
+				 ((string-equal "*" (substring (buffer-name) 0 1)) "emacs")
+				 ((eq major-mode 'dired-mode                     ) "emacs")
+
+				 ;; Default case -> everything else in user group
+				 (t                                                "user" )
 				)
 		)
   )
