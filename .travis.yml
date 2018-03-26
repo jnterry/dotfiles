@@ -1,11 +1,16 @@
-language: c
+language: generic
 
 os:
   - linux
 
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y emacs stow aspell
+addons:
+  apt:
+    sources:
+      - cassou-emacs
+    packages:
+      - emacs24
+      - stow
+      - aspell
 
 script:
   - ./install.sh && ~/.emacs.d/rebuild.sh
