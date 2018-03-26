@@ -39,7 +39,7 @@
   (defvar use-package-verbose t)
   (require 'cl-lib)
   (require 'use-package)
-;;  (require 'bind-key) :TODO: use bind key to make overriding key bindings easier?
+  (require 'bind-key)
 ;;  (require 'diminish) :TODO: use diminish to hide minor modes?
   (setq use-package-always-ensure t)
 )
