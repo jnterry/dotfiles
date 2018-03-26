@@ -7,3 +7,6 @@
 
 ;; Reads the abbreviations file on startup
 (quietly-read-abbrev-file)
+
+;; Hide from the mode line
+(diminish 'abbrev-mode)

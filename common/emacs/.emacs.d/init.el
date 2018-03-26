@@ -40,9 +40,12 @@
   (require 'cl-lib)
   (require 'use-package)
   (require 'bind-key)
-;;  (require 'diminish) :TODO: use diminish to hide minor modes?
   (setq use-package-always-ensure t)
 )
+;; use diminish to remove always on minor-modes from status bar at bottom
+;; Needs to be included before any other packages so we can use :diminish
+;; keyword, hence load in init.el rather than as a file in config directory
+(use-package diminish)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Don't save emacs generated customisations in this file since this file is
