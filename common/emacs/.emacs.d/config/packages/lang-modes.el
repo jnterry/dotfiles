@@ -22,9 +22,15 @@
 		)
 )
 
-(use-package markdown-mode
-  :mode "\\.md\\'"
-)
+;; Ensure markdown-mode is only used on emacs versions 24.4 and above since
+;; unsupported on older versions
+(when (or (> emacs-major-version 24)
+					(and (eq emacs-major-version 24) (>= emacs-minor-version 4))
+					)
+	(use-package markdown-mode
+		:mode "\\.md\\'"
+		)
+	)
 
 (use-package js2-mode
   :mode "\\.js\\'"
