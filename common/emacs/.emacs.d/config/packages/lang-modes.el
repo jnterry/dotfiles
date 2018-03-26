@@ -1,3 +1,7 @@
+;;; lang-modes --- Setups various major modes for editing different languages
+;;;
+;;; Code:
+
 (use-package dockerfile-mode
   :mode "\\Dockerfile\\'"
 )
@@ -22,9 +26,13 @@
 		)
 )
 
-(use-package markdown-mode
-  :mode "\\.md\\'"
-)
+;; markdown-mode relies on emacs version 24.4 or newer
+(when (or (> emacs-major-version 24)
+					(and (eq emacs-major-version 24) (>= emacs-minor-version 4))
+					)
+	(use-package markdown-mode
+		:mode "\\.md\\'"
+		))
 
 (use-package js2-mode
   :mode "\\.js\\'"
@@ -37,16 +45,16 @@
 )
 
 (use-package web-mode
-  :mode (("\\.html\\.erb\\'" . web-mode)
-         ("\\.mustache\\'"   . web-mode)
-         ("\\.jinja\\'"      . web-mode)
-         ("\\.php\\'"        . web-mode)
+	:mode (("\\.html\\.erb\\'" . web-mode)
+				 ("\\.mustache\\'"   . web-mode)
+				 ("\\.jinja\\'"      . web-mode)
+				 ("\\.php\\'"        . web-mode)
 				 ("\\.vue\\'"        . web-mode)
 				 ("\\.html\\'"       . web-mode)
 				 ("\\.dot\\'"        . web-mode)
-				)
-  :config
-  (setq web-mode-enable-css-colorization t)
+				 )
+	:config
+	(setq web-mode-enable-css-colorization t)
 	(setq web-mode-markup-indent-offset    2)
 	(setq web-mode-css-indent-offset       2)
 	(setq web-mode-code-indent-offset      2)
@@ -59,11 +67,6 @@
 (use-package ruby-mode
 	:mode (("\\.rb\\'"      . ruby-mode)
 				 ("\\.vagrant\\'" . ruby-mode)
-				)
-)
-
-(use-package markdown-mode
-	:mode (("\\.md\\'"      . markdown-mode)
 				)
 )
 
@@ -83,3 +86,5 @@
 ;; (load "specman-mode")
 ;; (add-to-list 'auto-mode-alist '("\\.e\\'" . specman-mode   ))
 ;; (add-to-list 'auto-mode-alist '("\\.ecom\\'" . specman-mode))
+
+;;; lang-modes.el ends here

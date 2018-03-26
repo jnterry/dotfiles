@@ -1,0 +1,16 @@
+language: generic
+
+os:
+  - linux
+
+addons:
+  apt:
+    sources:
+      - cassou-emacs
+    packages:
+      - emacs24
+      - stow
+      - aspell
+
+script:
+  - ./install.sh && ~/.emacs.d/rebuild.sh
