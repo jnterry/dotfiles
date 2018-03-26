@@ -6,7 +6,7 @@
 ;; Emacs uses next-error and previous-error to jump the cursor between errors
 ;; found in compiler output.
 ;;
-;; We want to cycle back to the begining when the end is reached, these
+;; We want to cycle back to the beginning when the end is reached, these
 ;; functions achieve that goal
 ;;
 ;; Originally taken from:
@@ -62,6 +62,10 @@ forwards, if negative)."
                        (goto-char (point-max))
                        (call-interactively 'previous-error))
                      (my-indicate-error-nav-wrapped 'previous))))))
+
+;; Ensure that the current error is always kept 0 lines from the top of the
+;; output buffer
+(setq compilation-context-lines 0)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; To make it more obvious where errors are in a source file we want to
