@@ -79,11 +79,6 @@
 				)
 )
 
-(use-package markdown-mode
-	:mode (("\\.md\\'"      . markdown-mode)
-				)
-)
-
 (use-package verilog-mode
        :mode (("\\.v\\'" . verilog-mode))
        :config
