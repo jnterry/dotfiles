@@ -1,4 +1,6 @@
-;; Expand selection by semantic groups
+;; Add bindings for expanding a selection by semantic groups
+;;
+;; https://github.com/magnars/expand-region.el
 
 (use-package expand-region
   :bind (

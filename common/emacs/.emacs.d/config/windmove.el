@@ -1,10 +1,8 @@
-;;; windmove.el --- Sets keybindings for windmove
-;;;
-;;; Commentary:
-;;; windmove is build into Emacs, but doesn't have keybindings set by default
-;;; This file sets up the keybindings
-;;;
-;;; Code:
+;; Sets keybindings for windmove package. This allows moving between panes
+;; in emacs using arrow keys
+;;
+;; Note that windmove is build into Emacs, but doesn't have keybindings set by
+;; default - this file sets them up
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Enables "Ctrl-c arrow key" to move between panes
@@ -24,3 +22,5 @@
 ;;
 ;; (when (fboundp 'windmove-default-keybindings)
 ;;   (windmove-default-keybindings))
+
+;;; windmove.el ends here

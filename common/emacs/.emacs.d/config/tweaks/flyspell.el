@@ -1,13 +1,16 @@
-;; Enable spell check of comments in following language modes
+;; Enable spell check of comments and strings in following language modes
 (dolist (hook '(lisp-mode-hook
                 emacs-lisp-mode-hook
                 yaml-mode
                 shell-mode-hook
                 php-mode-hook
                 html-mode-hook
+								web-mode
+								js-mode
+								js2-mode
+								javascript-mode
+								css-mode
                 haskel-mode-hook
-                js-mode-hook
-								js2-mode-hook
 								c-mode-hook
 								c++-mode-hook
 			   )
@@ -24,3 +27,6 @@
 )
 
 (setq ispell-personal-dictionary "~/.emacs.d/flyspell_personal_dictionary")
+
+;; Prevent flyspell checking include file names
+(add-to-list 'ispell-skip-region-alist '("^#include" forward-line))

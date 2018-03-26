@@ -1,7 +1,8 @@
 ;; By default:
 ;;  - C-a goes right to start of line
 ;;  - M-m goes to first non-whitespace char of line
-;; This remaps C-a to first go to first non-whitespace char, then to start of line
+;; This remaps C-a to move the cursor to the first non-whitespace char,
+;; then on the second press it goes to the start of the line
 ;;
 ;; Taken from: http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-beginning-of-a-line/
 

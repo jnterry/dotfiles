@@ -1,7 +1,3 @@
-;; Set personal data
-(setq user-full-name    "Jamie Terry"
-      user-mail-address "jnterry@ntlworld.com")
-
 ;; Change all prompts to y or n
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -14,5 +10,8 @@
 ;; Dispaly time in modeline
 (display-time-mode 1)
 
-;; After copy Ctrl+c in Linux X11, you can paste by `yank' in emacs
+;; Ensure that after a Ctrl+c in Linux X11, you can paste in emacs
 (setq select-enable-clipboard t)
+
+;; Delete whitespace at end of lines on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)

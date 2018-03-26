@@ -50,20 +50,22 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add load paths
-(add-to-list 'load-path "~/.emacs.d/config/")
 (add-to-list 'load-path "~/.emacs.d/ext/")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Load config directories
 (defun load-directory (dir)
 	(mapc
 	 (lambda (f) (load-file (concat (file-name-as-directory dir) f)))
 	 (directory-files dir nil "\\.el$"))
 	)
-
+(load-directory "~/.emacs.d/config")
 (load-directory "~/.emacs.d/config/packages")
 (load-directory "~/.emacs.d/config/tweaks")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Ensure all emacs files are byte compile so subsequent start-ups
 ;; are quicker. This is done after loading everything so everything
 ;; is defined at this point
