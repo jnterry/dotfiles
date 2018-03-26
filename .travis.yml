@@ -5,7 +5,7 @@ os:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y emacs stow
+  - sudo apt-get install -y emacs stow aspell
 
 script:
   - ./install.sh && ~/.emacs.d/rebuild.sh
