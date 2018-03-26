@@ -1,5 +1,9 @@
 ;; Tweaks to ORG mode
 
+;; Ensure latest version of org is installed, rather than that
+;; bundled with emacs
+(use-package org)
+
 ;; Drag and drop images into org-mode
 (use-package org-download
   :ensure t
@@ -19,9 +23,12 @@
 ;; Ensure indentation is preserved in exported src blocks
 (setq org-src-preserve-indentation t)
 
-;; Ensure SRC blocks are exported nicely when going to latex and pdf
+;; Ensure source blocks are exported nicely to latex and pdf, this includes:
+;; - tabs that aren't size 0
+;; - syntax highlighting
+;; - outline
 (setq org-latex-listings t) ;; use listings package in code exports
-(use-package ox-latex)
+(require 'ox-latex)
 (add-to-list 'org-latex-packages-alist '("" "listings")) ;; \usepackage listings
 (add-to-list 'org-latex-packages-alist '("dvipsnames" "xcolor"))    ;; \usepackage color (for syntax highlighting)
 (setq org-latex-listings-options
