@@ -7,11 +7,5 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y emacs stow aspell
 
-env:
-  matrix:
-    - EMACS=emacs23
-    - EMACS=emacs24
-    - EMACS=emacs25
-
 script:
   - ./install.sh && ~/.emacs.d/rebuild.sh
