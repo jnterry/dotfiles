@@ -1,13 +1,8 @@
-;; Tweaks to ORG mode
+;; Modifies various configuration options for org-mode
 
-
-(use-package org
-  ;; Ensure latest version of org is installed, rather than that
-  ;; bundled with emacs
-  ;; :TODO: enable? does it work if org already installed?
-  ;; check with org-version command
-  ;;	:pin gnu
-)
+;; org mode is loaded by default by emacs, but we want access to some org mode
+;; variables/function in this file
+(use-package org)
 
 ;; Determine the major version of the org package, some of this config relies on
 ;; a relatively modern version, so we need to check
@@ -19,13 +14,19 @@
 
 ;; :TODO: drag and drop images into org mode
 ;; Drag and drop images into org-mode
-;;(use-package org-download
-;;  :ensure t
-;;  :defer 2)
+;; (use-package org-download)
 
-;; :TODO: show preview of latex fragments
-;;(setq org-latex-create-formula-image-program 'dvipng)
-
+;; Configure showing latex equation previews
+;; use keybind C-c C-x C-l
+(setq org-latex-create-formula-image-program 'dvipng)
+(setq org-format-latex-options
+			(quote (:foreground auto
+							:background auto
+							:scale 1.7
+							:html-foreground "Black"
+							:html-background "Transparent"
+							:html-scale 1.0
+							:matchers ("begin" "$1" "$" "$$" "\\(" "\\["))))
 
 ;; Only display 300px of wide images
 (setq org-image-actual-width '(300))
@@ -75,7 +76,7 @@
 	)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; org mode script blocks
+;; setup org mode src block editing
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq org-src-lang-modes (quote (("elisp" . emacs-lisp)
 								 ("C" . c)
@@ -90,6 +91,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add characters to expand into #+BEGIN #+END blocks with <c then tab
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (set-variable 'org-structure-template-alist ()) ;; remove defaults
 
 (add-to-list 'org-structure-template-alist
