@@ -1,4 +1,4 @@
-personal_ws-1.1 en 431 
+personal_ws-1.1 en 444
 Minigames
 pragram
 ALU
@@ -11,6 +11,7 @@ uncategorized
 bashrc
 addtolength
 endif
+flycheck
 quaternions
 notin
 VueJS
@@ -24,6 +25,7 @@ jacobi
 unclosed
 AWS
 combinator
+backends
 ShiftOutOfRange
 mathcal
 dir
@@ -78,6 +80,7 @@ icc
 ALU's
 Independency
 FPR
+backkends
 parallelizing
 optimizing
 frequentist
@@ -115,6 +118,7 @@ HSL
 ConnectionPromises
 ConnectionPromise's
 SpecMan
+param
 customisations
 cgit
 parallelization
@@ -180,6 +184,7 @@ titlespacing
 MVB
 ATTR
 NOP
+PrimitiveType
 MUL
 NPM
 infty
@@ -277,6 +282,7 @@ hyperparameters
 Subtask
 Postgres
 superscalar
+framebuffer's
 TPR
 overfit
 UoB
@@ -288,6 +294,7 @@ textasteriskcentered
 truthy
 vdots
 middleware
+handednesses
 Aabb
 Reddit
 testcase
@@ -352,6 +359,7 @@ Latencies
 le
 LHS's
 Obscura
+glDepthFunc
 haar
 js
 jt
@@ -389,7 +397,10 @@ adapter
 nano
 butterworth's
 setlength
+FrameBuffer
+framebuffer
 TP
+Raytracer
 OpenGL
 sz
 Sonka
@@ -424,8 +435,10 @@ const
 requestors
 queryable
 Renishaw
+Siri
 usepackage
 itemize
+allocator
 detections
 renderer
 BFM
