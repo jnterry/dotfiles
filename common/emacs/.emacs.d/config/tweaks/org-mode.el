@@ -2,7 +2,9 @@
 
 ;; Ensure latest version of org is installed, rather than that
 ;; bundled with emacs
-(use-package org)
+(use-package org
+	:pin gnu
+)
 
 ;; Drag and drop images into org-mode
 (use-package org-download
