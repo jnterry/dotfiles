@@ -5,7 +5,7 @@ os:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y emacs
+  - sudo apt-get install -y emacs stow
 
 script:
-  - ./common/emacs/.emacs.d/rebuild.sh
+  - ./install.sh && ~/.emacs.d/rebuild.sh
