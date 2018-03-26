@@ -14,8 +14,9 @@ if [[ `find ${SCRIPTDIR}/config | grep .elc` ]] ; then
 fi
 
 # Refresh the emacs custom file
-rm    ${SCRIPTDIR}/custom.el
-touch ${SCRIPTDIR}/custom.el
+mkdir -p ~/.emacs.d/
+rm -f ~/.emacs.d/custom.el
+touch ~/.emacs.d/custom.el
 
 # Make emacs load the config file - this will return 0 if the config could
 # be loaded, but non 0 if an error occurs
