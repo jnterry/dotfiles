@@ -220,6 +220,61 @@ then heuristically determining the project's type and building it"
 	)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Modify compilation buffer appearance - by default it is perhaps best
+;; described as a messy rainbow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq compilation-info-face
+			'((t :foreground "cyan2"
+					 :weight bold
+					 )))
+(setq compilation-warning-face
+			'((t :foreground "orange2"
+					 :weight bold
+					 )))
+(setq compilation-error-face
+			'((t :foreground "red3"
+					 :weight bold
+					 )))
+(setq compilation-message-face ())
+(setq compilation-line-face ())
+(setq compilation-message-face
+			'((t :weight bold
+					 )))
+(setq compilation-line-face
+			'((t :weight bold
+					 )))
+(setq compilation-column-face
+			'((t :weight bold
+					 )))
+
+;; :TODO: ideally we want to preserve the colors output by the build system
+;;
+;; The code below should convert any ansi escape sequences defining colors into
+;; appropriately formatted text, but for some reason the build system doesn't
+;; seem to be including the ansi sequences. Apparently most programs checks a
+;; some "TERM" env variable to check if colors are supported, emacs can override
+;; this
+;; see: https://stackoverflow.com/questions/13397737/ansi-coloring-in-compilation-mode
+;;
+;; BUT this doesn't appear to work:
+;;   (setq compilation-environment "xterm-256color")
+;; Try changing the compile command to echo $TERM
+;; if the line above is commented out we get "dumb", as per that stack overflow
+;; post, but if the above line is not commented out we get an empty line
+;; Not sure how to fix
+
+;; Ensure ansi escape codes for colors are interpreted correctly in the
+;; compilation buffer
+;; Taken from:
+;; https://stackoverflow.com/questions/3072648/cucumbers-ansi-colors-messing-up-emacs-compilation-buffer
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (let ((inhibit-read-only t))
+    (ansi-color-apply-on-region (point-min) (point-max))))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setup hotkeys
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (bind-key* "M-;"  #'compile-a-project)
