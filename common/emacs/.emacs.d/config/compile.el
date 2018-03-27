@@ -118,7 +118,11 @@ forwards, if negative)."
 	(condition-case nil
 			(while t
 				(next-error)
-				(highlight-current-line)
+
+				;; Highlight the line in compilation buffer
+				;; (highlight-current-line)
+
+				;; Highlight the line in the source file
 				(save-excursion
 					(compilation-next-error-function 0)
 					(highlight-current-line))
@@ -126,7 +130,7 @@ forwards, if negative)."
 		(error nil))
 	)
 
-(setq compilation-finish-function 'highlight-error-lines)
+(setq compilation-finish-functions 'highlight-error-lines)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; By default the compile command relies on the variable "compile-command" to
@@ -177,9 +181,9 @@ forwards, if negative)."
 				(recompile)
 				)
 		 )
-		 (t (print (concat "Failed to determine how to build project at '"
-											 project-root
-											 "'. Add a heuristic to ~/.emacs.d/config/compile.el")))
+		 (t (message (concat "Failed to determine how to build project at '"
+												 project-root
+												 "'. Add a heuristic to ~/.emacs.d/config/compile.el")))
 		 )
 		))
 
@@ -189,17 +193,27 @@ forwards, if negative)."
 then heuristically determining the project's type and building it"
 	(interactive)
 
-	(let ((existing-compilation-buffer (get-buffer "*compilation*")))
-		;; Open new compilation buffer if one doesn't already exist
+	(let ((existing-compilation-buffer (get-buffer "*compilation*"))
+				(initial-buffer              (current-buffer))
+			 )
+
+		;; Open new compilation buffer if one doesn't already exist.
+		;; If one does exist we assume the user is happy with its current layout
+		;; (eg, as a spilt in current frame, open in a different frame, etc)
 		(unless existing-compilation-buffer (split-window-below))
 
 		;; Compile the project
 		(my-compile---do-compile-project)
 
-		;; Enlarge this window by half the size of the compile window
-		;; This has shrinks the compile output to half its original height
+		;; Make sure we haven't moved the user away from the buffer they ran the
+		;; compile command in
+		(switch-to-buffer initial-buffer)
+
+		;; If we created a buffer for the compilation output it will be taking up
+		;; 50% of the screen. Half it down to 25% by enlarging the active window
+		;;
 		;; Note: We must do this after compiling the project since the compile
-		;; command will re-balance the windows
+		;; command will re-balance the window sizes
 		(unless existing-compilation-buffer
 			(enlarge-window (/ (window-height (next-window)) 2))
 			))
