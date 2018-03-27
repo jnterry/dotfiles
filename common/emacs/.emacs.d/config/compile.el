@@ -139,22 +139,8 @@ forwards, if negative)."
 ;;
 ;; This code is self implemented - no source online
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun compile-a-project ()
-	"Compiles a project by finding the project root as per ffip-get-project-root
-then heuristically determining the project's type and building it"
-	(interactive)
 
-	;; Close any existing compilation windows
-	(progn
-		(if (get-buffer "*compilation*") ; If old compile window exists
-  	(progn
-  	  (delete-windows-on (get-buffer "*compilation*")) ; Delete the compilation windows
-  	  (kill-buffer "*compilation*") ; and kill the buffers
-  	  )))
-
-	;; Split window below so compile output ends up at bottom of screen
-	(split-window-below)
-
+(defun my-compile---do-compile-project ()
 	;; Now compile the project
 	(let ((project-root (ffip-get-project-root-directory))
 
@@ -195,13 +181,28 @@ then heuristically determining the project's type and building it"
 											 project-root
 											 "'. Add a heuristic to ~/.emacs.d/config/compile.el")))
 		 )
-		)
+		))
 
-	;; Enlarge this window by half the size of the compile window
-	;; This has shrinks the compile output to half its original height
-	;; Note: We must do this after compiling the project since the compile
-	;; command will re-balance the windows
-	(enlarge-window (/ (window-height (next-window)) 2))
+
+(defun compile-a-project ()
+	"Compiles a project by finding the project root as per ffip-get-project-root
+then heuristically determining the project's type and building it"
+	(interactive)
+
+	(let ((existing-compilation-buffer (get-buffer "*compilation*")))
+		;; Open new compilation buffer if one doesn't already exist
+		(unless existing-compilation-buffer (split-window-below))
+
+		;; Compile the project
+		(my-compile---do-compile-project)
+
+		;; Enlarge this window by half the size of the compile window
+		;; This has shrinks the compile output to half its original height
+		;; Note: We must do this after compiling the project since the compile
+		;; command will re-balance the windows
+		(unless existing-compilation-buffer
+			(enlarge-window (/ (window-height (next-window)) 2))
+			))
 	)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
