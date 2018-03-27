@@ -15,9 +15,9 @@
 
 
 (defun kill-other-buffers ()
-      "Kills buffers but the current"
-      (interactive)
-      (mapc 'kill-buffer (delq (current-buffer) (delq (neotree) (buffer-list))))
+	"Kills buffers but the current"
+	(interactive)
+	(mapc 'kill-buffer (delq (current-buffer) (delq (neotree) (buffer-list))))
 )
 
 (global-set-key (kbd "<M-f3>") 'kill-other-buffers)
@@ -29,15 +29,18 @@
 ;; This makes everything go into a single group named "user", apart from a few
 ;; special emacs buffers
 ;; Groups:
-;;  - user  - all user created buffers
-;;  - emacs - emacs created buffers (scratch, messages)
+;;  - emacs - emacs created buffers (scratch, messages, etc)
+;;  - cmd   - terminal replacement windows - these are the buffers which replace
+;;            activities traditionally performed in terminal
+;;  - code  - all other buffers
 (defun my-tabbar-buffer-groups ()
   (list (cond
-				 ;; Special cases -> some emacs buffers we want to be in the same group
-				 ;; as files
-				 ((string=      "*shell*"       (buffer-name)    ) "user" )
-				 ((string=      "*terminal*"    (buffer-name)    ) "user" )
-				 ((string=      "*compilation*" (buffer-name)    ) "user" )
+				 ;; Group together buffers which are replacements for terminal
+				 ((string= "*shell*"         (buffer-name)                ) "terminal")
+				 ((string= "*terminal*"      (buffer-name)                ) "terminal")
+				 ((string= "*ansi-terminal*" (buffer-name)                ) "terminal")
+				 ((string= "*compilation*"   (buffer-name)                ) "terminal")
+				 ((string= "magit: "         (substring (buffer-name) 0 7)) "terminal")
 
 				 ;; All other emacs special buffers go in their own group
 				 ((string-equal "*" (substring (buffer-name) 0 1)) "emacs")
