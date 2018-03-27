@@ -63,6 +63,9 @@ forwards, if negative)."
                        (call-interactively 'previous-error))
                      (my-indicate-error-nav-wrapped 'previous))))))
 
+;; Scroll compilation buffer as the process runs
+(setq compilation-scroll-output t)
+
 ;; Ensure that the current error is always kept 0 lines from the top of the
 ;; output buffer
 (setq compilation-context-lines 0)
