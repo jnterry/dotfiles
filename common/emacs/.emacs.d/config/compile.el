@@ -144,7 +144,7 @@ forwards, if negative)."
 ;; This code is self implemented - no source online
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun my-compile---do-compile-project ()
+(defun my-compile---do-compile-project (clean-project)
 	;; Now compile the project
 	(let ((project-root (ffip-get-project-root-directory))
 
@@ -165,8 +165,10 @@ forwards, if negative)."
 				;; The set pipefail ensures the error code from make is propagated
 				;; out of the overall command (rather than the 0 returned by grep)
 				;; see: https://stackoverflow.com/questions/1221833/pipe-output-and-capture-exit-status-in-bash
-				(make-cmd "(set -o pipefail; make | grep -vwE 'recipe.*failed');")
-				)
+				(make-cmd
+				 (concat (if clean-project "make clean &&" "")
+								 "(set -o pipefail; make | grep -vwE 'recipe.*failed');")
+				 ))
 
 		(cond
 		 ;; Build a project with makefile in root of vcs repo
@@ -188,9 +190,10 @@ forwards, if negative)."
 		))
 
 
-(defun compile-a-project ()
+(defun compile-a-project (clean-project)
 	"Compiles a project by finding the project root as per ffip-get-project-root
-then heuristically determining the project's type and building it"
+then heuristically determining the project's type and building it. If
+CLEAN-PROJECT is set then does a complete rebuild of the project"
 	(interactive)
 
 	(let ((existing-compilation-buffer (get-buffer "*compilation*"))
@@ -203,7 +206,7 @@ then heuristically determining the project's type and building it"
 		(unless existing-compilation-buffer (split-window-below))
 
 		;; Compile the project
-		(my-compile---do-compile-project)
+		(my-compile---do-compile-project clean-project)
 
 		;; Make sure we haven't moved the user away from the buffer they ran the
 		;; compile command in
@@ -277,7 +280,7 @@ then heuristically determining the project's type and building it"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setup hotkeys
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(bind-key* "M-;"  #'compile-a-project)
-(bind-key* "<f5>" #'compile-a-project)
-(bind-key* "M-,"  #'my-previous-error-wrapped)
-(bind-key* "M-."  #'my-next-error-wrapped)
+(bind-key* "<f5>"   (lambda () (interactive) (compile-a-project nil))) ;; build
+(bind-key* "C-<f5>" (lambda () (interactive) (compile-a-project t  ))) ;; clean
+(bind-key* "M-,"    #'my-previous-error-wrapped)
+(bind-key* "M-."    #'my-next-error-wrapped)
