@@ -1,1 +1,1 @@
-Contains all emacs config files (except init.el, in the directory above)
+Contains emacs configuration files. External libraries should be placed in ext instead.

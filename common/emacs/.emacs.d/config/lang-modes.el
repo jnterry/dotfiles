@@ -1,6 +1,4 @@
-;;; lang-modes --- Setups various major modes for editing different languages
-;;;
-;;; Code:
+;; Setups various major modes for editing different languages
 
 (use-package dockerfile-mode
   :mode "\\Dockerfile\\'"
@@ -11,19 +9,18 @@
   :config
   (setq puppet-indent-level     2)
   (setq puppet-indent-tabs-mode t)
-
 )
 
 (use-package haskell-mode
   :mode (("\\.hs\\'"  . haskell-mode)
-		 ("\\.lhs\\'" . haskell-mode)
-		)
+				 ("\\.lhs\\'" . haskell-mode)
+				)
 )
 
 (use-package yaml-mode
   :mode (("\\.yaml\\'" . yaml-mode)
-		 ("\\.yml\\'"  . yaml-mode)
-		)
+				 ("\\.yml\\'"  . yaml-mode)
+				)
 )
 
 ;; markdown-mode relies on emacs version 24.4 or newer
@@ -32,12 +29,7 @@
 					)
 	(use-package markdown-mode
 		:mode "\\.md\\'"
-		))
-
-(use-package js2-mode
-  :mode "\\.js\\'"
-  :init
-   (setq js2-strict-trailing-comma-warning nil)
+	)
 )
 
 (use-package json-mode
@@ -52,6 +44,8 @@
 				 ("\\.vue\\'"        . web-mode)
 				 ("\\.html\\'"       . web-mode)
 				 ("\\.dot\\'"        . web-mode)
+				 ("\\.js\\'"         . web-mode)
+				 ("\\.html\\'"       . web-mode)
 				 )
 	:config
 	(setq web-mode-enable-css-colorization t)
@@ -71,20 +65,18 @@
 )
 
 (use-package verilog-mode
-       :mode (("\\.v\\'" . verilog-mode))
-       :config
-       (clear-abbrev-table verilog-mode-abbrev-table)
+	:mode (("\\.v\\'" . verilog-mode))
+	:config
+	(clear-abbrev-table verilog-mode-abbrev-table)
 )
 
 (use-package glsl-mode
-       :mode (("\\.glsl\\'" . glsl-mode)
-							("\\.vert\\'" . glsl-mode)
-							("\\.frag\\'" . glsl-mode)
+	:mode (("\\.glsl\\'" . glsl-mode)
+				 ("\\.vert\\'" . glsl-mode)
+				 ("\\.frag\\'" . glsl-mode)
 				)
 )
 
 ;; (load "specman-mode")
 ;; (add-to-list 'auto-mode-alist '("\\.e\\'" . specman-mode   ))
 ;; (add-to-list 'auto-mode-alist '("\\.ecom\\'" . specman-mode))
-
-;;; lang-modes.el ends here
