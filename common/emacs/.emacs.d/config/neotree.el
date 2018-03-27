@@ -13,3 +13,14 @@
 					"^\\.#"    ;; emacs backup files
 					"\\.elc$"  ;; compiled el files
 					)))
+
+(add-hook 'neotree-mode-hook
+					(lambda ()
+					  (local-set-key (kbd "u"   ) 'neotree-refresh)        ;; u for update
+						(local-set-key (kbd "e"   ) 'neotree-change-root)    ;; e for enter
+						(local-set-key (kbd "m"   ) 'neotree-rename-node)    ;; m for mv
+						(local-set-key (kbd "r"   ) 'neotree-delete-node)    ;; r for rm
+						(local-set-key (kbd "t"   ) 'neotree-create-node)    ;; t for touch
+						(local-set-key (kbd "c"   ) 'neotree-copy-node)      ;; c for cp
+						(local-set-key (kbd "a"   ) 'neotree-stretch-toggle) ;; a - default is A
+						))
