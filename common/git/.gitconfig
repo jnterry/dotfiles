@@ -1,3 +1,5 @@
+[core]
+	 editor = emacsclient --alternate-editor="" -c "$@"
 [user]
 		email = jnterry@ntlworld.com
 		name  = Jamie Terry
