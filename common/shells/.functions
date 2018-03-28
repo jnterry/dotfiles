@@ -18,3 +18,8 @@ function fs() {
 		du $arg .[^.]* ./*;
 	fi;
 }
+
+# Opens a file in emacs in terminal
+function e() {
+		emacsclient --alternate-editor="" -c "$@"
+}
