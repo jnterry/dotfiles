@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# This script sets up config common to both bash and zsh shells
+
+# Enable using programs in bin directory
+export PATH="$HOME/bin:$PATH"
+
+# Add z command to jump to recently used directories
+source "$HOME/bin/z.sh"
+
+# Use custom functions
+source "$HOME/.functions"

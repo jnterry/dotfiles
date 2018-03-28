@@ -116,4 +116,5 @@ fi
 #  fi
 #fi
 
-export PATH="~/bin:$PATH"
+# Load common shell config
+source "$HOME/.shells"
