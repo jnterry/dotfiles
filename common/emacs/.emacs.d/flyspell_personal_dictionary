@@ -1,4 +1,4 @@
-personal_ws-1.1 en 455
+personal_ws-1.1 en 459 
 Minigames
 pragram
 ALU
@@ -81,6 +81,7 @@ BlueCrystal
 icc
 ALU's
 Independency
+executables
 FPR
 backkends
 parallelizing
@@ -94,6 +95,7 @@ Kerrison
 labelfont
 multicol
 setlist
+ansi
 sensative
 Elsley
 fancyvrb
@@ -118,10 +120,10 @@ ing
 frontend
 testbench
 HSL
-ConnectionPromise's
 ConnectionPromises
-SpecMan
+ConnectionPromise's
 specman
+SpecMan
 param
 customisations
 cgit
@@ -145,6 +147,7 @@ lim
 LHS
 unoptimised
 titlesec
+NaN
 undirected
 performant
 Chpt
@@ -203,8 +206,8 @@ QDR
 Hoisin
 Eder
 Javascript
-OOP
 RBF
+OOP
 attentional
 init
 RANSAC
@@ -267,8 +270,8 @@ NodeJS
 rhead
 rasterization
 NewAgenda
+assimp
 src
-SRC
 vectorial
 unmaintainable
 showqueue
@@ -292,6 +295,7 @@ Postgres
 superscalar
 framebuffer's
 TPR
+xeno
 overfit
 UoB
 Xeon
@@ -356,8 +360,8 @@ intrinsics
 dereferenced
 excitatory
 qteaching
-FN
 dx
+FN
 FP
 Arduinos
 ij
@@ -408,8 +412,8 @@ adapter
 nano
 butterworth's
 setlength
-framebuffer
 FrameBuffer
+framebuffer
 TP
 Raytracer
 OpenGL
@@ -438,8 +442,8 @@ OpenMP
 BAE
 bistable
 vectorization
-DUV's
 DUVs
+DUV's
 chainable
 username
 const
