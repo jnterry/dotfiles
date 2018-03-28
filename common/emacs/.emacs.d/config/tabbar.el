@@ -40,7 +40,10 @@
 				 ((string= "*terminal*"      (buffer-name)                ) "terminal")
 				 ((string= "*ansi-terminal*" (buffer-name)                ) "terminal")
 				 ((string= "*compilation*"   (buffer-name)                ) "terminal")
-				 ((string= "magit: "         (substring (buffer-name) 0 7)) "terminal")
+				 ((string= "COMMIT_EDITMSG"  (buffer-name)                ) "terminal")
+				 ((string= "magit"           (substring (buffer-name) 0 5)) "terminal")
+				 ((string= "*magit"          (substring (buffer-name) 0 6)) "terminal")
+				 ((string= "git-rebase-todo" (buffer-name)                ) "terminal")
 
 				 ;; All other emacs special buffers go in their own group
 				 ((string-equal "*" (substring (buffer-name) 0 1)) "emacs")
