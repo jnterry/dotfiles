@@ -116,19 +116,4 @@ fi
 #  fi
 #fi
 
-# added by Anaconda3 4.2.0 installer
-export PATH="/home/jamie/anaconda3/bin:$PATH"
-
-PATH="/home/jamie/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/jamie/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/jamie/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/jamie/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/jamie/perl5"; export PERL_MM_OPT;
-
-# added by Miniconda3 installer
-export PATH="/home/jamie/bin/miniconda3/bin:$PATH"
-
-export PATH="/opt/intel/vtune_amplifier_2018/bin64:$PATH"
-export PATH=~/bin/tau-2.27/x86_64/bin:${PATH}
-
 export PATH="~/bin:$PATH"
