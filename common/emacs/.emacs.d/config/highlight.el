@@ -24,12 +24,22 @@
 
  ;; List of modes to apply the function to
  '(c++-mode
-			 c-mode
-			 js-mode
-			 html-mode
-			 emacs-lisp-mode
-			 python-mode
-			 haskell-mode
-			 perl-mode
-			 org-mode
-			 ))
+	 c-mode
+	 glsl-mode
+	 js-mode
+	 html-mode
+	 emacs-lisp-mode
+	 python-mode
+	 haskell-mode
+	 perl-mode
+	 org-mode
+	 puppet-mode
+	 web-mode
+	 dockerfile-mode
+	 yaml-mode
+	 markdown-mode
+	 json-mode
+	 less-css-mode
+	 ruby-mode
+	 verilog-mode
+	 ))
