@@ -8,5 +8,9 @@ export PATH="$HOME/bin:$PATH"
 # Add z command to jump to recently used directories
 source "$HOME/bin/z.sh"
 
+# Add k for pretty directory listings
+# https://github.com/supercrabtree/k
+source "$HOME/bin/k.sh"
+
 # Use custom functions
 source "$HOME/.functions"
