@@ -1,4 +1,4 @@
-;; Modifies various configuration options for org-mode
+; Modifies various configuration options for org-mode
 
 ;; org mode is loaded by default by emacs, but we want access to some org mode
 ;; variables/function in this file
@@ -88,6 +88,17 @@
 
 (add-hook 'org-mode-hook 'visual-line-mode)
 (add-hook 'org-mode-hook 'adaptive-wrap-prefix-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Setup org mode source block execution (babel)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+	 (python . t)
+	 (C      . t)
+	 (js     . t)
+	 ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add characters to expand into #+BEGIN #+END blocks with <c then tab
