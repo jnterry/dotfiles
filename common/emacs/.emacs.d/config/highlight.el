@@ -11,6 +11,7 @@
 (modify-face 'font-lock-my-todo-face "red"    nil nil t t nil nil nil)
 (modify-face 'font-lock-my-opt-face  "yellow" nil nil t t nil nil nil)
 (modify-face 'font-lock-my-comp-face "cyan"   nil nil t t nil nil nil)
+(modify-face 'font-lock-my-comp-face "green"  nil nil t t nil nil nil)
 
 (mapc
  ;; Function which adds the keywords to 'mode;
@@ -20,6 +21,7 @@
 		'((":\\(TODO\\):" 1 'font-lock-my-todo-face t)
 			(":\\(OPT\\):"  1 'font-lock-my-opt-face  t)
 			(":\\(COMP\\):" 1 'font-lock-my-comp-face t)
+			(":\\(REF\\):"  1 'font-lock-my-comp-face t)
 			)))
 
  ;; List of modes to apply the function to
