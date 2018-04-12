@@ -1,4 +1,4 @@
-personal_ws-1.1 en 459 
+personal_ws-1.1 en 465 
 Minigames
 pragram
 ALU
@@ -53,6 +53,7 @@ FPUs
 xtmp
 portably
 parameterisation
+destructor
 soma
 backpropogation
 Prolog's
@@ -63,6 +64,7 @@ indexable
 rasterisation
 parameterised
 validator
+resizable
 cmake
 CMake
 Zerbino
@@ -198,6 +200,7 @@ infty
 underbrace
 glibc
 parallelize
+barycentric
 Luxford
 omp
 Kerstin
@@ -329,6 +332,7 @@ rfoot
 Tweety
 lhead
 vue
+centering
 Arduino
 struct
 translational
@@ -370,6 +374,7 @@ variates
 captionsetup
 thepage
 HW
+destructors
 Latencies
 le
 LHS's
@@ -400,6 +405,7 @@ InstallShield
 surprisedness
 thresholded
 sh
+raytraced
 DVCS
 color
 uncalibrated
