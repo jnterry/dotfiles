@@ -50,6 +50,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+				handle-switch-frame
 				kill-region
 				mouse-set-region
 				org-insert-heading-respect-content
