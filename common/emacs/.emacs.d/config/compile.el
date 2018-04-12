@@ -167,7 +167,7 @@ forwards, if negative)."
 				;; see: https://stackoverflow.com/questions/1221833/pipe-output-and-capture-exit-status-in-bash
 				(make-cmd
 				 (concat (if clean-project "make clean &&" "")
-								 "(set -o pipefail; make | grep -vwE 'recipe.*failed');")
+								 "(set -o pipefail; make -j 8 | grep -vwE 'recipe.*failed');")
 				 ))
 
 		(cond
