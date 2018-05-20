@@ -1,4 +1,4 @@
-personal_ws-1.1 en 534 
+personal_ws-1.1 en 542 
 Minigames
 pragram
 ALU
@@ -53,6 +53,7 @@ WORKDIR
 DNS
 CSS
 Verilog
+CWA
 gcc
 boolean
 LaTex
@@ -124,6 +125,7 @@ redux
 HPC
 forall
 chai
+Nagumo
 Goto
 hor
 grep
@@ -141,10 +143,10 @@ frontend
 wireframe
 testbench
 HSL
-ConnectionPromise's
 ConnectionPromises
-SpecMan
+ConnectionPromise's
 specman
+SpecMan
 param
 cornell
 customisations
@@ -236,8 +238,8 @@ QDR
 Hoisin
 Eder
 Javascript
-OOP
 RBF
+OOP
 attentional
 init
 RANSAC
@@ -246,6 +248,7 @@ SIDENOTE
 inliers
 satisfiable
 iteratively
+disjunction
 overfitting
 orm
 Sobel
@@ -338,9 +341,11 @@ Subtask
 Postgres
 superscalar
 framebuffer's
+skolem
 TPR
 xeno
 overfit
+abductive
 UoB
 Xeon
 Uzbeki
@@ -376,7 +381,7 @@ uncountably
 whitespace
 rfoot
 dendritically
-Tweety
+tweety
 photoreceptive
 lhead
 vue
@@ -390,6 +395,7 @@ Thresholding
 ShiftBy
 reconvergence
 emacs
+lightbulb
 Netcraft
 XKCD
 misclassified
@@ -477,8 +483,8 @@ nano
 butterworth's
 setlength
 achilles
-framebuffer
 FrameBuffer
+framebuffer
 TP
 raytracer
 OpenGL
@@ -515,12 +521,13 @@ hyperpolarization
 vectorization
 Peristimulus
 BCM
-DUV's
 DUVs
+DUV's
 chainable
 username
 const
 requestors
+equisatisfiable
 queryable
 Renishaw
 Siri
@@ -531,5 +538,6 @@ detections
 renderer
 BFM
 qsub
+FitzHugh
 Gyrus
 Starfield
