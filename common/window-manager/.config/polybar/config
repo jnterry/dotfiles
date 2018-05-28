@@ -4,7 +4,7 @@ background-alt   = #cc000000
 foreground       = #dfdfdf
 foreground-alt   = #999999
 foreground-err   = #ffaaaa
-primary          = #ffb52a
+primary          = #a0c4ff
 secondary        = #e60053
 alert            = #bd2c40
 
@@ -24,14 +24,14 @@ line-color = #f00
 border-size = 0
 border-color = #00000000
 
-separator = "  "
+separator =
 seperator-color = ${colors.foreground-alt}
 
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 3
+module-margin-right = 3
 
 font-0 = Source Sans Pro:style:SemiBold:size=10;1
 font-1 = FontAwesome:size=10;1
@@ -40,7 +40,7 @@ font-3 = Source Han Sans JP:size=10;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = volume filesystem xbacklight cpu temperature memory wlan eth battery date powermenu
+modules-right = volume filesystem xbacklight cpu memory temperature wlan eth battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -71,6 +71,7 @@ mount-0 = /
 label-mounted =  %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-err}
+click-left = /usr/bin/nautilus
 
 [module/bspwm]
 type = internal/bspwm
@@ -212,18 +213,59 @@ card = intel_backlight
 [module/cpu]
 format-label       = internal/cpu
 
-format             = <label>
+format    = <label> <ramp-coreload>
 type      = internal/cpu
-interval  = 2
-label     =  %percentage%%
+interval  = 0.3
+label     = "CPU"
 padding   = 0
+format-underline = ${colors.primary}
+
+ramp-coreload-0 = ▁
+ramp-coreload-0-foreground = ${colors.primary}
+ramp-coreload-1 = ▂
+ramp-coreload-1-foreground = ${colors.primary}
+ramp-coreload-2 = ▃
+ramp-coreload-2-foreground = ${colors.primary}
+ramp-coreload-3 = ▄
+ramp-coreload-3-foreground = ${colors.primary}
+ramp-coreload-4 = ▅
+ramp-coreload-4-foreground = ${colors.primary}
+ramp-coreload-5 = ▆
+ramp-coreload-5-foreground = ${colors.alert}
+ramp-coreload-6 = ▇
+ramp-coreload-6-foreground = ${colors.alert}
+ramp-coreload-7 = █
+ramp-coreload-7-foreground = ${colors.alert}
 
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-label = %percentage_used%%
+format= <label> <bar-used>
+label = "RAM"
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.primary}
+bar-used-indicator =
+bar-used-width = 16
+bar-used-foreground-0 = ${colors.primary}
+bar-used-foreground-1 = ${colors.primary}
+bar-used-foreground-2 = ${colors.primary}
+bar-used-foreground-3 = ${colors.primary}
+bar-used-foreground-4 = ${colors.primary}
+bar-used-foreground-5 = ${colors.primary}
+bar-used-foreground-6 = ${colors.primary}
+bar-used-foreground-7 = ${colors.primary}
+bar-used-foreground-8 = ${colors.primary}
+bar-used-foreground-9 = ${colors.primary}
+bar-used-foreground-10 = ${colors.secondary}
+bar-used-foreground-11 = ${colors.secondary}
+bar-used-foreground-12 = ${colors.secondary}
+bar-used-foreground-13 = ${colors.secondary}
+bar-used-foreground-14 = ${colors.secondary}
+bar-used-foreground-15 = ${colors.secondary}
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = ${colors.foreground-alt}
 
 [module/wlan]
 type = internal/network
