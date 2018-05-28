@@ -30,8 +30,8 @@ seperator-color = ${colors.foreground-alt}
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 3
-module-margin-right = 3
+module-margin-left = 2
+module-margin-right = 2
 
 font-0 = Source Sans Pro:style:SemiBold:size=10;1
 font-1 = FontAwesome:size=10;1
@@ -68,9 +68,12 @@ interval = 25
 
 mount-0 = /
 
+format-mounted-underline = ${colors.primary}
 label-mounted =  %free%
+
+format-unmounted-underline = ${colors.alert}
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-err}
+
 click-left = /usr/bin/nautilus
 
 [module/bspwm]
@@ -275,6 +278,10 @@ interval = 3.0
 format-connected = <ramp-signal> <label-connected>
 label-connected =  %signal%%
 
+format-connected-underline = ${colors.primary}
+
+label-disconnected =   0%
+format-disconnected-underline = ${colors.alert}
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;label-disconnected = %ifname% disconnected
@@ -303,10 +310,12 @@ format-disconnected = "No eth"
 type = internal/date
 interval = 1
 
-date     = "%a %d/%m/%y"
+date     = "%a %Y/%m/%d"
 time     = "%H:%M"
 
 label = "%date% %time%"
+
+format-underline = ${colors.primary}
 
 [module/volume]
 type = internal/volume
@@ -314,14 +323,15 @@ type = internal/volume
 format-volume = <ramp-volume> <label-volume>
 label-volume = "%percentage%%"
 label-volume-foreground = ${root.foreground}
-
+format-volume-underline  = ${colors.primary}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
 format-muted-foreground = ${colors.foreground-err}
-label-muted = "      "
+format-muted-underline  = ${colors.alert}
+label-muted = "        "
 
 bar-volume-width = 11
 bar-volume-foreground-0 = #55aa55
@@ -346,6 +356,8 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
+format-underline = ${colors.primary}
+
 format-charging = <animation-charging> <label-charging>
 
 format-discharging = <ramp-capacity> <label-discharging>
@@ -359,7 +371,6 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
-
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
@@ -372,8 +383,10 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 50
 
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
+format = <label>
+format-warn = <label-warn>
+
+format-underline = ${colors.primary}
 
 label = %temperature%
 label-warn = %temperature%
