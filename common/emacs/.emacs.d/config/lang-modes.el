@@ -56,6 +56,13 @@
 	(setq web-mode-code-indent-offset      2)
 )
 
+(use-package typescript-mode
+ 	:mode (("\\.ts\\'" . typescript-mode)
+				 )
+	:config
+	(setq typescript-indent-level 2)
+)
+
 (use-package less-css-mode
 	:mode "\\.less\\'"
 )
