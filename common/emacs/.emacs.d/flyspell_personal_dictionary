@@ -1,4 +1,4 @@
-personal_ws-1.1 en 542 
+personal_ws-1.1 en 549 
 Minigames
 pragram
 ALU
@@ -7,6 +7,7 @@ AQA
 sqlite
 dbh
 unary
+fastcgi
 cgi
 uncategorized
 bashrc
@@ -50,8 +51,8 @@ killall
 saliency
 CSP
 WORKDIR
-DNS
 CSS
+DNS
 Verilog
 CWA
 gcc
@@ -95,6 +96,7 @@ icc
 ALU's
 Independency
 executables
+uncomment
 Lecar
 FPR
 backkends
@@ -216,8 +218,10 @@ namespace
 Haproxy
 PCI
 PBS
+nginx
 Guildford
 diag
+unix
 titlespacing
 MVB
 ATTR
@@ -292,6 +296,7 @@ ROC
 lang
 COMS
 setup
+tcp
 documentclass
 SHR
 nullclines
@@ -315,6 +320,7 @@ NodeJS
 notational
 rhead
 rasterization
+fcgi
 NewAgenda
 assimp
 src
@@ -395,6 +401,7 @@ Thresholding
 ShiftBy
 reconvergence
 emacs
+fcgiwrap
 lightbulb
 Netcraft
 XKCD
