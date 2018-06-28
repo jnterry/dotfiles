@@ -1,13 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/sh
 #
 # Installs all dotfiles to the appropriate locations
 
-pushd $(dirname "${0}") > /dev/null
-SCRIPTDIR=$(pwd -L)
-popd > /dev/null
+SCRIPT=$(readlink -f "$0")
+SCRIPTDIR=$(dirname $SCRIPT)
 
 STOW_CMD='/usr/bin/stow'
-if [[ -f '/usr/bin/stowforce' ]] ; then
+if [ -f '/usr/bin/stowforce' ] ; then
 	STOW_CMD='/usr/bin/stowforce'
 fi
 
@@ -24,7 +23,7 @@ done
 #######################################
 # Install host specific files
 HOSTDIR=${SCRIPTDIR}/$(hostname)
-if [[ -d ${HOSTDIR} ]] ; then
+if [ -d ${HOSTDIR} ] ; then
 	cd ${HOSTDIR}
 	for d in `ls -d */`;
 	do
