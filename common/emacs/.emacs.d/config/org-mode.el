@@ -41,6 +41,18 @@
 ;; Lets tab work as normal in code blocks
 (setq org-src-tab-acts-natively t)
 
+;; Highlight start and end line for blocks in editor
+(defface org-block-begin-line
+  '((t ( :foreground "spring green"
+				 :background "#112f11"
+			 )))
+  "Face used for the line delimiting the begin of source blocks.")
+(defface org-block-end-line
+  '((t ( :foreground "spring green"
+				 :background "#112f11"
+			 )))
+  "Face used for the line delimiting the begin of source blocks.")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Ensure source blocks are exported nicely to latex and pdf, this includes:
 ;; - tabs that aren't size 0
@@ -152,6 +164,13 @@
 						 '(
 							 "a"
 							 "#+BEGIN_ASIDE\n?\n#+END_ASIDE\n" ""
+							 )
+						 )
+
+(add-to-list 'org-structure-template-alist
+						 '(
+							 "t"
+							 "#+BEGIN_TODO\n?\n#+END_TODO\n" ""
 							 )
 						 )
 
