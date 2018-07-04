@@ -1,4 +1,4 @@
-personal_ws-1.1 en 549 
+personal_ws-1.1 en 558 
 Minigames
 pragram
 ALU
@@ -51,12 +51,14 @@ killall
 saliency
 CSP
 WORKDIR
-CSS
 DNS
+CSS
 Verilog
 CWA
 gcc
 boolean
+devops
+DevOps
 LaTex
 unitless
 FPUs
@@ -128,6 +130,7 @@ HPC
 forall
 chai
 Nagumo
+Multilane
 Goto
 hor
 grep
@@ -145,10 +148,10 @@ frontend
 wireframe
 testbench
 HSL
-ConnectionPromises
 ConnectionPromise's
-specman
+ConnectionPromises
 SpecMan
+specman
 param
 cornell
 customisations
@@ -177,6 +180,7 @@ Hebbian
 lim
 LHS
 unoptimised
+toolchain
 autocorrelogram
 titlesec
 NaN
@@ -242,8 +246,8 @@ QDR
 Hoisin
 Eder
 Javascript
-RBF
 OOP
+RBF
 attentional
 init
 RANSAC
@@ -265,6 +269,7 @@ ifndef
 Jira
 ppn
 pre
+hostname
 params
 parskip
 numa
@@ -303,6 +308,7 @@ nullclines
 bimodal
 SLD
 ivdep
+entrypoint
 jnbe
 ModelSim
 Zarola
@@ -342,6 +348,7 @@ sqdiff
 dataset
 PICAXE
 Kutta
+srv
 hyperparameters
 Subtask
 Postgres
@@ -468,6 +475,7 @@ mx
 pmatrix
 proxied
 bigstar
+MySQL
 mysql
 RG
 InstallShield
@@ -490,8 +498,8 @@ nano
 butterworth's
 setlength
 achilles
-FrameBuffer
 framebuffer
+FrameBuffer
 TP
 raytracer
 OpenGL
@@ -521,6 +529,7 @@ vectorized
 OpenMP
 BAE
 Hebb
+symlinks
 potentiation
 bistable
 Ammon
@@ -528,8 +537,8 @@ hyperpolarization
 vectorization
 Peristimulus
 BCM
-DUVs
 DUV's
+DUVs
 chainable
 username
 const
