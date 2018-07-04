@@ -1,8 +1,11 @@
 ; Modifies various configuration options for org-mode
 
 ;; org mode is loaded by default by emacs, but we want access to some org mode
-;; variables/function in this file
-(use-package org)
+;; variables/function in this file without compiler warnings, also we want to
+;; ensure that we have the latest version
+(require 'package)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(require 'org)
 
 ;; Determine the major version of the org package, some of this config relies on
 ;; a relatively modern version, so we need to check
@@ -110,6 +113,7 @@
 	 (python . t)
 	 (C      . t)
 	 (js     . t)
+	 (sh     . t)
 	 ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
