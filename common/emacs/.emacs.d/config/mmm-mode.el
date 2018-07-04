@@ -17,8 +17,12 @@
 			)))
 
 	;; Enable org-blocks in the following major modes
-	(add-to-list 'mmm-mode-ext-classes-alist '(puppet-mode     nil org-blocks))
-	;;(add-to-list 'mmm-mode-ext-classes-alist '(c++-mode        nil org-blocks))
+	(add-to-list 'mmm-mode-ext-classes-alist '(puppet-mode       nil org-blocks))
+	(add-to-list 'mmm-mode-ext-classes-alist '(c++-mode          nil org-blocks))
+	(add-to-list 'mmm-mode-ext-classes-alist '(c-mode            nil org-blocks))
+	(add-to-list 'mmm-mode-ext-classes-alist '(js-mode           nil org-blocks))
+	(add-to-list 'mmm-mode-ext-classes-alist '(typescript-mode   nil org-blocks))
+	(add-to-list 'mmm-mode-ext-classes-alist '(css-mode          nil org-blocks))
 
 	(add-hook 'c-mode-common-hook (lambda()()))
 	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
