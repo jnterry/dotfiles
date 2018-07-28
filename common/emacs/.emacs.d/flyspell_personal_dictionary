@@ -1,4 +1,4 @@
-personal_ws-1.1 en 558 
+personal_ws-1.1 en 562 
 Minigames
 pragram
 ALU
@@ -12,6 +12,7 @@ cgi
 uncategorized
 bashrc
 addtolength
+HTTPS
 endif
 flycheck
 quaternions
@@ -51,8 +52,8 @@ killall
 saliency
 CSP
 WORKDIR
-DNS
 CSS
+DNS
 Verilog
 CWA
 gcc
@@ -93,6 +94,7 @@ Hough
 sigmoid
 Tilehurst
 nabla
+natively
 BlueCrystal
 icc
 ALU's
@@ -148,10 +150,10 @@ frontend
 wireframe
 testbench
 HSL
-ConnectionPromise's
 ConnectionPromises
-SpecMan
+ConnectionPromise's
 specman
+SpecMan
 param
 cornell
 customisations
@@ -246,8 +248,8 @@ QDR
 Hoisin
 Eder
 Javascript
-OOP
 RBF
+OOP
 attentional
 init
 RANSAC
@@ -338,6 +340,7 @@ Bolognese
 SPS
 enumitem
 blackbox
+installable
 toc
 ConnectionPromise
 overbrace
@@ -475,8 +478,8 @@ mx
 pmatrix
 proxied
 bigstar
-MySQL
 mysql
+MySQL
 RG
 InstallShield
 autocorrelation
@@ -498,8 +501,8 @@ nano
 butterworth's
 setlength
 achilles
-framebuffer
 FrameBuffer
+framebuffer
 TP
 raytracer
 OpenGL
@@ -513,6 +516,7 @@ Hebb's
 vs
 infiniband
 Centos
+crontrol
 pagestyle
 xp
 colored
@@ -537,8 +541,8 @@ hyperpolarization
 vectorization
 Peristimulus
 BCM
-DUV's
 DUVs
+DUV's
 chainable
 username
 const
