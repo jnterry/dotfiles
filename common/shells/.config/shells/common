@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-#
 # This script sets up config common to both bash and zsh shells
 
 # Enable using programs in bin directory
@@ -11,6 +9,3 @@ source "$HOME/bin/z.sh"
 # Add k for pretty directory listings
 # https://github.com/supercrabtree/k
 source "$HOME/bin/k.sh"
-
-# Use custom functions
-source "$HOME/.functions"
