@@ -2,15 +2,19 @@
 #
 # Installs all dotfiles to the appropriate locations
 
-SCRIPT=$(/bin/readlink -f "$0")
-SCRIPTDIR=$(/usr/bin/dirname $SCRIPT)
+# We don't want to rely on $PATH being set as this may be run as part of
+# automatic system setup when enviroment variables are not present
+export PATH="$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin/"
+
+SCRIPT=$(readlink -f "$0")
+SCRIPTDIR=$(dirname $SCRIPT)
 
 # We don't want to rely on $HOME being set as this may be run as part of
 # automatic system setup when enviroment variables are not present
 #
 # Hence we are going to detect the home directory of the user this script
 # is being ran as, and install to there
-TARGET=$(eval echo "~$(/usr/bin/whoami)")
+TARGET=$(eval echo "~$(whoami)")
 
 STOW_CMD='/usr/bin/stow'
 if [ -f '/usr/bin/stowforce' ] ; then
@@ -29,7 +33,7 @@ done
 
 #######################################
 # Install host specific files
-HOSTDIR=${SCRIPTDIR}/$(/bin/hostname)
+HOSTDIR=${SCRIPTDIR}/$(hostname)
 if [ -d ${HOSTDIR} ] ; then
 	cd ${HOSTDIR}
 	for d in `ls -d */`;
