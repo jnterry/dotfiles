@@ -1,4 +1,4 @@
-personal_ws-1.1 en 566 
+personal_ws-1.1 en 585
 Minigames
 pragram
 ALU
@@ -25,8 +25,10 @@ ast
 myprog
 Gaussians
 cmd
+CLI
 dia
 jacobi
+optargs
 unclosed
 AWS
 combinator
@@ -58,6 +60,8 @@ Verilog
 CWA
 gcc
 boolean
+rsync
+doT
 devops
 DevOps
 LaTex
@@ -84,6 +88,7 @@ cmake
 CMake
 Zerbino
 Liveness
+gid
 DUV
 etc
 scikit
@@ -113,12 +118,14 @@ prolog
 unshuffle
 PRERELEASE
 iff
+readme
 metabotropic
 Kerrison
 labelfont
 multicol
 setlist
 hyperpolarizing
+treeploy
 ansi
 sensative
 Elsley
@@ -177,6 +184,7 @@ optimization
 itr
 covariance
 LGN
+programmatically
 max
 myelinated
 morphologies
@@ -297,6 +305,7 @@ Penrose
 Cornus
 thenable
 SGI
+conf
 microarchitecture
 sgn
 reachability
@@ -340,6 +349,7 @@ unmaintainable
 showqueue
 sql
 Bolognese
+uid
 SPS
 enumitem
 blackbox
@@ -348,8 +358,10 @@ toc
 ConnectionPromise
 overbrace
 epipolar
+SRP
 tmp
 Waymont
+VCS
 sqdiff
 dataset
 PICAXE
@@ -372,6 +384,7 @@ rasterizer
 FDIV
 textasteriskcentered
 truthy
+yaml
 vdots
 middleware
 shader
@@ -399,10 +412,12 @@ discriminability
 uncountably
 whitespace
 rfoot
+hostnames
 dendritically
 tweety
 photoreceptive
 lhead
+WMS
 vue
 centering
 Arduino
@@ -430,8 +445,10 @@ qquad
 cd
 emissive
 templated
+yml
 intel
 striate
+cp
 eg
 el
 dimensionality
@@ -459,6 +476,7 @@ destructors
 Latencies
 le
 LHS's
+json
 Obscura
 glDepthFunc
 haar
@@ -560,6 +578,7 @@ itemize
 allocator
 detections
 renderer
+npmjs
 BFM
 qsub
 FitzHugh
