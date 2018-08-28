@@ -24,6 +24,7 @@
 				keyboard-escape-quit
 				kmacro-start-macro-or-insert-counter
 				markdown-cycle
+				markdown-outdent-or-delete
 				org-cycle
 				org-end-of-line
 				org-force-self-insert
