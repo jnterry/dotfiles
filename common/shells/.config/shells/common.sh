@@ -10,16 +10,6 @@ source "$HOME/bin/z.sh"
 # https://github.com/supercrabtree/k
 source "$HOME/bin/k.sh"
 
-# Aliases
-#cdandls() {
-#		echo "hi"
-#		cd $1;
-#		ls;
-#}
-#alias cd="cdandls"
-
-#alias ls="k"
-
 # added by travis gem
 [ -f /home/jamie/.travis/travis.sh ] && source /home/jamie/.travis/travis.sh
 

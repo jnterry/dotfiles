@@ -14,6 +14,16 @@
 (setq inhibit-startup-message t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Setup this instance as an emacs server if we are running in GUI mode (a
+;; a terminal server should be started at login by shell config)
+(load "server")
+
+(if (display-graphic-p) (progn
+													(setq server-name "gui")
+													(unless (server-running-p) (server-start)
+														)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setup packge repository
 (when (>= emacs-major-version 24)
   (require 'package)

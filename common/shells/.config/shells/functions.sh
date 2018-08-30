@@ -18,11 +18,3 @@ function fs() {
 		du $arg .[^.]* ./*;
 	fi;
 }
-
-# Opens a file in emacs in terminal
-function e() {
-		# --alternate-editor="" means if the server is not running
-		# then start it and connect, rather than falling back to vim or
-		# similar
-		emacsclient --alternate-editor="" -c "$@"
-}

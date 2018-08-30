@@ -108,6 +108,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #fi
 
 # Load common shell config
-for FILE in $HOME/.config/shells/*; do
+for FILE in $HOME/.config/shells/*.sh; do
 		source $FILE
 done
