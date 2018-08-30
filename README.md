@@ -16,5 +16,5 @@ At first glance having CI for dotfiles may seem strange - however when we note t
 
 # To Install
 
-1. Clone the repository
+1. ```git clone --recurse-submodules -j8 git@github.com:jnterry/dotfiles.git```
 2. Run ```install.sh```

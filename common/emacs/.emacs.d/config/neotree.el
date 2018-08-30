@@ -16,7 +16,7 @@
 
 (add-hook 'neotree-mode-hook
 					(lambda ()
-					  (local-set-key (kbd "u"   ) 'neotree-refresh)        ;; u for update
+					  (local-set-key (kbd "g"   ) 'neotree-refresh)        ;; g for update - same as magit
 						(local-set-key (kbd "e"   ) 'neotree-change-root)    ;; e for enter
 						(local-set-key (kbd "m"   ) 'neotree-rename-node)    ;; m for mv
 						(local-set-key (kbd "r"   ) 'neotree-delete-node)    ;; r for rm

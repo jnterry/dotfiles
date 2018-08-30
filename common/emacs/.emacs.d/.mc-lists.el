@@ -24,6 +24,7 @@
 				keyboard-escape-quit
 				kmacro-start-macro-or-insert-counter
 				markdown-cycle
+				markdown-outdent-or-delete
 				org-cycle
 				org-end-of-line
 				org-force-self-insert
@@ -44,12 +45,14 @@
 				specman-remove-tab
 				tabbar-backward-tab
 				tabbar-select-tab-callback
+				typescript-insert-and-indent
 				yaml-electric-backspace
 				yaml-electric-dash-and-dot
 				))
 
 (setq mc/cmds-to-run-once
       '(
+				handle-switch-frame
 				kill-region
 				mouse-set-region
 				org-insert-heading-respect-content

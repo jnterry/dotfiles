@@ -1,5 +1,7 @@
 ;; Setups various major modes for editing different languages
 
+;; (add-hook 'c++-mode-hook (lambda()(c-set-offset 'innamespace 0)))
+
 (use-package dockerfile-mode
   :mode "\\Dockerfile\\'"
 )
@@ -52,6 +54,13 @@
 	(setq web-mode-markup-indent-offset    2)
 	(setq web-mode-css-indent-offset       2)
 	(setq web-mode-code-indent-offset      2)
+)
+
+(use-package typescript-mode
+ 	:mode (("\\.ts\\'" . typescript-mode)
+				 )
+	:config
+	(setq typescript-indent-level 2)
 )
 
 (use-package less-css-mode

@@ -1,8 +1,11 @@
-;; Modifies various configuration options for org-mode
+; Modifies various configuration options for org-mode
 
 ;; org mode is loaded by default by emacs, but we want access to some org mode
-;; variables/function in this file
-(use-package org)
+;; variables/function in this file without compiler warnings, also we want to
+;; ensure that we have the latest version
+(require 'package)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(require 'org)
 
 ;; Determine the major version of the org package, some of this config relies on
 ;; a relatively modern version, so we need to check
@@ -40,6 +43,18 @@
 
 ;; Lets tab work as normal in code blocks
 (setq org-src-tab-acts-natively t)
+
+;; Highlight start and end line for blocks in editor
+(defface org-block-begin-line
+  '((t ( :foreground "spring green"
+				 :background "#112f11"
+			 )))
+  "Face used for the line delimiting the begin of source blocks.")
+(defface org-block-end-line
+  '((t ( :foreground "spring green"
+				 :background "#112f11"
+			 )))
+  "Face used for the line delimiting the begin of source blocks.")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Ensure source blocks are exported nicely to latex and pdf, this includes:
@@ -88,6 +103,18 @@
 
 (add-hook 'org-mode-hook 'visual-line-mode)
 (add-hook 'org-mode-hook 'adaptive-wrap-prefix-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Setup org mode source block execution (babel)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+	 (python . t)
+	 (C      . t)
+	 (js     . t)
+	 (sh     . t)
+	 ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add characters to expand into #+BEGIN #+END blocks with <c then tab
@@ -141,6 +168,13 @@
 						 '(
 							 "a"
 							 "#+BEGIN_ASIDE\n?\n#+END_ASIDE\n" ""
+							 )
+						 )
+
+(add-to-list 'org-structure-template-alist
+						 '(
+							 "t"
+							 "#+BEGIN_TODO\n?\n#+END_TODO\n" ""
 							 )
 						 )
 

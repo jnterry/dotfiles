@@ -2,8 +2,11 @@
 bindkey -e
 
 # Load common shell config
-source "$HOME/.shells"
+for FILE in $HOME/.config/shells/*; do
+		source $FILE
+done
 
+# Load zsh specifc config
 ZSH_CONFIG_DIR=$HOME/.config/zsh/
 for f in `ls ${ZSH_CONFIG_DIR} | grep \.sh$`
 do
