@@ -45,6 +45,7 @@
 				specman-remove-tab
 				tabbar-backward-tab
 				tabbar-select-tab-callback
+				typescript-insert-and-indent
 				yaml-electric-backspace
 				yaml-electric-dash-and-dot
 				))
