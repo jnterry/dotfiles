@@ -4,7 +4,6 @@
 # First off, it if the emacs terminal server is not running the start it
 
 if [[ -e /usr/bin/emacs && ! -e /tmp/emacs1000/terminal ]] ; then
-		echo "Starting emacs server in background..."
 		# Do in brackets (subshell) to prevent print of pid etc
 		(emacs --daemon=terminal > /dev/null 2> /dev/null &)
 fi
