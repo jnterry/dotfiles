@@ -177,12 +177,22 @@ forwards, if negative)."
 				(recompile)
 				)
 			)
+
 		 ;; Build a project with makefile in /build folder of vcs repo
 		 ((file-exists-p (concat project-root "build/Makefile"))
 			(let ((compile-command (concat "cd " project-root "build && " make-cmd)))
 				(recompile)
 				)
-		 )
+			)
+
+		 ;; Build a project with package.json in root of vcs repo
+		 ((file-exists-p (concat project-root "package.json"))
+			(let ((compile-command (concat "cd " project-root " && npm run build")))
+				(recompile)
+				)
+			)
+
+		 ;; Default case is to complain
 		 (t (message (concat "Failed to determine how to build project at '"
 												 project-root
 												 "'. Add a heuristic to ~/.emacs.d/config/compile.el")))
