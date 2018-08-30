@@ -1,1 +1,4 @@
-xrandr --output DisplayPort-0 --auto --output HDMI-0 --auto --right-of DisplayPort-0 --output DVI-0 --auto --right-of HDMI-0
+xrandr --output HDMI-0 --auto \
+			 --output DisplayPort-0 --auto --right-of HDMI-0 \
+			 --output DVI-0 --auto --right-of DisplayPort-0 \
+			 --output DVI-1 --off
