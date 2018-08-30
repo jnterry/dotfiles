@@ -1,5 +1,3 @@
-echo "Sourcing plugins"
-
 pushd $(dirname "${0}") > /dev/null
 SCRIPTDIR=$(pwd -L)
 popd > /dev/null
