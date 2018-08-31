@@ -2,7 +2,7 @@
 bindkey -e
 
 # Load common shell config
-for FILE in $HOME/.config/shells/*; do
+for FILE in $HOME/.config/shells/*.sh; do
 		source $FILE
 done
 
