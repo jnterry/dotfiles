@@ -248,7 +248,7 @@ function print_top_left () {
 
 		tput setaf 0
 
-		printf " $(pwd | sed 's:^$HOME:~:') "
+		printf " $(pwd | sed 's/^\/home\/jamie/~/') "
 
 		tput sgr0
 		tput setaf 117
