@@ -7,8 +7,10 @@
 )
 
 ;; Make emacs window slightly transparent
-(set-frame-parameter (selected-frame) 'alpha '(90 . 90))
-(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
+(if (or (eq system-type 'gnu) (eq system-type 'gnu/linux))
+		(progn
+			(set-frame-parameter (selected-frame) 'alpha '(90 . 90))
+			(add-to-list 'default-frame-alist '(alpha . (90 . 90)))))
 
 ;; Improve comment contrast
 (set-face-foreground 'font-lock-comment-face "spring green")
