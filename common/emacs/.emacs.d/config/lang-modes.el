@@ -1,6 +1,7 @@
 ;; Setups various major modes for editing different languages
 
 ;; (add-hook 'c++-mode-hook (lambda()(c-set-offset 'innamespace 0)))
+(add-hook 'c++-mode-hook (lambda()(c-set-offset 'label 'tab-width)))
 
 (use-package dockerfile-mode
   :mode "\\Dockerfile\\'"
