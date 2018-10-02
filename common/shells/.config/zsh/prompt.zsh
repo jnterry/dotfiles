@@ -60,7 +60,9 @@ function print_top_right() {
 		#
 		# !!!!!!!!!!!!!!!!!!!!!!!!!!
 		#
-		#  Tested with git v 2.17.1
+		#  Tested with git versions:
+		# - 2.15.1
+		# - 2.17.1
 		#
 		# !!!!!!!!!!!!!!!!!!!!!!!!!!
 
