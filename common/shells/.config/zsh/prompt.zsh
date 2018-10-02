@@ -172,10 +172,9 @@ function print_top_right() {
 				# do lets do that...
 				SHORT_STATUS=$(git status --short)
 
-				FILES_STAGED=$(echo ${SHORT_STATUS} | awk '{print substr($0, 1, 1) }' | tr -d [:space:] | tr -d ? | wc -c)
-				FILES_CHANGED=$(echo ${SHORT_STATUS} | awk '{print substr($0, 2, 2) }' | tr -d [:space:] | tr -d ? | wc -c)
-				FILES_UNTRACKED=$(echo ${SHORT_STATUS} | awk '{print substr($0, 2, 2) }' | tr -d [:alpha:] | tr -d [:space:] | wc -c)
-
+				FILES_STAGED=$(echo ${SHORT_STATUS} | awk '{print substr($0, 1, 1) }' | tr -d " \n" | tr -d "?" | wc -c)
+				FILES_CHANGED=$(echo ${SHORT_STATUS} | awk '{print substr($0, 2, 2) }' | tr -d " \n" | tr -d "?" | wc -c)
+				FILES_UNTRACKED=$(echo ${SHORT_STATUS} | awk '{print substr($0, 2, 2) }' | tr -d "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" | tr -d " \n" | wc -c)
 
 				if [[ ! ${FILES_STAGED} == 0 ]] ; then
 						STATE="● ${FILES_STAGED}"
