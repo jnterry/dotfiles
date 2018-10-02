@@ -1,4 +1,4 @@
-personal_ws-1.1 en 585
+personal_ws-1.1 en 589 
 Minigames
 pragram
 ALU
@@ -93,6 +93,7 @@ DUV
 etc
 scikit
 attractor
+subseteq
 SRAM
 HDL
 Anki
@@ -117,8 +118,8 @@ GMM
 prolog
 unshuffle
 PRERELEASE
-iff
 readme
+iff
 metabotropic
 Kerrison
 labelfont
@@ -142,6 +143,7 @@ chai
 namespaces
 Nagumo
 Multilane
+emptyset
 Goto
 hor
 grep
@@ -413,6 +415,7 @@ uncountably
 whitespace
 rfoot
 hostnames
+Dempster
 dendritically
 tweety
 photoreceptive
@@ -424,6 +427,7 @@ Arduino
 struct
 translational
 pragma
+Shafer
 raytracing
 Thresholding
 ShiftBy
