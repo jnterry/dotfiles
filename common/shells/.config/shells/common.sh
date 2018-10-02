@@ -13,7 +13,10 @@ source "$HOME/bin/k.sh"
 # added by travis gem
 [ -f /home/jamie/.travis/travis.sh ] && source /home/jamie/.travis/travis.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="$PATH:$(nvm which node)"
+
+if which nvm > /dev/null 2> /dev/null ; then
+		export NVM_DIR="$HOME/.nvm"
+		[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+		export PATH="$PATH:$(nvm which node)"
+fi
