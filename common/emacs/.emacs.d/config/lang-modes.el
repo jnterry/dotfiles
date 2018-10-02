@@ -20,6 +20,11 @@
 				)
 )
 
+(use-package go-mode
+  :mode (("\\.go\\'"  . go-mode)
+				)
+)
+
 (use-package yaml-mode
   :mode (("\\.yaml\\'" . yaml-mode)
 				 ("\\.yml\\'"  . yaml-mode)
