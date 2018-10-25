@@ -1,4 +1,4 @@
-personal_ws-1.1 en 631 
+personal_ws-1.1 en 633 
 Minigames
 pragram
 ALU
@@ -59,8 +59,8 @@ killall
 saliency
 CSP
 WORKDIR
-DNS
 CSS
+DNS
 Verilog
 CWA
 gcc
@@ -80,8 +80,8 @@ destructor
 soma
 EOF
 backpropogation
-externality
 callee's
+externality
 Prolog's
 noitemsep
 whitebox
@@ -149,9 +149,9 @@ notitlepage
 walltime
 redux
 HPC
+strcpy
 forall
 chai
-strcpy
 namespaces
 Nagumo
 Multilane
@@ -159,6 +159,7 @@ emptyset
 Goto
 hor
 grep
+haptic
 retinotopy
 hopfield
 appendString
@@ -174,10 +175,10 @@ frontend
 wireframe
 testbench
 HSL
-ConnectionPromise's
 ConnectionPromises
-SpecMan
+ConnectionPromise's
 specman
+SpecMan
 argc
 param
 cornell
@@ -222,10 +223,10 @@ Chpt
 topsep
 VHDL
 Multinomial
+uparrow
 NEC
 hfill
 appender
-uparrow
 viewable
 LevelManager
 hacky
@@ -277,14 +278,15 @@ barycentric
 unintuitive
 Luxford
 omp
+overbar
 Kerstin
 arctan
 QDR
 Hoisin
 Eder
 Javascript
-OOP
 RBF
+OOP
 attentional
 init
 RANSAC
@@ -380,8 +382,8 @@ unmaintainable
 showqueue
 sql
 Bolognese
-SPS
 uid
+SPS
 enumitem
 blackbox
 installable
@@ -541,8 +543,8 @@ mx
 pmatrix
 proxied
 bigstar
-MySQL
 mysql
+MySQL
 RG
 InstallShield
 autocorrelation
@@ -564,8 +566,8 @@ nano
 butterworth's
 setlength
 achilles
-framebuffer
 FrameBuffer
+framebuffer
 TP
 raytracer
 OpenGL
@@ -606,8 +608,8 @@ vectorization
 Peristimulus
 Bea
 BCM
-DUV's
 DUVs
+DUV's
 chainable
 username
 const
