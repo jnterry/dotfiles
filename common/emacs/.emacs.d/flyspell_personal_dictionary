@@ -1,8 +1,9 @@
-personal_ws-1.1 en 597
+personal_ws-1.1 en 631 
 Minigames
 pragram
 ALU
 Bim
+eigenvectors
 AQA
 sqlite
 dbh
@@ -28,9 +29,11 @@ cmd
 CLI
 dia
 jacobi
+ebp
 optargs
 unclosed
 AWS
+spotify
 combinator
 backends
 jnterry
@@ -40,8 +43,10 @@ mathcal
 unreachablility
 dir
 nullcline
+BSS
 qstat
 DMA
+unbundling
 noindent
 profiler
 DbConnectionPromise
@@ -64,6 +69,7 @@ rsync
 doT
 devops
 DevOps
+gdb
 LaTex
 unitless
 FPUs
@@ -72,7 +78,10 @@ portably
 parameterisation
 destructor
 soma
+EOF
 backpropogation
+externality
+callee's
 Prolog's
 noitemsep
 whitebox
@@ -92,13 +101,15 @@ gid
 DUV
 etc
 scikit
-attractor
 subseteq
+attractor
 SRAM
 HDL
 Anki
 Hough
+permutated
 sigmoid
+downarrow
 Tilehurst
 nabla
 natively
@@ -140,6 +151,7 @@ redux
 HPC
 forall
 chai
+strcpy
 namespaces
 Nagumo
 Multilane
@@ -166,6 +178,7 @@ ConnectionPromise's
 ConnectionPromises
 SpecMan
 specman
+argc
 param
 cornell
 customisations
@@ -178,8 +191,10 @@ optimize
 GPUs
 Ising
 ish
+argv
 hyperparameter
 rescale
+upsell
 textfloatsep
 conductances
 jpg
@@ -195,6 +210,7 @@ Hebbian
 lim
 LHS
 unoptimised
+Computerphile
 toolchain
 autocorrelogram
 initialize
@@ -209,6 +225,7 @@ Multinomial
 NEC
 hfill
 appender
+uparrow
 viewable
 LevelManager
 hacky
@@ -222,6 +239,7 @@ GUIs
 nlogn
 Purkinje
 lnodes
+OAP
 backend
 unhandled
 Karnaugh
@@ -256,6 +274,7 @@ underbrace
 glibc
 parallelize
 barycentric
+unintuitive
 Luxford
 omp
 Kerstin
@@ -274,15 +293,18 @@ SIDENOTE
 inliers
 satisfiable
 iteratively
+invertible
 disjunction
 overfitting
 orm
 Sobel
 normals
 unvisited
+execve
 RGB
 cmpl
 vivo
+realloc
 ifndef
 Jira
 ppn
@@ -307,6 +329,7 @@ config
 tbc
 hippocampus
 Penrose
+iPhones
 Cornus
 thenable
 SGI
@@ -324,6 +347,7 @@ tcp
 prependString
 documentclass
 SHR
+Diagonalize
 nullclines
 bimodal
 SLD
@@ -367,6 +391,7 @@ overbrace
 epipolar
 tmp
 SRP
+SaaS
 Waymont
 VCS
 sqdiff
@@ -391,6 +416,7 @@ rasterizer
 FDIV
 textasteriskcentered
 truthy
+strncpy
 yaml
 vdots
 middleware
@@ -458,6 +484,7 @@ emissive
 templated
 yml
 intel
+Combinatoral
 striate
 cp
 eg
@@ -505,8 +532,11 @@ plusminus
 nm
 intra
 microarchitectural
+xFFFFFFFF
+covariant
 mV
 socrates
+externalities
 mx
 pmatrix
 proxied
@@ -542,6 +572,7 @@ OpenGL
 sz
 Sonka
 argmax
+envp
 neuroscience
 photoreceptors
 fancyhf
@@ -573,6 +604,7 @@ Ammon
 hyperpolarization
 vectorization
 Peristimulus
+Bea
 BCM
 DUV's
 DUVs
@@ -582,6 +614,7 @@ const
 requestors
 equisatisfiable
 queryable
+Orbitz
 Renishaw
 Siri
 usepackage
@@ -596,3 +629,4 @@ qsub
 FitzHugh
 Gyrus
 Starfield
+callee
