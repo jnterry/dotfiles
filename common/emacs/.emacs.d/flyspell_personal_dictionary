@@ -1,4 +1,4 @@
-personal_ws-1.1 en 634 
+personal_ws-1.1 en 669 
 Minigames
 pragram
 ALU
@@ -34,12 +34,14 @@ optargs
 unclosed
 AWS
 spotify
+defacto
 combinator
 backends
 jnterry
 specular
 ShiftOutOfRange
 mathcal
+centered
 unreachablility
 dir
 nullcline
@@ -55,12 +57,14 @@ axonal
 multimodal
 Tapeout
 BFM's
+DoE
 killall
 saliency
 CSP
 WORKDIR
-DNS
+Vach
 CSS
+DNS
 Verilog
 CWA
 gcc
@@ -75,6 +79,7 @@ unitless
 FPUs
 xtmp
 portably
+Gode
 parameterisation
 destructor
 soma
@@ -85,10 +90,12 @@ externality
 Prolog's
 noitemsep
 whitebox
+GD's
 gmon
 TeamCity
 indexable
 photoreceptor
+GDX
 rasterisation
 parameterised
 validator
@@ -175,15 +182,16 @@ frontend
 wireframe
 testbench
 HSL
-ConnectionPromise's
 ConnectionPromises
-SpecMan
+ConnectionPromise's
 specman
+SpecMan
 argc
 param
 cornell
 customisations
 cgit
+unscaled
 parallelization
 viewport
 combinatorics
@@ -197,11 +205,14 @@ hyperparameter
 rescale
 upsell
 textfloatsep
+i'th
 conductances
 jpg
+MBC
 optimization
 itr
 covariance
+overline
 LGN
 programmatically
 max
@@ -213,6 +224,7 @@ LHS
 unoptimised
 Computerphile
 toolchain
+MGD
 autocorrelogram
 initialize
 titlesec
@@ -223,6 +235,7 @@ Chpt
 topsep
 VHDL
 Multinomial
+stochastically
 uparrow
 NEC
 hfill
@@ -238,6 +251,7 @@ mis
 nullptr
 GUIs
 nlogn
+neq
 Purkinje
 lnodes
 OAP
@@ -253,12 +267,15 @@ parindent
 bmatrix
 Pico
 VTune
+PCA
 LTP
 greyscale
 qdel
 namespace
 Haproxy
+MsC
 PCI
+Oja
 PBS
 nginx
 Guildford
@@ -286,8 +303,9 @@ QDR
 Hoisin
 Eder
 Javascript
-OOP
 RBF
+OOP
+unmixing
 attentional
 init
 RANSAC
@@ -303,6 +321,7 @@ orm
 Sobel
 normals
 unvisited
+Opex
 execve
 RGB
 cmpl
@@ -318,6 +337,7 @@ parskip
 numa
 GridPosition
 Arista
+recentered
 PSF
 Adelson
 luminance
@@ -336,6 +356,7 @@ iPhones
 Cornus
 thenable
 SGI
+decorrelating
 conf
 microarchitecture
 sgn
@@ -447,8 +468,11 @@ optimizations
 intracellular
 discriminability
 uncountably
+Eriksen
 whitespace
 rfoot
+Vach's
+weighings
 hostnames
 Dempster
 dendritically
@@ -461,6 +485,7 @@ centering
 Arduino
 struct
 translational
+InfoMax
 pragma
 Shafer
 raytracing
@@ -478,9 +503,11 @@ AdaBoost
 interoperability
 math
 PROC
+Sejnowski
 vectorize
 Hlavac
 crontrol's
+MBRA
 qquad
 cd
 emissive
@@ -492,6 +519,7 @@ striate
 cp
 eg
 el
+equilibria
 dimensionality
 dt
 ionotropic
@@ -532,6 +560,7 @@ MEng
 center
 rightarrow
 plusminus
+distractors
 nm
 intra
 microarchitectural
@@ -544,8 +573,9 @@ mx
 pmatrix
 proxied
 bigstar
-MySQL
 mysql
+MySQL
+Kaplan's
 RG
 InstallShield
 autocorrelation
@@ -567,8 +597,9 @@ nano
 butterworth's
 setlength
 achilles
-framebuffer
+allocative
 FrameBuffer
+framebuffer
 TP
 raytracer
 OpenGL
@@ -584,10 +615,12 @@ vs
 infiniband
 Centos
 crontrol
+Sunder's
 pagestyle
 xp
 colored
 Nyquist
+ZI
 Multinomials
 conjugacy
 Netcraft's
@@ -609,8 +642,8 @@ vectorization
 Peristimulus
 Bea
 BCM
-DUV's
 DUVs
+DUV's
 chainable
 username
 const
@@ -627,8 +660,10 @@ prepended
 detections
 renderer
 npmjs
+simplexes
 BFM
 qsub
+CDA
 FitzHugh
 Gyrus
 Starfield
