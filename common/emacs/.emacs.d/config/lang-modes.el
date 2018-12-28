@@ -3,6 +3,9 @@
 ;; (add-hook 'c++-mode-hook (lambda()(c-set-offset 'innamespace 0)))
 (add-hook 'c++-mode-hook (lambda()(c-set-offset 'label 'tab-width)))
 
+;; Set python indent level (8 by default...)
+(add-hook 'python-mode-hook (lambda()(setq python-indent 4)))
+
 (use-package dockerfile-mode
   :mode "\\Dockerfile\\'"
 )
@@ -90,6 +93,12 @@
 				 ("\\.vert\\'" . glsl-mode)
 				 ("\\.frag\\'" . glsl-mode)
 				)
+	)
+
+(use-package terraform-mode
+	:mode (("\\.tf\\'" . terraform-mode)
+				)
+	:config (add-hook 'terraform-mode-hook 'terraform-format-on-save-mode)
 )
 
 ;; (load "specman-mode")
