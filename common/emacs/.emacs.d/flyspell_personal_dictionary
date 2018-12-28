@@ -1,4 +1,4 @@
-personal_ws-1.1 en 669 
+personal_ws-1.1 en 685 
 Minigames
 pragram
 ALU
@@ -14,6 +14,7 @@ uncategorized
 bashrc
 addtolength
 HTTPS
+betamax
 endif
 flycheck
 quaternions
@@ -35,13 +36,13 @@ unclosed
 AWS
 spotify
 defacto
+centered
 combinator
 backends
 jnterry
 specular
 ShiftOutOfRange
 mathcal
-centered
 unreachablility
 dir
 nullcline
@@ -61,8 +62,8 @@ DoE
 killall
 saliency
 CSP
-WORKDIR
 Vach
+WORKDIR
 CSS
 DNS
 Verilog
@@ -78,8 +79,8 @@ LaTex
 unitless
 FPUs
 xtmp
-portably
 Gode
+portably
 parameterisation
 destructor
 soma
@@ -89,8 +90,8 @@ callee's
 externality
 Prolog's
 noitemsep
-whitebox
 GD's
+whitebox
 gmon
 TeamCity
 indexable
@@ -105,6 +106,7 @@ CMake
 Zerbino
 Liveness
 gid
+GFS
 DUV
 etc
 scikit
@@ -127,6 +129,7 @@ Independency
 executables
 uncomment
 Lecar
+mutex
 FPR
 backkends
 parallelizing
@@ -142,7 +145,9 @@ metabotropic
 Kerrison
 labelfont
 multicol
+writeback
 setlist
+enqueue
 hyperpolarizing
 treeploy
 ansi
@@ -154,6 +159,7 @@ instantiation
 FPGAs
 notitlepage
 walltime
+enqueued
 redux
 HPC
 strcpy
@@ -272,6 +278,7 @@ LTP
 greyscale
 qdel
 namespace
+Carlota
 Haproxy
 MsC
 PCI
@@ -318,6 +325,7 @@ invertible
 disjunction
 overfitting
 orm
+Telecoms
 Sobel
 normals
 unvisited
@@ -325,6 +333,7 @@ Opex
 execve
 RGB
 cmpl
+enqueuing
 vivo
 realloc
 ifndef
@@ -361,6 +370,7 @@ conf
 microarchitecture
 sgn
 reachability
+Personalization
 bandpass
 SHL
 ROC
@@ -381,8 +391,8 @@ jnbe
 ModelSim
 Zarola
 colors
-runtime's
 runtimes
+runtime's
 biophysically
 twocolumn
 Dentate
@@ -398,12 +408,13 @@ rasterization
 fcgi
 NewAgenda
 assimp
+immediates
 src
 vectorial
 unmaintainable
 showqueue
 sql
-Bolognese
+bolognese
 SPS
 uid
 enumitem
@@ -427,6 +438,7 @@ hyperparameters
 Subtask
 Postgres
 superscalar
+framebuffers
 framebuffer's
 skolem
 TPR
@@ -446,6 +458,7 @@ vdots
 middleware
 shader
 amacrine
+Variational
 representable
 handednesses
 dracula
@@ -456,7 +469,7 @@ VMs
 Prewitt
 preceeded
 misprediction
-Archlinux
+archlinux
 parsimmon
 subcaption
 txt
@@ -470,6 +483,7 @@ discriminability
 uncountably
 Eriksen
 whitespace
+MCap
 rfoot
 Vach's
 weighings
@@ -482,10 +496,11 @@ lhead
 WMS
 vue
 centering
-Arduino
+arduino
 struct
 translational
 InfoMax
+ASICs
 pragma
 Shafer
 raytracing
@@ -546,7 +561,7 @@ Latencies
 le
 LHS's
 json
-Obscura
+obscura
 glDepthFunc
 haar
 js
@@ -590,6 +605,7 @@ uncalibrated
 rr
 th
 OpenMP's
+discretizing
 OpenCV
 monotonicity
 adapter
@@ -613,7 +629,7 @@ fancyhf
 Hebb's
 vs
 infiniband
-Centos
+centos
 crontrol
 Sunder's
 pagestyle
@@ -621,7 +637,7 @@ xp
 colored
 Nyquist
 ZI
-Multinomials
+multinomials
 conjugacy
 Netcraft's
 leftarrow
@@ -666,5 +682,5 @@ qsub
 CDA
 FitzHugh
 Gyrus
-Starfield
+starfield
 callee
