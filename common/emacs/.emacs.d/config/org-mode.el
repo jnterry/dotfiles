@@ -44,6 +44,18 @@
 ;; Lets tab work as normal in code blocks
 (setq org-src-tab-acts-natively t)
 
+(setq org-src-lang-modes
+			(quote (("elisp" . emacs-lisp)
+							("C" . c)
+							("cpp" . c++)
+							("perl" . perl)
+							)
+						 )
+			)
+
+(add-hook 'org-mode-hook 'visual-line-mode)
+(add-hook 'org-mode-hook 'adaptive-wrap-prefix-mode)
+
 ;; Highlight start and end line for blocks in editor
 (defface org-block-begin-line
   '((t ( :foreground "spring green"
@@ -90,19 +102,8 @@
 				)
 	)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; setup org mode src block editing
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq org-src-lang-modes (quote (("elisp" . emacs-lisp)
-								 ("C" . c)
-								 ("cpp" . c++)
-								 ("perl" . perl)
-								 )
-								)
-			)
-
-(add-hook 'org-mode-hook 'visual-line-mode)
-(add-hook 'org-mode-hook 'adaptive-wrap-prefix-mode)
+;; Only export subscript and superscript when {} is used
+(setq org-export-with-sub-superscripts "{}")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setup org mode source block execution (babel)
