@@ -19,6 +19,7 @@
 				electric-verilog-tab
 				electric-verilog-tick
 				end-of-visual-line
+				haskell-indentation-common-electric-command
 				ignore
 				indent-for-tab-command
 				keyboard-escape-quit
