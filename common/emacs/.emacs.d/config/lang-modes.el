@@ -1,7 +1,26 @@
 ;; Setups various major modes for editing different languages
 
-;; (add-hook 'c++-mode-hook (lambda()(c-set-offset 'innamespace 0)))
+;;(add-hook 'c++-mode-hook (lambda()(c-set-offset 'innamespace 0)))
 (add-hook 'c++-mode-hook (lambda()(c-set-offset 'label 'tab-width)))
+
+;; Change function style from default:
+;;
+;; function_call(
+;;               test_param
+;;              );
+;;
+;; to
+;;
+;; function_call(
+;;   test_param
+;; );
+;;
+;; Note that if params are put on same line as opening ( they will be kept in
+;; correct alignment on subsequent lines
+(add-hook 'c++-mode-hook (lambda()(c-set-offset 'arglist-intro 'c-basic-offset)))
+(add-hook 'c++-mode-hook (lambda()(c-set-offset 'arglist-close 0)))
+(add-hook 'glsl-mode-hook (lambda()(c-set-offset 'arglist-intro 'c-basic-offset)))
+(add-hook 'glsl-mode-hook (lambda()(c-set-offset 'arglist-close 0)))
 
 ;; Set python indent level (8 by default...)
 (add-hook 'python-mode-hook (lambda()(setq python-indent 4)))
@@ -104,3 +123,11 @@
 ;; (load "specman-mode")
 ;; (add-to-list 'auto-mode-alist '("\\.e\\'" . specman-mode   ))
 ;; (add-to-list 'auto-mode-alist '("\\.ecom\\'" . specman-mode))
+
+;; Use org-mode, with beancount minor mode, for .bean files
+(require 'beancount)
+(add-to-list 'auto-mode-alist '("\\.bean\\'" . org-mode))
+(add-hook 'find-file-hook
+          (lambda ()
+            (when (string= (file-name-extension buffer-file-name) "bean")
+              (beancount-mode +1))))
