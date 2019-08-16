@@ -22,6 +22,13 @@
 (add-hook 'glsl-mode-hook (lambda()(c-set-offset 'arglist-intro 'c-basic-offset)))
 (add-hook 'glsl-mode-hook (lambda()(c-set-offset 'arglist-close 0)))
 
+(fset 'perl-mode 'cperl-mode)
+(setq cperl-indent-level 4
+      cperl-close-paren-offset -4
+      cperl-continued-statement-offset 4
+      cperl-indent-parens-as-block t
+      cperl-tab-always-indent t)
+
 ;; Set python indent level (8 by default...)
 (add-hook 'python-mode-hook (lambda()(setq python-indent 4)))
 
