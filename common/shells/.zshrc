@@ -1,3 +1,7 @@
+# Fix for using emacs TRAMP to access this machine
+# (Tramp uses dumb terminal, use single $ as prompt and then return from config)
+[[ $TERM = "tramp" ]] && unsetopt zle && PS1='$ ' && return
+
 # Use emacs-like keybindings for editing commands
 bindkey -e
 
