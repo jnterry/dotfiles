@@ -10,6 +10,18 @@ source "$HOME/bin/z.sh"
 # https://github.com/supercrabtree/k
 source "$HOME/bin/k.sh"
 
+# Start (or connect to) ssh-agent, add default keys
+if [[ -S ~/.ssh/agent_auth_sock ]] ; then
+	  SSH_AUTH_SOCK=~/.ssh/agent_auth_sock
+		export SSH_AUTH_SOCK
+else
+		eval `ssh-agent` > /dev/null
+		ln -sf "${SSH_AUTH_SOCK}" ~/.ssh/agent_auth_sock
+fi
+if ! ssh-add -l > /dev/null ; then
+		ssh-add
+fi
+
 # added by travis gem
 [ -f /home/jamie/.travis/travis.sh ] && source /home/jamie/.travis/travis.sh
 
