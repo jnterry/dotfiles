@@ -13,6 +13,9 @@
 	c-electric-slash
 	c-electric-star
 	c-indent-line-or-region
+	cperl-electric-brace
+	cperl-electric-lbrace
+	cperl-electric-paren
 	cperl-indent-command
 	electric-newline-and-maybe-indent
 	electric-verilog-colon
