@@ -16,6 +16,9 @@
 	cperl-electric-brace
 	cperl-electric-lbrace
 	cperl-electric-paren
+	cperl-electric-rparen
+	cperl-electric-semi
+	cperl-electric-terminator
 	cperl-indent-command
 	electric-newline-and-maybe-indent
 	electric-verilog-colon
