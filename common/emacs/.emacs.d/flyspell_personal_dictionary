@@ -1,4 +1,4 @@
-personal_ws-1.1 en 871 
+personal_ws-1.1 en 872 
 AQA
 Heligan
 Peristimulus
@@ -14,9 +14,9 @@ BFM's
 ast
 writeback
 parsimmon
-CLI
-cmd
 Bos
+cmd
+CLI
 dia
 BSc
 xtmp
@@ -39,8 +39,8 @@ tensorflow
 unshuffle
 DoE
 CSP
-CSS
 DNS
+CSS
 CWA
 neotree
 reconvergence
@@ -108,6 +108,7 @@ revprox
 advected
 argv
 hor
+Tanakh
 balancer
 hpp
 appender
@@ -187,8 +188,8 @@ bimodal
 ATTR
 repolarize
 documentclass
-PCA
 LTP
+PCA
 dataset
 qquad
 optimizing
@@ -214,8 +215,8 @@ Zerbino
 axonal
 cmpl
 misprediction
-MeshHeader
 Lansdown
+MeshHeader
 numa
 overfit
 omp
@@ -228,8 +229,8 @@ RBF
 OOP
 ShiftBy
 CNNs
-DevOps
 devops
+DevOps
 Kerrison
 scalable
 bottlenecked
@@ -250,16 +251,16 @@ pos
 pre
 blockier
 ionotropic
-mysql
 MySQL
+mysql
 arduino
 PSF
 combinator
 RHS
 morphologies
 tbc
-runtimes
 runtime's
+runtimes
 propto
 preceeded
 SHC
@@ -335,8 +336,8 @@ Levenburg
 Caravanning
 excitatory
 linters
-VM's
 VMs
+VM's
 Arduinos
 responders
 codewik
@@ -388,12 +389,12 @@ terraform
 Perranuthnoe
 Ek
 el
-CX
 Fi
+CX
 dt
 Liveness
-dx
 FN
+dx
 et
 iPhones
 Latencies
@@ -453,15 +454,15 @@ GridPosition
 Hebb
 grafana
 microservices
-th
 rr
+th
 walltime
 lightbulb
 SpecMan
 specman
 FPGAs
-UI
 rx
+UI
 viewable
 hopfield
 TP
@@ -551,8 +552,8 @@ Javadoc
 rescale
 SRAM
 advect
-infty
 Inigo
+infty
 saliency
 glibc
 uncategorized
@@ -582,8 +583,8 @@ hyperparameter
 rasterization
 Goto
 grep
-sqrt
 todo
+sqrt
 STDP
 orchestrator
 CubeToSphere
@@ -655,9 +656,9 @@ centering
 Vive
 Luxford
 normals
-loadtest
 FrameBuffer
 framebuffer
+loadtest
 downarrow
 flycheck
 unoptimised
@@ -804,8 +805,8 @@ Tapeout
 arctan
 mutex
 NaNs
-cmake
 CMake
+cmake
 externality
 noindent
 immediates
