@@ -22,12 +22,15 @@
 (add-hook 'glsl-mode-hook (lambda()(c-set-offset 'arglist-intro 'c-basic-offset)))
 (add-hook 'glsl-mode-hook (lambda()(c-set-offset 'arglist-close 0)))
 
-(fset 'perl-mode 'cperl-mode)
+
 (setq cperl-indent-level 4
       cperl-close-paren-offset -4
       cperl-continued-statement-offset 4
       cperl-indent-parens-as-block t
       cperl-tab-always-indent t)
+
+;; Override certain modes to use better versions
+(fset 'perl-mode 'cperl-mode)
 
 ;; Set python indent level (8 by default...)
 (add-hook 'python-mode-hook (lambda()(setq python-indent 4)))
@@ -81,7 +84,6 @@
 				 ("\\.vue\\'"        . web-mode)
 				 ("\\.html\\'"       . web-mode)
 				 ("\\.dot\\'"        . web-mode)
-				 ("\\.js\\'"         . web-mode)
 				 ("\\.html\\'"       . web-mode)
 				 )
 	:config
@@ -91,11 +93,15 @@
 	(setq web-mode-code-indent-offset      2)
 )
 
+
 (use-package typescript-mode
- 	:mode (("\\.ts\\'" . typescript-mode)
-				 )
+ 	:mode (("\\.ts\\'"         . typescript-mode))
 	:config
-	(setq typescript-indent-level 2)
+	(setq typescript-indent-level      2)
+)
+
+(use-package js3-mode
+ 	:mode (("\\.js\\'"         . rjsx-mode))
 )
 
 (use-package less-css-mode
