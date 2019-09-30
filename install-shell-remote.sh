@@ -16,3 +16,5 @@ scp -pr $SCRIPTDIR/common/shells/bin $REMOTE:~/bin
 scp -pr $SCRIPTDIR/common/shells/.zshrc $REMOTE:~/.zshrc
 scp -pr $SCRIPTDIR/common/shells/.bashrc $REMOTE:~/.bashrc
 scp -pr $SCRIPTDIR/common/shells/.config $REMOTE:~/.config
+
+scp -pr $SCRIPTDIR/common/git/.gitconfig $REMOTE:~/.gitconfig
