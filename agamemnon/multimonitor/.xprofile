@@ -1,4 +1,5 @@
-xrandr \
-			 --output DisplayPort-0 --auto \
-			 --output DVI-D-1 --auto --right-of DisplayPort-0 \
-			 --output DVI-D-0 --auto --right-of DVI-D-1
+#!/usr/bin/env bash
+xrandr --dpi 64 \
+    --output DisplayPort-0 --auto \
+    --output DVI-1 --auto --right-of DisplayPort-0 \
+    --output DVI-0 --auto --above    DisplayPort-0
