@@ -5,6 +5,7 @@
 ;; ensure that we have the latest version
 (require 'package)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(require 'flyspell)
 (require 'org)
 
 ;; Determine the major version of the org package, some of this config relies on
@@ -114,7 +115,7 @@
 	 (python . t)
 	 (C      . t)
 	 (js     . t)
-	 (sh     . t)
+	 ;; (sh     . t)
 	 ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
