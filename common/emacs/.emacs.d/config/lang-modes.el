@@ -24,7 +24,7 @@
 
 
 (setq cperl-indent-level 4
-      cperl-close-paren-offset -4
+			cperl-close-paren-offset -4
       cperl-continued-statement-offset 4
       cperl-indent-parens-as-block t
       cperl-tab-always-indent t)
@@ -98,10 +98,35 @@
  	:mode (("\\.ts\\'"         . typescript-mode))
 	:config
 	(setq typescript-indent-level      2)
+	)
+
+(use-package css-mode
+  :mode (("\\.css\\'" . css-mode))
+  :config
+  (setq css-indent-offset   2)
+)
+
+(use-package polymode
+  :after rjsx-mode
+  :config
+  (define-hostmode poly-rjsx-hostmode nil
+    "RJSX hostmode."
+    :mode 'rjsx-mode)
+  (define-innermode poly-rjsx-css-innermode nil
+    :mode 'css-mode
+    :head-matcher "styled[^\n]+\`\n"
+    :tail-matcher "\`"
+    :head-mode 'host
+    :tail-mode 'host)
+  (define-polymode poly-rjsx-mode
+    :hostmode   'poly-rjsx-hostmode
+    :innermodes '(poly-rjsx-css-innermode))
+  (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . poly-rjsx-mode))
 )
 
 (use-package js3-mode
- 	:mode (("\\.js\\'"         . rjsx-mode))
+  :after css-mode
+  :mode (("\\.js\\'" . rjsx-mode))
 )
 
 (use-package less-css-mode
