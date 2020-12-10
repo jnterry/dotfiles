@@ -1,5 +1,8 @@
 ;; Setups various major modes for editing different languages
 
+; disable lock files so react dev server doesn't crash...
+(setq create-lockfiles nil)
+
 ;;(add-hook 'c++-mode-hook (lambda()(c-set-offset 'innamespace 0)))
 (add-hook 'c++-mode-hook (lambda()(c-set-offset 'label 'tab-width)))
 
@@ -80,7 +83,6 @@
 	:mode (("\\.html\\.erb\\'" . web-mode)
 				 ("\\.mustache\\'"   . web-mode)
 				 ("\\.jinja\\'"      . web-mode)
-				 ("\\.php\\'"        . web-mode)
 				 ("\\.vue\\'"        . web-mode)
 				 ("\\.html\\'"       . web-mode)
 				 ("\\.dot\\'"        . web-mode)
@@ -91,6 +93,14 @@
 	(setq web-mode-markup-indent-offset    2)
 	(setq web-mode-css-indent-offset       2)
 	(setq web-mode-code-indent-offset      2)
+)
+
+(use-package php-mode
+	:mode (("\\.php\\'"        . php-mode))
+	:config
+	(setq indent-tabs-mode nil)
+	(setq tab-width          4)
+	(setq c-basic-offset     4)
 )
 
 
@@ -106,28 +116,36 @@
   (setq css-indent-offset   2)
 )
 
-(use-package polymode
-  :after rjsx-mode
-  :config
-  (define-hostmode poly-rjsx-hostmode nil
-    "RJSX hostmode."
-    :mode 'rjsx-mode)
-  (define-innermode poly-rjsx-css-innermode nil
-    :mode 'css-mode
-    :head-matcher "styled[^\n]+\`\n"
-    :tail-matcher "\`"
-    :head-mode 'host
-    :tail-mode 'host)
-  (define-polymode poly-rjsx-mode
-    :hostmode   'poly-rjsx-hostmode
-    :innermodes '(poly-rjsx-css-innermode))
-  (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . poly-rjsx-mode))
-)
+;; (use-package polymode
+;;   :after rjsx-mode
+;;   :config
+;;   (define-hostmode poly-rjsx-hostmode nil
+;;     "RJSX hostmode."
+;;     :mode 'rjsx-mode)
+;;   (define-innermode poly-rjsx-css-innermode nil
+;;     :mode 'css-mode
+;;     :head-matcher "styled[^\n]+\`\n"
+;;     :tail-matcher "\`"
+;;     :head-mode 'host
+;;     :tail-mode 'host)
+;;   (define-polymode poly-rjsx-mode
+;;     :hostmode   'poly-rjsx-hostmode
+;;     :innermodes '(poly-rjsx-css-innermode))
+;;   (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . poly-rjsx-mode))
+;; )
+;;
+;; (use-package js3-mode
+;;   :after css-mode
+;;   :mode (("\\.js\\'" . rjsx-mode))
+;; 	:config (add-hook 'rjsx-mode-hook
+;; 										(lambda ()
+;; 											(setq-local indent-line-function 'js-jsx-indent-line)
+;; 											)
+;; 										)
+;; )
 
-(use-package js3-mode
-  :after css-mode
-  :mode (("\\.js\\'" . rjsx-mode))
-)
+;; The built in js mode support tabs! unlike rjsx
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js-mode))
 
 (use-package less-css-mode
 	:mode "\\.less\\'"
