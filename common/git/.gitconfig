@@ -1,6 +1,6 @@
 [user]
-		email = jnterry@ntlworld.com
-		name  = Jamie Terry
+	email = dev@terry.cloud
+	name = Jamie Terry
 [diff]
 	# Detect copies as well as renames
 	renames = copies
@@ -15,3 +15,5 @@
 	clean = git-lfs clean -- %f
 [pull]
 	rebase = true
+[core]
+	excludesfile = ~/.gitignore
