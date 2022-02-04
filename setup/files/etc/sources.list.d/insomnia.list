@@ -1,0 +1,1 @@
+deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all

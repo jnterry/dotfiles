@@ -1,0 +1,65 @@
+#!/usr/bin/perl
+#
+# This script repeatedly calls stow and monitors the output for conflicts
+# If a conflict is found then the offending file is deleted
+# We keep running stow until it succeeds, or we fail after 50 retries
+
+use strict;
+use warnings;
+
+use Cwd;
+use File::Basename;
+
+my $args = (join " ", @ARGV);
+
+my $target    = undef;
+my $no_action = 0;
+for (my $i = 0; $i < @ARGV; ++$i) {
+		if( $ARGV[$i] =~ /^(-t|--target)$/  ) {
+				$target = $ARGV[$i+1];
+		}
+		if ($ARGV[$i] =~ /^--target=(.*)$/ ) {
+				$target = $1;
+		}
+		if( $ARGV[$i] =~ /^(-n|--no|--simulate)$/ ) {
+				$no_action = 1;
+		}
+}
+unless ($target) {
+		$target = Cwd::realpath('..');
+}
+unless ((substr $target, -1) eq '/') {
+		$target = "$target/"
+}
+
+my $repeats = 0;
+my $repeat_limit = 50;
+while ( 1 ) {
+		my $output = `/usr/bin/stow $args 2>&1`;
+		unless ($output  =~ "All operations aborted") {
+				print "Success :)\n";
+				print $output;
+				last;
+		}
+		my @out_lines = split "\n", $output;
+		foreach my $line ( @out_lines ) {
+				if($line =~ /^\s*\* existing target is neither a link nor a directory:\s+(.*)$/ or
+				   $line =~ /^\s*\* existing target is not owned by stow:\s+(.*)$/
+			          ){
+						my $conflict = "${target}${1}";
+						print "Removing conflict $conflict\n";
+						system `rm -r ${target}${1}` unless $no_action
+				}
+		}
+
+		++$repeats;
+		if($repeats > $repeat_limit){
+				print "Failed to remove all conflicts after $repeat_limit iterations, giving up\n";
+				exit 1;
+		}
+
+		# If no action is set nothing will have changed, so stop
+		last if $no_action;
+}
+
+exit 0;
