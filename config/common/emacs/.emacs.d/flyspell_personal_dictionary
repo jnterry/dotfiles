@@ -1,4 +1,4 @@
-personal_ws-1.1 en 874 
+personal_ws-1.1 en 912 
 AQA
 Heligan
 Peristimulus
@@ -8,6 +8,7 @@ dbh
 cgi
 chipset
 hacky
+APY
 initializing
 hyperparameters
 BFM's
@@ -25,6 +26,7 @@ Minigames
 satisfiable
 Computerphile
 butterworth's
+legos
 AWS
 PaaS
 dir
@@ -46,13 +48,16 @@ neotree
 reconvergence
 gcc
 Anki
+CeFi
 doT
 gdb
 GDC
 EKS
+composability
 ridgenoise
 ALU's
 EOF
+polyhedra
 hyperpolarization
 gprof
 GD's
@@ -96,6 +101,7 @@ cgit
 backpropogation
 Verbas
 Eriksen
+tweakable
 Nvidia
 subcaption
 ivdep
@@ -112,6 +118,7 @@ Tanakh
 balancer
 hpp
 appender
+img
 GTX
 performant
 ing
@@ -119,6 +126,7 @@ epipolar
 HTC
 Carlota
 PDRA
+tbody
 HSL
 AABBs
 thresholded
@@ -128,6 +136,8 @@ voxel
 DeadOutputs
 archlinux
 overbar
+defi
+DeFi
 Kutta
 dracula
 perlin
@@ -161,6 +171,7 @@ LHS
 Multilane
 MGD
 Javascript
+previewImage
 Pico
 bool
 biomes
@@ -195,6 +206,7 @@ qquad
 optimizing
 bashrc
 infiniband
+blockchain
 MsC
 Eder
 PCI
@@ -205,6 +217,7 @@ parameterised
 conjugacy
 softmax
 Sejnowski
+Parameterising
 Opex
 MVB
 NOP
@@ -212,6 +225,7 @@ MUL
 neuroscience
 NPM
 Zerbino
+fname
 axonal
 cmpl
 misprediction
@@ -228,11 +242,13 @@ topsep
 RBF
 OOP
 ShiftBy
+Satoshi
 CNNs
 devops
 DevOps
 Kerrison
 scalable
+png
 bottlenecked
 orm
 vectorized
@@ -312,6 +328,7 @@ repo
 VCS
 srv
 LeakyRelu
+svg
 correlogram
 reqX
 AdaBoost
@@ -338,6 +355,7 @@ excitatory
 linters
 VMs
 VM's
+ethereum
 Arduinos
 responders
 codewik
@@ -345,6 +363,7 @@ bigstar
 txt
 PROC
 undirected
+incentivised
 Wix
 hiphop
 Guildford
@@ -380,6 +399,7 @@ GCSE
 skolem
 De
 backends
+br
 cp
 execve
 redis
@@ -407,6 +427,7 @@ PICAXE
 deduplicate
 DVCS
 ij
+Covid
 LetsEncrypt
 thenable
 rasterisation
@@ -433,6 +454,7 @@ fourier
 uparrow
 nm
 reachability
+thead
 mV
 adapter
 treeploy
@@ -451,7 +473,9 @@ Nowell
 Trevenna
 enqueued
 sh
+td
 GridPosition
+whitepaper
 Hebb
 grafana
 microservices
@@ -534,10 +558,12 @@ Vach
 Hlavac
 perceptron
 SIDENOTE
+Dalio
 underbrace
 OpenCL
 uncomment
 soma
+SMTP
 FPUs
 Gode
 OpenCV
@@ -559,6 +585,7 @@ infty
 saliency
 glibc
 uncategorized
+interope
 unhandled
 Sobel
 bandpass
@@ -573,6 +600,8 @@ desynchronizing
 Vostok
 sqlite
 castable
+Vitalik
+interoperate
 conductances
 lerping
 Multithreaded
@@ -622,12 +651,14 @@ implementers
 biophysically
 potentiation
 starfield
+interoperable
 overline
 GUIs
 Netcraft's
 scikit
 backend
 killall
+href
 instantiation
 Vach's
 leftarrow
@@ -648,6 +679,7 @@ GeoMipMapping
 geomipmapping
 upsell
 Synthesiser
+BarnBridge
 vectorization
 PDRAs
 ASICs
@@ -705,6 +737,7 @@ Sonka
 forall
 usepackage
 hostnames
+Buterin
 uncalibrated
 namespace
 Elsley
@@ -733,6 +766,7 @@ thresholding
 npmjs
 optimizations
 DbConnectionPromise
+Sphericalization
 blackbox
 nullcline
 Zarola
@@ -753,6 +787,8 @@ spotify
 Diagonalize
 Runge
 backkends
+monospace
+Nakamoto
 dodecahedron
 unscaled
 notin
@@ -792,6 +828,7 @@ noitemsep
 OpenMP's
 LaTex
 MEng
+cryptocurrencies
 ifndef
 NodeJS
 toolchain
@@ -867,6 +904,7 @@ testcase
 BFM
 myelinated
 CDA
+figcaption
 metabotropic
 al's
 ALU

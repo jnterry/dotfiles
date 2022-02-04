@@ -93,7 +93,24 @@
 	(setq web-mode-markup-indent-offset    2)
 	(setq web-mode-css-indent-offset       2)
 	(setq web-mode-code-indent-offset      2)
+	(setq web-mode-script-padding          2)
 )
+
+; :TODO: these indentation settings make web-mode indent with 2 tabs
+; for above lanages, as it tries to get offset of 4 with 2-width tabs
+;(use-package web-mode
+;  ; .tag files are used by the "Riot" UI framework in cockpit CMS
+;  ; That repo uses 4 space indentation, and since we don't use .tag files anywhere else,
+;	; lets setup the defaults correctly...
+;	:mode (("\\.tag\\'"       . web-mode))
+;	:config
+;	(setq indent-tabs-mode nil)
+;	(setq web-mode-enable-css-colorization t)
+;	(setq web-mode-markup-indent-offset    4)
+;	(setq web-mode-css-indent-offset       4)
+;	(setq web-mode-code-indent-offset      4)
+;  (setq web-mode-script-padding          4)
+;)
 
 (use-package php-mode
 	:mode (("\\.php\\'"        . php-mode))

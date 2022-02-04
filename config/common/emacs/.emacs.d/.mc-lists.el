@@ -65,8 +65,10 @@
       '(
 				handle-switch-frame
 				kill-region
+				markdown-enter-key
 				mouse-set-region
 				org-insert-heading-respect-content
+				query-replace
 				tabbar-forward-tab
 				view-order-manuals
 				))

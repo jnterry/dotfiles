@@ -3,8 +3,11 @@ Contains personal dotfiles for configuring various applications.
 
 These files are managed by GNU stow; this creates system links in the correct location that point to the files in this repository. This allows all dotfiles to be tracked by a single repository, while being easily rolled out on a new machine
 
-```./common/``` contains config files that should be installed on all hosts.
-the other directories in this folder should only be installed on devices with particular host names.
+
+- `./config` - config files installed by stow
+  - `./config/common` - files installed on all hosts
+  - `./config/${name}` - files installed on hosts with particular names
+- `./setup` - files for setting up a new debian machine
 
 # Continuous Integration
 

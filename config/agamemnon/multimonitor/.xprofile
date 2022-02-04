@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+setxkbmap -model sun_type7_usb -layout gb
+
+xrandr --dpi 64 \
+    --output DP-1 --auto \
+    --output DVI-D-2 --auto --right-of DP-1 \ 
+    --output DVI-D-1 --auto --above DP-1

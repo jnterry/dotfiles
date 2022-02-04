@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Installs all dotfiles to the appropriate locations
 
@@ -21,27 +21,27 @@ if [ -f '/usr/bin/stowforce' ] ; then
 	STOW_CMD='/usr/bin/stowforce'
 fi
 
-#######################################
-# Install common files
-cd ${SCRIPTDIR}/common
-for d in `ls -d */`;
-do
-	printf "Installing %32s : " $d
-	$STOW_CMD $d --target $TARGET
-	printf "Done\n"
-done
-
-#######################################
-# Install host specific files
-HOSTDIR=${SCRIPTDIR}/$(hostname)
-if [ -d ${HOSTDIR} ] ; then
-	cd ${HOSTDIR}
+#####################
+# Helper to install files from a particular directory
+install_from_dir () {
+	pushd ${1}
 	for d in `ls -d */`;
 	do
-		printf "Installing %32s : " $d
+		printf "Installing %32s : '${d}' to '${TARGET}'"
 		$STOW_CMD $d --target $TARGET
 		printf "Done\n"
 	done
+	popd
+}
+
+# Install common files
+install_from_dir ${SCRIPTDIR}/config/common
+
+# Install host specific files
+HOSTDIR=${SCRIPTDIR}/config/$(hostname)
+echo $HOSTDIR
+if [ -d ${HOSTDIR} ] ; then
+	install_from_dir $HOSTDIR
 fi
 
 exit 0

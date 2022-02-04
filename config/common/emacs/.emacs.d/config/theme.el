@@ -14,3 +14,5 @@
 
 ;; Improve comment contrast
 (set-face-foreground 'font-lock-comment-face "spring green")
+
+(set-face-attribute 'default (selected-frame) :height 200)
