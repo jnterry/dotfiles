@@ -5,6 +5,10 @@ set -e
 
 sudo apt update
 
+# Ensure third party repos in config are cloned, eg, zsh plugins
+git submodule init
+git submodule update
+
 sudo apt install --yes fontconfig
 
 # Copy file structure
