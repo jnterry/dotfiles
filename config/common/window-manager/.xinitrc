@@ -6,4 +6,4 @@ if [ -f ~/.xprofile ] ; then
 fi
 
 # Start window manager
-/usr/local/bin/i3
+/usr/bin/i3
