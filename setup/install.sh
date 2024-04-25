@@ -39,7 +39,7 @@ sudo apt update
 sudo apt update
 
 # system tools
-sudo apt install --yes build-essential git gpg vim emacs zsh perl stow ca-certificates wget curl gnupg lsb-release software-properties-common apt-transport-https resolvconf htop bmon
+sudo apt install --yes build-essential git gpg vim emacs zsh perl stow ca-certificates wget curl gnupg lsb-release software-properties-common apt-transport-https resolvconf htop bmon net-tools
 
 # Installing resolvconf above causes DNS resolution to fail, so restart networking to fix
 # and allow further package installations to work
